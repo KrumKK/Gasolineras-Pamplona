@@ -1,0 +1,469 @@
+{
+ "ts": "2026-11-09T07:58:00+01:00",
+ "fecha": "2026-11-09",
+ "fuente": "micarburante.com (datos del Ministerio), carga inicial",
+ "diesel": [
+  {
+   "n": "Eurocam",
+   "d": "Pol. Agustinos Calle A Parcela 3B",
+   "p": 1.759
+  },
+  {
+   "n": "Petroprix",
+   "d": "Calle E, 1",
+   "p": 1.759
+  },
+  {
+   "n": "Eroski",
+   "d": "Polígono Agustinos, Calle A, Local 1598",
+   "p": 1.769
+  },
+  {
+   "n": "Avanza Oil",
+   "d": "Polígono Landaben, Calle F, 2",
+   "p": 1.769
+  },
+  {
+   "n": "Aralar",
+   "d": "Avenida Juan Pablo II, 23",
+   "p": 1.789
+  },
+  {
+   "n": "Moeve",
+   "d": "Avenida Guipúzcoa, 1",
+   "p": 1.919
+  },
+  {
+   "n": "Petronor",
+   "d": "Polígono Landaben, s/n",
+   "p": 1.929
+  },
+  {
+   "n": "Avia",
+   "d": "Carretera Baodstain, 2",
+   "p": 1.929
+  },
+  {
+   "n": "Repsol",
+   "d": "Calle Sadar, s/n",
+   "p": 1.935
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera de Artica, s/n",
+   "p": 1.935
+  },
+  {
+   "n": "Plenergy",
+   "d": "Polígono Mugazuri, 3 (Burlada)",
+   "p": 1.769
+  },
+  {
+   "n": "Alcampo",
+   "d": "Polígono Mugazuri, parcela B, 4 (Burlada)",
+   "p": 1.819
+  },
+  {
+   "n": "BP",
+   "d": "Avenida Carretera de Francia, s/n (Villava)",
+   "p": 1.935
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Guipúzcoa, N-240 km 4 (Berriozar)",
+   "p": 1.94
+  },
+  {
+   "n": "Transportes Cruz",
+   "d": "Polígono Comarca I, Calle D, s/n (Berrioplano)",
+   "p": 1.769
+  },
+  {
+   "n": "Petroprix",
+   "d": "Calle Artica, 30 (Berrioplano)",
+   "p": 1.779
+  },
+  {
+   "n": "Aralar",
+   "d": "Carretera Guipúzcoa N-240 km 5,5 (Aizoáin)",
+   "p": 1.809
+  },
+  {
+   "n": "Adelfas",
+   "d": "Calle María Viscarret, 39 (Artica)",
+   "p": 1.878
+  },
+  {
+   "n": "Galp",
+   "d": "Calle Artica esq. Calle Ansoáin, s/n (Artica)",
+   "p": 1.888
+  },
+  {
+   "n": "AN Energéticos",
+   "d": "Calle Olaz Chipi, s/n (Huarte)",
+   "p": 1.789
+  },
+  {
+   "n": "Repsol",
+   "d": "Calle Altxutxate, 50 (Huarte)",
+   "p": 1.93
+  },
+  {
+   "n": "BP",
+   "d": "Calle Intxaurdia, 6 (Huarte)",
+   "p": 1.935
+  },
+  {
+   "n": "AN Energéticos",
+   "d": "Calle Olaz, 3 (Olaz, Egüés)",
+   "p": 1.789
+  },
+  {
+   "n": "DST",
+   "d": "Carretera NA-150 km 1,56 (Alzuza, Egüés)",
+   "p": 1.799
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-135 km 4,6 (Olaz, Egüés)",
+   "p": 1.93
+  },
+  {
+   "n": "AN Energéticos",
+   "d": "Campo de Tajonar, s/n (Tajonar, Aranguren)",
+   "p": 1.759
+  },
+  {
+   "n": "Gasolinera Noáin",
+   "d": "Polígono Talluntxe II, s/n (Aranguren)",
+   "p": 1.769
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-121 km 5 (Aranguren)",
+   "p": 1.93
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
+   "p": 1.959
+  },
+  {
+   "n": "Cepsa",
+   "d": "Ronda de Barañáin, 2 (Barañáin)",
+   "p": 1.959
+  },
+  {
+   "n": "E.Leclerc",
+   "d": "Calle Arrobia, s/n (Zizur Mayor)",
+   "p": 1.729
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Estella, 9 (Zizur Mayor)",
+   "p": 1.92
+  },
+  {
+   "n": "Ballenoil",
+   "d": "Autovía A-12 km 7,3 (Astráin, Cizur)",
+   "p": 1.699
+  },
+  {
+   "n": "Cepsa",
+   "d": "Autovía A-12 km 7,3 (Gazólaz, Cizur)",
+   "p": 1.989
+  },
+  {
+   "n": "Petronor",
+   "d": "Carretera NA-7000 km 5,3 (Arazuri, Olza)",
+   "p": 1.914
+  },
+  {
+   "n": "Argi",
+   "d": "Pol. Comarca I, parcela D 25 (Orcoyen)",
+   "p": 1.73
+  },
+  {
+   "n": "Petro Swap",
+   "d": "Parque Empresarial La Muga, 7 (Orcoyen)",
+   "p": 1.779
+  },
+  {
+   "n": "Gasóleos Mercadaiz",
+   "d": "Paraje San Babil, 1 (Salinas de Pamplona)",
+   "p": 1.725
+  },
+  {
+   "n": "Bideko Aterpe",
+   "d": "Polígono Meseta de Salinas, 4 (Salinas de Pamplona)",
+   "p": 1.726
+  },
+  {
+   "n": "E.Leclerc",
+   "d": "Barrio La Morea (Cordovilla)",
+   "p": 1.729
+  },
+  {
+   "n": "Moeve",
+   "d": "Polígono Cordovilla-Galar, parcela 382 (Cordovilla)",
+   "p": 1.909
+  },
+  {
+   "n": "Bidasoa Combustibles",
+   "d": "Polígono Y, 10 (Noáin)",
+   "p": 1.769
+  },
+  {
+   "n": "Moeve",
+   "d": "Autopista AP-15 km 78 (Imarcoáin)",
+   "p": 1.909
+  },
+  {
+   "n": "Andamur",
+   "d": "Avenida Este, Ciudad del Transporte (Imarcoáin)",
+   "p": 1.929
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-121, 5 (Noáin)",
+   "p": 1.93
+  },
+  {
+   "n": "Transportes Azpiroz",
+   "d": "Calle Olite, 28, Ciudad del Transporte (Elorz)",
+   "p": 1.982
+  },
+  {
+   "n": "Ballenoil",
+   "d": "N-121 km 9,4 (Beriáin)",
+   "p": 1.759
+  },
+  {
+   "n": "Moeve",
+   "d": "N-121 km 9,4 (Beriáin)",
+   "p": 1.909
+  },
+  {
+   "n": "IDS",
+   "d": "Carretera N-121 km 9,5 (Beriáin)",
+   "p": 1.911
+  }
+ ],
+ "g95": [
+  {
+   "n": "Eurocam",
+   "d": "Pol. Agustinos Calle A Parcela 3B",
+   "p": 1.529
+  },
+  {
+   "n": "Petroprix",
+   "d": "Calle E, 1",
+   "p": 1.579
+  },
+  {
+   "n": "Eroski",
+   "d": "Polígono Agustinos, Calle A, Local 1598",
+   "p": 1.539
+  },
+  {
+   "n": "Avanza Oil",
+   "d": "Polígono Landaben, Calle F, 2",
+   "p": 1.589
+  },
+  {
+   "n": "Aralar",
+   "d": "Avenida Juan Pablo II, 23",
+   "p": 1.529
+  },
+  {
+   "n": "Moeve",
+   "d": "Avenida Guipúzcoa, 1",
+   "p": 1.72
+  },
+  {
+   "n": "Petronor",
+   "d": "Polígono Landaben, s/n",
+   "p": 1.709
+  },
+  {
+   "n": "Avia",
+   "d": "Carretera Baodstain, 2",
+   "p": 1.709
+  },
+  {
+   "n": "Repsol",
+   "d": "Calle Sadar, s/n",
+   "p": 1.745
+  },
+  {
+   "n": "Moeve",
+   "d": "Calle Sancho Ramírez, 2",
+   "p": 1.725
+  },
+  {
+   "n": "Plenergy",
+   "d": "Polígono Mugazuri, 3 (Burlada)",
+   "p": 1.529
+  },
+  {
+   "n": "Alcampo",
+   "d": "Polígono Mugazuri, parcela B, 4 (Burlada)",
+   "p": 1.549
+  },
+  {
+   "n": "BP",
+   "d": "Avenida Carretera de Francia, s/n (Villava)",
+   "p": 1.695
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Guipúzcoa, N-240 km 4 (Berriozar)",
+   "p": 1.71
+  },
+  {
+   "n": "Petroprix",
+   "d": "Calle Artica, 30 (Berrioplano)",
+   "p": 1.649
+  },
+  {
+   "n": "Aralar",
+   "d": "Carretera Guipúzcoa N-240 km 5,5 (Aizoáin)",
+   "p": 1.669
+  },
+  {
+   "n": "Adelfas",
+   "d": "Calle María Viscarret, 39 (Artica)",
+   "p": 1.794
+  },
+  {
+   "n": "Galp",
+   "d": "Calle Artica esq. Calle Ansoáin, s/n (Artica)",
+   "p": 1.784
+  },
+  {
+   "n": "AN Energéticos",
+   "d": "Calle Olaz Chipi, s/n (Huarte)",
+   "p": 1.609
+  },
+  {
+   "n": "Repsol",
+   "d": "Calle Altxutxate, 50 (Huarte)",
+   "p": 1.74
+  },
+  {
+   "n": "BP",
+   "d": "Calle Intxaurdia, 6 (Huarte)",
+   "p": 1.695
+  },
+  {
+   "n": "AN Energéticos",
+   "d": "Calle Olaz, 3 (Olaz, Egüés)",
+   "p": 1.609
+  },
+  {
+   "n": "DST",
+   "d": "Carretera NA-150 km 1,56 (Alzuza, Egüés)",
+   "p": 1.629
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-135 km 4,6 (Olaz, Egüés)",
+   "p": 1.74
+  },
+  {
+   "n": "AN Energéticos",
+   "d": "Campo de Tajonar, s/n (Tajonar, Aranguren)",
+   "p": 1.579
+  },
+  {
+   "n": "Gasolinera Noáin",
+   "d": "Polígono Talluntxe II, s/n (Aranguren)",
+   "p": 1.529
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-121 km 5 (Aranguren)",
+   "p": 1.71
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
+   "p": 1.789
+  },
+  {
+   "n": "Cepsa",
+   "d": "Ronda de Barañáin, 2 (Barañáin)",
+   "p": 1.749
+  },
+  {
+   "n": "E.Leclerc",
+   "d": "Calle Arrobia, s/n (Zizur Mayor)",
+   "p": 1.499
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Estella, 9 (Zizur Mayor)",
+   "p": 1.74
+  },
+  {
+   "n": "Ballenoil",
+   "d": "Autovía A-12 km 7,3 (Astráin, Cizur)",
+   "p": 1.499
+  },
+  {
+   "n": "Cepsa",
+   "d": "Autovía A-12 km 7,3 (Gazólaz, Cizur)",
+   "p": 1.769
+  },
+  {
+   "n": "Petronor",
+   "d": "Carretera NA-7000 km 5,3 (Arazuri, Olza)",
+   "p": 1.7
+  },
+  {
+   "n": "Petro Swap",
+   "d": "Parque Empresarial La Muga, 7 (Orcoyen)",
+   "p": 1.579
+  },
+  {
+   "n": "E.Leclerc",
+   "d": "Barrio La Morea (Cordovilla)",
+   "p": 1.499
+  },
+  {
+   "n": "Moeve",
+   "d": "Polígono Cordovilla-Galar, parcela 382 (Cordovilla)",
+   "p": 1.71
+  },
+  {
+   "n": "Bidasoa Combustibles",
+   "d": "Polígono Y, 10 (Noáin)",
+   "p": 1.529
+  },
+  {
+   "n": "Moeve",
+   "d": "Autopista AP-15 km 78 (Imarcoáin)",
+   "p": 1.71
+  },
+  {
+   "n": "Andamur",
+   "d": "Avenida Este, Ciudad del Transporte (Imarcoáin)",
+   "p": 1.728
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-121, 5 (Noáin)",
+   "p": 1.71
+  },
+  {
+   "n": "Ballenoil",
+   "d": "N-121 km 9,4 (Beriáin)",
+   "p": 1.549
+  },
+  {
+   "n": "Moeve",
+   "d": "N-121 km 9,4 (Beriáin)",
+   "p": 1.71
+  }
+ ]
+}

@@ -1,1 +1,9 @@
-# Gasolineras-Pamplona
+# Gasolineras Pamplona y comarca
+
+Web con los precios de diésel y gasolina 95 de las gasolineras de Pamplona y su comarca, ordenadas de más barata a más cara.
+
+- **Web:** https://krumkk.github.io/gasolineras-pamplona/
+- **Datos:** API oficial del Ministerio para la Transición Ecológica.
+- **Actualización:** la GitHub Action `Actualizar precios` se ejecuta dos veces al día, descarga los precios y guarda `data/precios.json` y `data/historial.json`. También se puede lanzar a mano desde la pestaña *Actions → Actualizar precios → Run workflow*.
+
+Municipios incluidos: Pamplona/Iruña, Burlada, Villava, Ansoáin, Berriozar, Berrioplano, Huarte, Valle de Egüés, Aranguren, Barañáin, Zizur Mayor, Cendea de Cizur, Orkoien, Cendea de Olza, Galar, Noáin (Valle de Elorz) y Beriáin. Se cambian en `scripts/actualizar.py` (`MUNICIPIOS`).

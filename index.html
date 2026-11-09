@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Gasolineras Pamplona y comarca</title>
+<meta name="description" content="Precios de diésel y gasolina 95 en Pamplona y comarca, de más barata a más cara.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9B%BD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Lista de surtidor: recomendación del día arriba, ajustes, tickets de más barato a más caro */
+:root{
+  --bg:#f6f8fb; --surface:#ffffff; --ink:#26323d; --muted:#6b7884; --line:#e2e8ee;
+  --mint:#d9f2e6; --mint-ink:#1f6b4a; --sky:#dcebfa; --sky-ink:#245a8c;
+  --peach:#fde6d8; --peach-ink:#9a4a1e; --lav:#ebe5fa; --lav-ink:#5a4796;
+  --display:"Fraunces",Georgia,serif; --body:"Nunito Sans",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#171c22; --surface:#20262e; --ink:#e7edf2; --muted:#9aa7b3; --line:#2f3741;
+  --mint:#1f3a30; --mint-ink:#9be0bf; --sky:#1f3248; --sky-ink:#a9cdf2;
+  --peach:#3e2a1f; --peach-ink:#f5bf9c; --lav:#2c2742; --lav-ink:#c8bcf2; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#171c22; --surface:#20262e; --ink:#e7edf2; --muted:#9aa7b3; --line:#2f3741;
+  --mint:#1f3a30; --mint-ink:#9be0bf; --sky:#1f3248; --sky-ink:#a9cdf2;
+  --peach:#3e2a1f; --peach-ink:#f5bf9c; --lav:#2c2742; --lav-ink:#c8bcf2; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:16px;padding-block:20px 32px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+h1{font:700 1.9rem/1.1 var(--display);margin:0;text-wrap:balance}
+.sub{color:var(--muted);font-size:.85rem;margin-top:4px}
+button{font:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:3px solid var(--lav-ink);outline-offset:2px}
+.refresh{border:0;border-radius:999px;background:var(--sky);color:var(--sky-ink);font-weight:700;padding:10px 16px;display:inline-flex;gap:8px;align-items:center}
+.refresh[disabled]{opacity:.6;cursor:default}
+.loading .spin{display:inline-block;animation:r 1s linear infinite}
+@keyframes r{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.loading .spin{animation:none}}
+.status{font-size:.82rem;color:var(--sky-ink);background:var(--sky);border-radius:12px;padding:8px 12px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:14px}
+.label{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:7px 13px;font-weight:600;font-size:.9rem}
+.chip[aria-pressed="true"]{background:var(--mint);color:var(--mint-ink);border-color:transparent}
+.litros{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.litros input{width:110px;font:700 1.6rem var(--mono);text-align:center;border:1px solid var(--line);border-radius:12px;padding:6px;background:var(--bg);color:var(--ink)}
+.step{border:0;width:40px;height:40px;border-radius:12px;background:var(--lav);color:var(--lav-ink);font-weight:700;font-size:1.2rem}
+.quick{display:flex;gap:6px;flex-wrap:wrap}
+.quick button{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:8px;padding:4px 9px;font-size:.82rem}
+.best-day{background:var(--lav);border-color:transparent}
+.best-day .label{color:var(--lav-ink)}
+.bd-head{font:700 1.6rem/1.15 var(--display);color:var(--lav-ink);text-wrap:balance}
+.bd-text{font-size:.92rem}
+.bd-text:empty,.bd-foot:empty,.bars:empty{display:none}
+.bars{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;align-items:end;height:130px}
+.bar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;height:100%;min-width:0}
+.bar i{display:block;width:100%;border-radius:8px 8px 4px 4px;background:var(--surface)}
+.bar.win i{background:var(--mint-ink)}
+.bar.lose i{background:var(--peach-ink);opacity:.55}
+.bar.none i{background:transparent;border:1px dashed var(--lav-ink);opacity:.4}
+.bar small{font:600 .66rem var(--mono);color:var(--lav-ink);white-space:nowrap}
+.bar span{font-size:.75rem;font-weight:700;color:var(--lav-ink)}
+.bd-foot{font-size:.75rem;color:var(--lav-ink);opacity:.85}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.summary div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px;min-width:0}
+.summary b{display:block;font:700 1.1rem var(--mono);font-variant-numeric:tabular-nums}
+.summary span{font-size:.75rem;color:var(--muted)}
+.list{display:flex;flex-direction:column;gap:10px;list-style:none;margin:0;padding:0}
+.st{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 14px;display:grid;grid-template-columns:30px 1fr auto;gap:12px;align-items:center}
+.st.best{background:var(--mint);border-color:transparent}
+.rank{font:700 .95rem var(--mono);color:var(--muted);text-align:center}
+.best .rank{color:var(--mint-ink)}
+.info{min-width:0}
+.name{font-weight:700;overflow-wrap:anywhere}
+.addr{font-size:.82rem;color:var(--muted);overflow-wrap:anywhere}
+.addr a{color:var(--sky-ink)}
+.price{text-align:right;font-variant-numeric:tabular-nums}
+.total{font:700 1.2rem var(--mono)}
+.pl{font:.8rem var(--mono);color:var(--muted)}
+.diff{display:inline-block;margin-top:3px;font:600 .72rem var(--mono);padding:1px 7px;border-radius:999px;background:var(--peach);color:var(--peach-ink)}
+.best .diff{background:var(--surface);color:var(--mint-ink)}
+.empty{padding:16px;border-radius:14px;border:1px dashed var(--line);color:var(--muted);text-align:center}
+.note{font-size:.75rem;color:var(--muted);text-align:center}
+.note a{color:var(--sky-ink)}
+@media (max-width:420px){.summary b{font-size:.95rem}.st{grid-template-columns:24px 1fr auto;gap:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Gasolineras Pamplona y comarca</h1>
+      <div class="sub" id="stamp">Cargando precios guardados…</div>
+    </div>
+  </header>
+  
+  <section class="panel best-day" aria-label="Mejor día para repostar">
+    <div class="label" id="bdLabel">Mejor día para llenar</div>
+    <div id="bdHead" class="bd-head">Lunes</div>
+    <div id="bdText" class="bd-text"></div>
+    <div class="bars" id="bars"></div>
+    <div class="bd-foot" id="bdFoot"></div>
+  </section>
+
+  <section class="panel" aria-label="Configuración">
+    <div>
+      <div class="label">Combustible</div>
+      <div class="chips" id="fuels">
+        <button class="chip" type="button" id="f-diesel" data-k="diesel" aria-pressed="true">Diésel</button>
+        <button class="chip" type="button" id="f-g95" data-k="g95" aria-pressed="false">Gasolina 95</button>
+      </div>
+    </div>
+    <div>
+      <div class="label">Litros a repostar</div>
+      <div class="litros">
+        <button class="step" type="button" id="minus" aria-label="Menos 5 litros">−</button>
+        <input id="litros" type="number" inputmode="decimal" min="1" max="200" step="1" value="50" aria-label="Litros">
+        <button class="step" type="button" id="plus" aria-label="Más 5 litros">+</button>
+        <div class="quick" id="quick"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="summary" id="summary" hidden>
+    <div><span>Más barata</span><b id="sMin">–</b></div>
+    <div><span>Más cara</span><b id="sMax">–</b></div>
+    <div><span>Ahorro máx.</span><b id="sSave">–</b></div>
+  </div>
+
+  <ol class="list" id="list"><li class="empty">Aquí aparecerán las gasolineras de Pamplona y comarca ordenadas de más barata a más cara.</li></ol>
+  <p class="note">Precios de las propias estaciones, publicados por el Ministerio para la Transición Ecológica. Se actualizan solos cada mañana y cada tarde. <a href="https://github.com/KrumKK/gasolineras-pamplona">Código en GitHub</a>.</p>
+</div>
+
+<script>
+const DIAS = ["lunes","martes","miércoles","jueves","viernes","sábado","domingo"];
+const DIAS_C = ["Lun","Mar","Mié","Jue","Vie","Sáb","Dom"];
+const FUEL_N = {diesel:"diésel", g95:"gasolina 95"};
+const $ = id => document.getElementById(id);
+const eur = n => n.toLocaleString("es-ES",{style:"currency",currency:"EUR"});
+const f3 = p => p.toFixed(3).replace(".",",");
+const esc = t => String(t??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function get(k,d){try{return localStorage.getItem("gp_"+k) ?? d}catch(e){return d}}
+function put(k,v){try{localStorage.setItem("gp_"+k,v)}catch(e){}}
+
+const st = {fuel: get("fuel","diesel"), litros: +get("litros",50) || 50, doc: null, hist: {}};
+
+$("fuels").onclick = e => { const b=e.target.closest(".chip"); if(!b) return; st.fuel=b.dataset.k; put("fuel",st.fuel); render(); };
+$("quick").innerHTML = [20,30,40,50,60].map(v=>`<button type="button" data-v="${v}">${v} L</button>`).join("");
+$("quick").onclick = e => { const b=e.target.closest("button"); if(b) setL(+b.dataset.v); };
+$("litros").oninput = () => { const v=parseFloat($("litros").value); if(v>0){ st.litros=v; put("litros",v); render(); } };
+$("minus").onclick = () => setL(Math.max(1, st.litros-5));
+$("plus").onclick = () => setL(st.litros+5);
+function setL(v){ st.litros=v; $("litros").value=v; put("litros",v); render(); }
+$("litros").value = st.litros;
+
+function render(){
+  [...$("fuels").children].forEach(c=>c.setAttribute("aria-pressed", c.dataset.k===st.fuel));
+  if (st.doc){
+    const d = new Date(st.doc.ts);
+    $("stamp").textContent = "Actualizado " + d.toLocaleString("es-ES",{weekday:"long",day:"numeric",month:"long",hour:"2-digit",minute:"2-digit",timeZone:"Europe/Madrid"});
+  }
+  renderList(st.doc);
+  renderBestDay();
+}
+
+function mapa(x){
+  if (x.lat && x.lon) return "https://www.google.com/maps/search/?api=1&query="+x.lat+","+x.lon;
+  const loc=/\(([^)]+)\)\s*$/.exec(x.d||""), calle=loc?x.d.slice(0,loc.index).trim():x.d;
+  return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(x.n+" "+calle+", "+(loc?loc[1]:"Pamplona")+", Navarra");
+}
+
+function renderList(doc){
+  const rows = (doc?.[st.fuel] || []).filter(x=>x && x.p>0).slice().sort((a,b)=>a.p-b.p);
+  if (!rows.length){ $("summary").hidden=true; return; }
+  const L = st.litros, min = rows[0].p*L, max = rows[rows.length-1].p*L;
+  $("summary").hidden=false; $("sMin").textContent=eur(min); $("sMax").textContent=eur(max); $("sSave").textContent=eur(max-min);
+  $("list").innerHTML = rows.map((x,i)=>{
+    const tot=x.p*L;
+    return `<li class="st${i===0?" best":""}">
+      <div class="rank">${i+1}</div>
+      <div class="info"><div class="name">${esc(x.n)}</div>
+        <div class="addr"><a href="${mapa(x)}" target="_blank" rel="noopener">${esc(x.d)}</a></div></div>
+      <div class="price"><div class="total">${eur(tot)}</div><div class="pl">${f3(x.p)} €/L</div>
+        <span class="diff">${i===0?"La más barata":"+"+eur(tot-min)}</span></div></li>`;
+  }).join("");
+}
+
+/* Mejor día: precio medio de la zona por día de la semana, con el historial guardado */
+function renderBestDay(){
+  const sums = Array.from({length:7},()=>[0,0]);
+  let nDays = 0;
+  for (const [f,v] of Object.entries(st.hist)){
+    const p = v?.[st.fuel]; if (!(p>0)) continue;
+    const wd = (new Date(f+"T12:00:00").getDay()+6)%7;
+    sums[wd][0] += p; sums[wd][1]++; nDays++;
+  }
+  const avg = sums.map(([s,n])=> n ? s/n : null);
+  const covered = avg.filter(v=>v!==null).length;
+  const fuel = FUEL_N[st.fuel];
+
+  if (covered < 7){
+    $("bdLabel").textContent = "Mejor día para llenar · patrón en España";
+    $("bdHead").textContent = "Llena el depósito el lunes";
+    $("bdText").textContent = `Según la OCU, el lunes suele ser el día más barato y el fin de semana el más caro (unos 4–5 € más por depósito de 50 L). La web guarda los precios de la comarca cada día: cuando tenga datos de los 7 días de la semana, la recomendación saldrá de los precios reales de aquí.`;
+    $("bars").innerHTML = barsHTML(avg, null, null);
+    $("bdFoot").textContent = `${covered} de 7 días de la semana con datos (${nDays} ${nDays===1?"día guardado":"días guardados"}).`;
+    return;
+  }
+  const valid = avg.filter(v=>v!==null), lo=Math.min(...valid), hi=Math.max(...valid);
+  const best=avg.indexOf(lo), worst=avg.indexOf(hi);
+  $("bdLabel").textContent = `Mejor día para llenar · Pamplona y comarca, últimos ${nDays} días`;
+  if ((hi-lo)*100 < 0.3){
+    $("bdHead").textContent = "Da igual el día";
+    $("bdText").textContent = `En la comarca el ${fuel} cuesta prácticamente lo mismo todos los días. Lo que ahorra es elegir la gasolinera más barata de la lista.`;
+  } else {
+    $("bdHead").textContent = `Llena el depósito el ${DIAS[best]}`;
+    $("bdText").textContent = `Es el día más barato de media para ${fuel}: ${f3(lo)} €/L. El más caro es el ${DIAS[worst]} (${f3(hi)} €/L). Con ${st.litros} L ahorras unos ${eur((hi-lo)*st.litros)} por depósito, y más si eliges la gasolinera más barata.`;
+  }
+  $("bars").innerHTML = barsHTML(avg, best, worst, lo, hi);
+  $("bdFoot").textContent = "Precio medio de las gasolineras de Pamplona y comarca. La barra más baja es la mejor.";
+}
+function barsHTML(avg,best,worst,lo,hi){
+  const v = avg.filter(x=>x!==null);
+  if (lo===undefined && v.length){ lo=Math.min(...v); hi=Math.max(...v); }
+  const span = Math.max((hi??0)-(lo??0), 0.001);
+  return avg.map((x,i)=>{
+    if (x===null) return `<div class="bar none"><small>–</small><i style="height:30%"></i><span>${DIAS_C[i]}</span></div>`;
+    const h = 25 + 75*(x-lo)/span, cls = i===best?"win":(i===worst?"lose":"");
+    return `<div class="bar ${cls}"><small>${f3(x)}</small><i style="height:${h}%"></i><span>${DIAS_C[i]}</span></div>`;
+  }).join("");
+}
+
+(async () => {
+  const q = "?v=" + Date.now();
+  try{
+    const [p,h] = await Promise.all([fetch("data/precios.json"+q), fetch("data/historial.json"+q)]);
+    st.doc = await p.json();
+    st.hist = h.ok ? await h.json() : {};
+  }catch(e){ $("stamp").textContent = "No se han podido cargar los precios."; }
+  render();
+})();
+render();
+</script>
+</body>
+</html>
