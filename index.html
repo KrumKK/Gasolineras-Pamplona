@@ -68,6 +68,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--lav-ink);outlin
 .bar.none i{background:transparent;border:1px dashed var(--lav-ink);opacity:.4}
 .bar small{font:600 .66rem var(--mono);color:var(--lav-ink);white-space:nowrap}
 .bar span{font-size:.75rem;font-weight:700;color:var(--lav-ink)}
+.bars-cap{font-size:.78rem;font-weight:700;color:var(--lav-ink);margin-bottom:-4px}
 .bd-foot{font-size:.75rem;color:var(--lav-ink);opacity:.85}
 .summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .summary div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px;min-width:0}
@@ -150,6 +151,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-grad
     <div class="label" id="bdLabel">Mejor día para llenar</div>
     <div id="bdHead" class="bd-head">Lunes</div>
     <div id="bdText" class="bd-text"></div>
+    <div class="bars-cap" id="barsCap"></div>
     <div class="bars" id="bars"></div>
     <div class="bd-foot" id="bdFoot"></div>
   </section>
@@ -287,8 +289,9 @@ function renderBestDay(){
     $("bdLabel").textContent = "Mejor día para llenar · patrón en España";
     $("bdHead").textContent = "Llena el depósito el lunes";
     $("bdText").textContent = `Según la OCU, el lunes suele ser el día más barato y el fin de semana el más caro (unos 4–5 € más por depósito de 50 L). La web guarda los precios de la comarca cada día: cuando tenga datos de los 7 días de la semana, la recomendación saldrá de los precios reales de aquí.`;
+    $("barsCap").textContent = `Precio medio del ${fuel} por día de la semana (€/L)`;
     $("bars").innerHTML = barsHTML(avg, null, null);
-    $("bdFoot").textContent = `${covered} de 7 días de la semana con datos (${nDays} ${nDays===1?"día guardado":"días guardados"}).`;
+    $("bdFoot").textContent = `Es la media de todas las gasolineras de la comarca, no el precio de una gasolinera concreta. Hay ${covered} de 7 días de la semana con datos (${nDays} ${nDays===1?"día guardado":"días guardados"}).`;
     return;
   }
   const valid = avg.filter(v=>v!==null), lo=Math.min(...valid), hi=Math.max(...valid);
@@ -301,8 +304,9 @@ function renderBestDay(){
     $("bdHead").textContent = `Llena el depósito el ${DIAS[best]}`;
     $("bdText").textContent = `Es el día más barato de media para ${fuel}: ${f3(lo)} €/L. El más caro es el ${DIAS[worst]} (${f3(hi)} €/L). Con ${st.litros} L ahorras unos ${eur((hi-lo)*st.litros)} por depósito, y más si eliges la gasolinera más barata.`;
   }
-  $("bars").innerHTML = barsHTML(avg, best, worst, lo, hi);
-  $("bdFoot").textContent = "Precio medio de las gasolineras de Pamplona y comarca. La barra más baja es la mejor.";
+  $("barsCap").textContent = `Precio medio del ${fuel} por día de la semana (€/L)`;
+    $("bars").innerHTML = barsHTML(avg, best, worst, lo, hi);
+  $("bdFoot").textContent = "Es la media de todas las gasolineras de la comarca, no el precio de una gasolinera concreta. La barra más baja es el mejor día.";
 }
 function barsHTML(avg,best,worst,lo,hi){
   const v = avg.filter(x=>x!==null);
