@@ -4,7 +4,7 @@ de las gasolineras de Pamplona y comarca y los guarda en data/.
 - data/precios.json   -> última lectura (la usa la web)
 - data/historial.json -> precio medio por día, para el "mejor día para llenar"
 """
-import json, os, re, sys, unicodedata, urllib.request
+import json, os, re, ssl, subprocess, sys, time, unicodedata, urllib.request
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -64,11 +64,36 @@ def precio(v):
         return None
 
 
+def descargar(intentos=5):
+    """El servidor del Ministerio a veces corta la conexión (SSL EOF).
+    Se reintenta varias veces, alternando Python y curl, con esperas crecientes."""
+    ctx = ssl.create_default_context()
+    ctx.options |= getattr(ssl, "OP_LEGACY_SERVER_CONNECT", 0x4)
+    headers = {"Accept": "application/json", "User-Agent": "Mozilla/5.0 (gasolineras-pamplona)"}
+    ultimo = None
+    for i in range(1, intentos + 1):
+        try:
+            if i % 2:
+                req = urllib.request.Request(API, headers=headers)
+                with urllib.request.urlopen(req, timeout=90, context=ctx) as r:
+                    texto = r.read().decode("utf-8-sig")
+            else:
+                texto = subprocess.run(
+                    ["curl", "-sS", "--fail", "--retry", "2", "--max-time", "90",
+                     "-H", "Accept: application/json", "-A", headers["User-Agent"], API],
+                    check=True, capture_output=True, text=True).stdout.lstrip("\ufeff")
+            return json.loads(texto)
+        except Exception as e:  # noqa: BLE001
+            ultimo = e
+            espera = 15 * i
+            print(f"Intento {i}/{intentos} fallido: {e}. Reintento en {espera} s.")
+            if i < intentos:
+                time.sleep(espera)
+    sys.exit(f"No se pudo descargar del Ministerio tras {intentos} intentos: {ultimo}")
+
+
 def main():
-    req = urllib.request.Request(API, headers={"Accept": "application/json",
-                                               "User-Agent": "gasolineras-pamplona/1.0"})
-    with urllib.request.urlopen(req, timeout=90) as r:
-        raw = json.loads(r.read().decode("utf-8-sig"))
+    raw = descargar()
     lista = raw.get("ListaEESSPrecio") or []
     if not lista:
         sys.exit("La API no ha devuelto gasolineras: no se guarda nada.")
