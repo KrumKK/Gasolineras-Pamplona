@@ -19,7 +19,8 @@ MUNICIPIOS = [
     "cizur", "cendea de cizur", "orkoien", "orcoyen", "olza", "cendea de olza",
     "galar", "noain", "elortzibar", "beriain",
 ]
-COMBUSTIBLES = {"diesel": "Precio Gasoleo A", "g95": "Precio Gasolina 95 E5"}
+COMBUSTIBLES = {"diesel": "Precio Gasoleo A", "g95": "Precio Gasolina 95 E5",
+                "g98": "Precio Gasolina 98 E5"}
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 MINUSC = {"de", "del", "la", "las", "el", "los", "y", "s/n", "sn", "a", "en"}
@@ -159,7 +160,8 @@ def main():
     print(f"Municipios: {sorted(municipios)}")
     print(f"Diésel: {len(out['diesel'])} · G95: {len(out['g95'])} · "
           f"más barato diésel {out['diesel'][0]['p'] if out['diesel'] else '-'} · "
-          f"g95 {out['g95'][0]['p'] if out['g95'] else '-'}")
+          f"g95 {out['g95'][0]['p'] if out['g95'] else '-'} · "
+          f"g98: {len(out['g98'])}")
 
 
 if __name__ == "__main__":
