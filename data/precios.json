@@ -1,8 +1,8 @@
 {
- "ts": "2026-11-09T08:59:12+01:00",
+ "ts": "2026-11-09T09:08:40+01:00",
  "fecha": "2026-11-09",
  "fuente": "Ministerio para la Transición Ecológica (geoportalgasolineras.es)",
- "fecha_ministerio": "09/11/2026 8:59:11",
+ "fecha_ministerio": "09/11/2026 9:08:38",
  "diesel": [
   {
    "n": "Ballenoil",
@@ -313,13 +313,6 @@
    "lon": -1.635278
   },
   {
-   "n": "Repsol",
-   "d": "Cl Carretera de Artica,s.n.",
-   "p": 1.93,
-   "lat": 42.8355,
-   "lon": -1.653361
-  },
-  {
    "n": "Petronor",
    "d": "Cl Poligono Landaben, S.n.",
    "p": 1.934,
@@ -370,10 +363,17 @@
   },
   {
    "n": "Repsol",
+   "d": "Cl Carretera de Artica,s.n.",
+   "p": 1.94,
+   "lat": 42.8355,
+   "lon": -1.653361
+  },
+  {
+   "n": "Repsol",
    "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
    "p": 1.959,
-   "lat": 42.80175,
-   "lon": -1.612667
+   "lat": 42.800611,
+   "lon": -1.611611
   },
   {
    "n": "Cepsa",
@@ -759,8 +759,8 @@
    "n": "Repsol",
    "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
    "p": 1.789,
-   "lat": 42.80175,
-   "lon": -1.612667
+   "lat": 42.800611,
+   "lon": -1.611611
   },
   {
    "n": "Repsol",
