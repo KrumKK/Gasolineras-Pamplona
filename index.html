@@ -74,20 +74,36 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--lav-ink);outlin
 .summary div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px;min-width:0}
 .summary b{display:block;font:700 1.1rem var(--mono);font-variant-numeric:tabular-nums}
 .summary span{font-size:.75rem;color:var(--muted)}
+.top-head{display:flex;flex-direction:column;gap:2px;margin:6px 2px -2px}
+.top-head h3{margin:0;font:700 1.35rem var(--display);color:#fff}
+.top-head span{font-size:.78rem;color:rgba(255,255,255,.7)}
 .list{display:flex;flex-direction:column;gap:10px;list-style:none;margin:0;padding:0}
-.st{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 14px;display:grid;grid-template-columns:30px 1fr auto;gap:12px;align-items:center}
-.st.best{background:var(--mint);border-color:transparent}
-.rank{font:700 .95rem var(--mono);color:var(--muted);text-align:center}
-.best .rank{color:var(--mint-ink)}
+.st{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 18px -14px rgba(0,0,0,.6)}
+.st summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 38px 1fr auto;gap:10px;align-items:center;padding:12px 14px 14px}
+.st summary::-webkit-details-marker{display:none}
+.rank{font:700 .95rem var(--mono);color:var(--muted);text-align:center;width:30px;height:30px;line-height:30px;border-radius:50%}
+.m1 .rank{background:linear-gradient(135deg,#ffe27a,#d4a017);color:#4a3400}
+.m2 .rank{background:linear-gradient(135deg,#f1f4f7,#a9b4be);color:#2f3a44}
+.m3 .rank{background:linear-gradient(135deg,#f3c39b,#b8723d);color:#3f2210}
+.marca{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font:800 1rem var(--body);color:#fff;letter-spacing:-.02em}
 .info{min-width:0}
-.name{font-weight:700;overflow-wrap:anywhere}
-.addr{font-size:.82rem;color:var(--muted);overflow-wrap:anywhere}
-.addr a{color:var(--sky-ink)}
+.name{font-weight:800;line-height:1.2;overflow-wrap:anywhere}
+.loc{font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:4px}
 .price{text-align:right;font-variant-numeric:tabular-nums}
-.total{font:700 1.2rem var(--mono)}
-.pl{font:.8rem var(--mono);color:var(--muted)}
-.diff{display:inline-block;margin-top:3px;font:600 .72rem var(--mono);padding:1px 7px;border-radius:999px;background:var(--peach);color:var(--peach-ink)}
-.best .diff{background:var(--surface);color:var(--mint-ink)}
+.total{font:700 1.15rem var(--mono);white-space:nowrap}
+.pl{font:.76rem var(--mono);color:var(--muted);white-space:nowrap}
+.diff{display:inline-block;margin-top:3px;font:600 .7rem var(--mono);padding:1px 7px;border-radius:999px;background:var(--peach);color:var(--peach-ink);white-space:nowrap}
+.meter{grid-column:1/-1;height:6px;margin:2px 2px 0;border-radius:999px;background:linear-gradient(90deg,#2fae7c,#e9c46a 55%,#e4572e);position:relative;opacity:.9}
+.meter i{position:absolute;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--surface);border:3px solid var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.more{padding:2px 14px 14px;font-size:.85rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.go{display:inline-flex;align-items:center;gap:6px;background:var(--sky-ink);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:7px 14px;font-size:.85rem}
+.st.m1{background:linear-gradient(135deg,var(--mint),var(--surface) 70%);border-color:transparent;box-shadow:0 10px 26px -14px rgba(30,107,82,.8)}
+.st.m1 .total{font-size:1.45rem;color:var(--mint-ink)}
+.st.m1 .name{font-size:1.08rem}
+.st.m1 .diff{background:var(--mint-ink);color:#fff}
+.ver-mas{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;border-radius:14px;padding:12px;font-weight:700;width:100%}
+.ver-mas:hover{background:rgba(255,255,255,.14)}
+@media (max-width:420px){.st summary{grid-template-columns:28px 34px 1fr auto;gap:8px;padding:11px 12px 9px}.marca{width:34px;height:34px;border-radius:10px;font-size:.9rem}.rank{width:26px;height:26px;line-height:26px;font-size:.85rem}}
 .empty{padding:16px;border-radius:14px;border:1px dashed var(--line);color:var(--muted);text-align:center}
 .note{font-size:.75rem;color:var(--muted);text-align:center}
 .note a{color:var(--sky-ink)}
@@ -187,7 +203,9 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-grad
     <div><span id="lSave">Ahorro máx.</span><b id="sSave">–</b></div>
   </div>
 
+  <div class="top-head" id="topHead" hidden><h3 id="topTitle">Top 10</h3><span id="topSub"></span></div>
   <ol class="list" id="list"><li class="empty">Aquí aparecerán las gasolineras de Pamplona y comarca ordenadas de más barata a más cara.</li></ol>
+  <button class="ver-mas" type="button" id="verMas" hidden></button>
   <p class="note">Precios de las propias estaciones, publicados por el Ministerio para la Transición Ecológica. Se actualizan solos cada mañana y cada tarde. <a href="https://github.com/KrumKK/Gasolineras-Pamplona">Código en GitHub</a>.</p>
   <div class="firma"><img src="kkk-logo.png" alt="" width="30" height="30"><span>Diseñada y desarrollada por <b>KKK</b></span></div>
 </div>
@@ -203,7 +221,7 @@ const esc = t => String(t??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">"
 function get(k,d){try{return localStorage.getItem("gp_"+k) ?? d}catch(e){return d}}
 function put(k,v){try{localStorage.setItem("gp_"+k,v)}catch(e){}}
 
-const st = {fuel: get("fuel","diesel"), modo: get("modo","L"), litros: +get("litros",50) || 50, euros: +get("euros",50) || 50, doc: null, hist: {}};
+const st = {fuel: get("fuel","diesel"), modo: get("modo","L"), litros: +get("litros",50) || 50, euros: +get("euros",50) || 50, doc: null, hist: {}, todas: false};
 const lt = n => n.toLocaleString("es-ES",{minimumFractionDigits:1,maximumFractionDigits:1})+" L";
 const cant = () => st.modo==="E" ? st.euros : st.litros;
 
@@ -244,7 +262,7 @@ function mapa(x){
 function renderList(doc){
   const rows = (doc?.[st.fuel] || []).filter(x=>x && x.p>0).slice().sort((a,b)=>a.p-b.p);
   if (!rows.length){
-    $("summary").hidden=true; $("heroSave").innerHTML="";
+    $("summary").hidden=true; $("heroSave").innerHTML=""; $("topHead").hidden=true; $("verMas").hidden=true;
     if (doc) $("list").innerHTML = `<li class="empty">Todavía no hay precios de ${FUEL_N[st.fuel]}. Aparecerán en la próxima actualización.</li>`;
     return;
   }
@@ -264,14 +282,32 @@ function renderList(doc){
     filas = rows.map((x,i)=>({x, big:eur(x.p*L), diff: i===0?"La más barata":"+"+eur(x.p*L-min)}));
   }
   $("summary").hidden=false;
-  $("list").innerHTML = filas.map(({x,big,diff},i)=>`<li class="st${i===0?" best":""}">
-      <div class="rank">${i+1}</div>
-      <div class="info"><div class="name">${esc(x.n)}</div>
-        <div class="addr"><a href="${mapa(x)}" target="_blank" rel="noopener">${esc(x.d)}</a></div></div>
-      <div class="price"><div class="total">${big}</div><div class="pl">${f3(x.p)} €/L</div>
-        <span class="diff">${diff}</span></div></li>`).join("");
+  const N = 10, vis = st.todas ? filas : filas.slice(0,N), span = Math.max(pMax-pMin, 0.001);
+  $("topHead").hidden=false;
+  $("topTitle").textContent = st.todas ? `Las ${filas.length} gasolineras` : `Top ${Math.min(N,filas.length)} más baratas`;
+  $("topSub").textContent = `${fuel} · toca una para ver cómo llegar`;
+  $("list").innerHTML = vis.map(({x,big,diff},i)=>{
+    const loc=/\(([^)]+)\)\s*$/.exec(x.d||""), calle=loc?x.d.slice(0,loc.index).trim():x.d, sitio=loc?loc[1]:"Pamplona";
+    const pos = Math.round(100*(x.p-pMin)/span);
+    return `<li><details class="st${i<3?" m"+(i+1):""}">
+      <summary>
+        <div class="rank">${i+1}</div>
+        <div class="marca" style="background:${colorMarca(x.n)}">${esc(inicial(x.n))}</div>
+        <div class="info"><div class="name">${esc(x.n)}</div><div class="loc">📍 ${esc(sitio)}</div></div>
+        <div class="price"><div class="total">${big}</div><div class="pl">${f3(x.p)} €/L</div><span class="diff">${diff}</span></div>
+        <div class="meter" title="Posición entre la más barata y la más cara"><i style="left:${pos}%"></i></div>
+      </summary>
+      <div class="more"><span>${esc(calle)}</span><a class="go" href="${mapa(x)}" target="_blank" rel="noopener">Cómo llegar ➜</a></div>
+    </details></li>`;
+  }).join("");
+  const resto = filas.length - N;
+  $("verMas").hidden = resto <= 0;
+  $("verMas").textContent = st.todas ? "Ver solo el top 10" : `Ver las ${resto} restantes`;
 }
-
+$("verMas").onclick = () => { st.todas = !st.todas; render(); if(!st.todas) $("topHead").scrollIntoView({behavior:"smooth"}); };
+function inicial(n){ const w=(n||"?").replace(/[^\p{L}\p{N} ]/gu," ").trim().split(/\s+/); return (w.length>1 && w[0].length<=2 ? w[0]+w[1][0] : w[0].slice(0,1)).toUpperCase().slice(0,2); }
+function colorMarca(n){ const pal=["#1f6690","#1e6b52","#7a3e9d","#c0392b","#d35400","#2c7a7b","#8e5b2a","#3d5a98","#b83280","#2f855a","#9c4221","#4a5568"];
+  let h=0; for(const c of (n||"")) h=(h*31+c.charCodeAt(0))>>>0; return pal[h%pal.length]; }
 /* Mejor día: precio medio de la zona por día de la semana, con el historial guardado */
 function renderBestDay(){
   const sums = Array.from({length:7},()=>[0,0]);
