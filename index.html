@@ -52,6 +52,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--lav-ink);outlin
 .litros{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .litros input{width:110px;font:700 1.6rem var(--mono);text-align:center;border:1px solid var(--line);border-radius:12px;padding:6px;background:var(--bg);color:var(--ink)}
 .step{border:0;width:40px;height:40px;border-radius:12px;background:var(--lav);color:var(--lav-ink);font-weight:700;font-size:1.2rem}
+.unit{font:700 1.2rem var(--mono);color:var(--muted);margin-left:-4px}
 .quick{display:flex;gap:6px;flex-wrap:wrap}
 .quick button{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:8px;padding:4px 9px;font-size:.82rem}
 .best-day{background:var(--lav);border-color:transparent}
@@ -140,7 +141,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-grad
     <div class="save" id="heroSave"></div>
     <ol class="steps">
       <li>Mira qué día sale más barato</li>
-      <li>Elige tu combustible y tus litros</li>
+      <li>Elige combustible, litros o euros</li>
       <li>Ve a la primera de la lista</li>
     </ol>
   </header>
@@ -159,23 +160,29 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-grad
       <div class="chips" id="fuels">
         <button class="chip" type="button" id="f-diesel" data-k="diesel" aria-pressed="true">Diésel</button>
         <button class="chip" type="button" id="f-g95" data-k="g95" aria-pressed="false">Gasolina 95</button>
+        <button class="chip" type="button" id="f-g98" data-k="g98" aria-pressed="false">Gasolina 98</button>
       </div>
     </div>
     <div>
-      <div class="label">Litros a repostar</div>
+      <div class="label">Quiero repostar</div>
+      <div class="chips" id="modos" style="margin-bottom:10px">
+        <button class="chip" type="button" data-m="L" aria-pressed="true">Por litros</button>
+        <button class="chip" type="button" data-m="E" aria-pressed="false">Por euros</button>
+      </div>
       <div class="litros">
-        <button class="step" type="button" id="minus" aria-label="Menos 5 litros">−</button>
-        <input id="litros" type="number" inputmode="decimal" min="1" max="200" step="1" value="50" aria-label="Litros">
-        <button class="step" type="button" id="plus" aria-label="Más 5 litros">+</button>
+        <button class="step" type="button" id="minus" aria-label="Menos 5">−</button>
+        <input id="litros" type="number" inputmode="decimal" min="1" max="500" step="1" value="50" aria-label="Cantidad">
+        <span class="unit" id="unit">L</span>
+        <button class="step" type="button" id="plus" aria-label="Más 5">+</button>
         <div class="quick" id="quick"></div>
       </div>
     </div>
   </section>
 
   <div class="summary" id="summary" hidden>
-    <div><span>Más barata</span><b id="sMin">–</b></div>
-    <div><span>Más cara</span><b id="sMax">–</b></div>
-    <div><span>Ahorro máx.</span><b id="sSave">–</b></div>
+    <div><span id="lMin">Más barata</span><b id="sMin">–</b></div>
+    <div><span id="lMax">Más cara</span><b id="sMax">–</b></div>
+    <div><span id="lSave">Ahorro máx.</span><b id="sSave">–</b></div>
   </div>
 
   <ol class="list" id="list"><li class="empty">Aquí aparecerán las gasolineras de Pamplona y comarca ordenadas de más barata a más cara.</li></ol>
@@ -186,7 +193,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-grad
 <script>
 const DIAS = ["lunes","martes","miércoles","jueves","viernes","sábado","domingo"];
 const DIAS_C = ["Lun","Mar","Mié","Jue","Vie","Sáb","Dom"];
-const FUEL_N = {diesel:"diésel", g95:"gasolina 95"};
+const FUEL_N = {diesel:"diésel", g95:"gasolina 95", g98:"gasolina 98"};
 const $ = id => document.getElementById(id);
 const eur = n => n.toLocaleString("es-ES",{style:"currency",currency:"EUR"});
 const f3 = p => p.toFixed(3).replace(".",",");
@@ -194,16 +201,27 @@ const esc = t => String(t??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">"
 function get(k,d){try{return localStorage.getItem("gp_"+k) ?? d}catch(e){return d}}
 function put(k,v){try{localStorage.setItem("gp_"+k,v)}catch(e){}}
 
-const st = {fuel: get("fuel","diesel"), litros: +get("litros",50) || 50, doc: null, hist: {}};
+const st = {fuel: get("fuel","diesel"), modo: get("modo","L"), litros: +get("litros",50) || 50, euros: +get("euros",50) || 50, doc: null, hist: {}};
+const lt = n => n.toLocaleString("es-ES",{minimumFractionDigits:1,maximumFractionDigits:1})+" L";
+const cant = () => st.modo==="E" ? st.euros : st.litros;
 
 $("fuels").onclick = e => { const b=e.target.closest(".chip"); if(!b) return; st.fuel=b.dataset.k; put("fuel",st.fuel); render(); };
-$("quick").innerHTML = [20,30,40,50,60].map(v=>`<button type="button" data-v="${v}">${v} L</button>`).join("");
+function pintaControles(){
+  const E = st.modo==="E";
+  [...$("modos").children].forEach(c=>c.setAttribute("aria-pressed", c.dataset.m===st.modo));
+  $("unit").textContent = E ? "€" : "L";
+  $("litros").value = cant();
+  $("litros").setAttribute("aria-label", E ? "Euros" : "Litros");
+  $("quick").innerHTML = (E?[20,30,40,50,70]:[20,30,40,50,60]).map(v=>`<button type="button" data-v="${v}">${v} ${E?"€":"L"}</button>`).join("");
+}
+$("modos").onclick = e => { const b=e.target.closest(".chip"); if(!b) return; st.modo=b.dataset.m; put("modo",st.modo); pintaControles(); render(); };
 $("quick").onclick = e => { const b=e.target.closest("button"); if(b) setL(+b.dataset.v); };
-$("litros").oninput = () => { const v=parseFloat($("litros").value); if(v>0){ st.litros=v; put("litros",v); render(); } };
-$("minus").onclick = () => setL(Math.max(1, st.litros-5));
-$("plus").onclick = () => setL(st.litros+5);
-function setL(v){ st.litros=v; $("litros").value=v; put("litros",v); render(); }
-$("litros").value = st.litros;
+$("litros").oninput = () => { const v=parseFloat($("litros").value); if(v>0) guarda(v); };
+$("minus").onclick = () => setL(Math.max(1, cant()-5));
+$("plus").onclick = () => setL(cant()+5);
+function guarda(v){ if(st.modo==="E"){ st.euros=v; put("euros",v); } else { st.litros=v; put("litros",v); } render(); }
+function setL(v){ $("litros").value=v; guarda(v); }
+pintaControles();
 
 function render(){
   [...$("fuels").children].forEach(c=>c.setAttribute("aria-pressed", c.dataset.k===st.fuel));
@@ -223,19 +241,33 @@ function mapa(x){
 
 function renderList(doc){
   const rows = (doc?.[st.fuel] || []).filter(x=>x && x.p>0).slice().sort((a,b)=>a.p-b.p);
-  if (!rows.length){ $("summary").hidden=true; return; }
-  const L = st.litros, min = rows[0].p*L, max = rows[rows.length-1].p*L;
-  $("heroSave").innerHTML = `Hoy, elegir bien te ahorra hasta<b>${eur(max-min)}</b>en un repostaje de ${L} L de ${FUEL_N[st.fuel]}`;
-  $("summary").hidden=false; $("sMin").textContent=eur(min); $("sMax").textContent=eur(max); $("sSave").textContent=eur(max-min);
-  $("list").innerHTML = rows.map((x,i)=>{
-    const tot=x.p*L;
-    return `<li class="st${i===0?" best":""}">
+  if (!rows.length){
+    $("summary").hidden=true; $("heroSave").innerHTML="";
+    if (doc) $("list").innerHTML = `<li class="empty">Todavía no hay precios de ${FUEL_N[st.fuel]}. Aparecerán en la próxima actualización.</li>`;
+    return;
+  }
+  const fuel = FUEL_N[st.fuel], pMin = rows[0].p, pMax = rows[rows.length-1].p;
+  let filas;
+  if (st.modo==="E"){
+    const E = st.euros, lMax = E/pMin, lMin = E/pMax;
+    $("heroSave").innerHTML = `Hoy, con ${eur(E)} eligiendo bien te llevas hasta<b>${lt(lMax-lMin)} más</b>de ${fuel} que en la más cara`;
+    $("lMin").textContent="Más litros"; $("lMax").textContent="Menos litros"; $("lSave").textContent="Diferencia";
+    $("sMin").textContent=lt(lMax); $("sMax").textContent=lt(lMin); $("sSave").textContent=lt(lMax-lMin);
+    filas = rows.map((x,i)=>({x, big:lt(E/x.p), diff: i===0?"Más litros":"−"+lt(lMax-E/x.p)}));
+  } else {
+    const L = st.litros, min = pMin*L, max = pMax*L;
+    $("heroSave").innerHTML = `Hoy, elegir bien te ahorra hasta<b>${eur(max-min)}</b>en un repostaje de ${L} L de ${fuel}`;
+    $("lMin").textContent="Más barata"; $("lMax").textContent="Más cara"; $("lSave").textContent="Ahorro máx.";
+    $("sMin").textContent=eur(min); $("sMax").textContent=eur(max); $("sSave").textContent=eur(max-min);
+    filas = rows.map((x,i)=>({x, big:eur(x.p*L), diff: i===0?"La más barata":"+"+eur(x.p*L-min)}));
+  }
+  $("summary").hidden=false;
+  $("list").innerHTML = filas.map(({x,big,diff},i)=>`<li class="st${i===0?" best":""}">
       <div class="rank">${i+1}</div>
       <div class="info"><div class="name">${esc(x.n)}</div>
         <div class="addr"><a href="${mapa(x)}" target="_blank" rel="noopener">${esc(x.d)}</a></div></div>
-      <div class="price"><div class="total">${eur(tot)}</div><div class="pl">${f3(x.p)} €/L</div>
-        <span class="diff">${i===0?"La más barata":"+"+eur(tot-min)}</span></div></li>`;
-  }).join("");
+      <div class="price"><div class="total">${big}</div><div class="pl">${f3(x.p)} €/L</div>
+        <span class="diff">${diff}</span></div></li>`).join("");
 }
 
 /* Mejor día: precio medio de la zona por día de la semana, con el historial guardado */
