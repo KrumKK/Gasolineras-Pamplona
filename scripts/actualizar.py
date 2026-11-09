@@ -15,8 +15,9 @@ FUENTE = "Ministerio para la Transición Ecológica (geoportalgasolineras.es)"
 # Municipios de la comarca (primer nombre oficial, sin tildes, en minúsculas)
 MUNICIPIOS = [
     "pamplona", "burlada", "villava", "ansoain", "berriozar", "berrioplano",
-    "huarte", "valle de egues", "aranguren", "baranain", "zizur mayor",
-    "cendea de cizur", "orkoien", "cendea de olza", "galar", "noain", "beriain",
+    "huarte", "egues", "valle de egues", "aranguren", "baranain", "zizur mayor",
+    "cizur", "cendea de cizur", "orkoien", "orcoyen", "olza", "cendea de olza",
+    "galar", "noain", "elortzibar", "beriain",
 ]
 COMBUSTIBLES = {"diesel": "Precio Gasoleo A", "g95": "Precio Gasolina 95 E5"}
 
