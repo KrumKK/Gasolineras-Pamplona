@@ -1,9 +1,16 @@
 {
- "ts": "2026-11-09T08:30:45+01:00",
+ "ts": "2026-11-09T08:59:12+01:00",
  "fecha": "2026-11-09",
  "fuente": "Ministerio para la Transición Ecológica (geoportalgasolineras.es)",
- "fecha_ministerio": "09/11/2026 8:30:44",
+ "fecha_ministerio": "09/11/2026 8:59:11",
  "diesel": [
+  {
+   "n": "Ballenoil",
+   "d": "Autovia A-12 km 7,3 (Astrain)",
+   "p": 1.699,
+   "lat": 42.778278,
+   "lon": -1.707139
+  },
   {
    "n": "Gasoleos Mercadaiz",
    "d": "Paraje San Babil 1, Bajo (Salinas de Pamplona)",
@@ -38,6 +45,13 @@
    "p": 1.729,
    "lat": 42.787028,
    "lon": -1.698306
+  },
+  {
+   "n": "Argi",
+   "d": "Pol. Comarca I, Parcela D 25 (Orcoyen)",
+   "p": 1.73,
+   "lat": 42.826417,
+   "lon": -1.688083
   },
   {
    "n": "AN Energéticos - Tajonar",
@@ -117,11 +131,25 @@
    "lon": -1.689
   },
   {
+   "n": "Petro Swap",
+   "d": "Parque Empresarial la Muga, 7 (Orcoyen)",
+   "p": 1.779,
+   "lat": 42.821639,
+   "lon": -1.688694
+  },
+  {
    "n": "Estacion DE Servicio Aralar",
    "d": "Ctra.guipuzcoa-n-240 km 5,5 (Aizoain)",
    "p": 1.789,
    "lat": 42.84325,
    "lon": -1.681528
+  },
+  {
+   "n": "AN Energeticos - Sarriguren",
+   "d": "Calle Olaz, 3 (Olaz)",
+   "p": 1.789,
+   "lat": 42.815556,
+   "lon": -1.590667
   },
   {
    "n": "AN Energeticos - Huarte",
@@ -143,6 +171,20 @@
    "p": 1.799,
    "lat": 42.737417,
    "lon": -1.630694
+  },
+  {
+   "n": "DST",
+   "d": "Carretera Na150 km 1,56 (Alzuza)",
+   "p": 1.799,
+   "lat": 42.826944,
+   "lon": -1.567917
+  },
+  {
+   "n": "AN Energeticos - Urroz",
+   "d": "Carretera NA-150 km 2 (Egues)",
+   "p": 1.799,
+   "lat": 42.826028,
+   "lon": -1.562972
   },
   {
    "n": "Alcampo",
@@ -215,6 +257,13 @@
    "lon": -1.633889
   },
   {
+   "n": "Petronor",
+   "d": "Carretera Cr NA-7000, 5,3 km 5,3 (Arazuri)",
+   "p": 1.914,
+   "lat": 42.818417,
+   "lon": -1.718111
+  },
+  {
    "n": "Repsol",
    "d": "Avenida Estella, 9 (Zizur Mayor)",
    "p": 1.92,
@@ -241,6 +290,13 @@
    "p": 1.93,
    "lat": 42.776111,
    "lon": -1.634722
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-135, 4,6 (Olaz)",
+   "p": 1.93,
+   "lat": 42.816111,
+   "lon": -1.593222
   },
   {
    "n": "Repsol",
@@ -307,6 +363,13 @@
   },
   {
    "n": "Repsol",
+   "d": "Carretera N-135 km 4,6 (Olaz)",
+   "p": 1.94,
+   "lat": 42.817194,
+   "lon": -1.59275
+  },
+  {
+   "n": "Repsol",
    "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
    "p": 1.959,
    "lat": 42.80175,
@@ -327,6 +390,13 @@
    "lon": -1.633722
   },
   {
+   "n": "Igoa Y Patxi SL",
+   "d": "Poligono Industrial, s/n (Egues)",
+   "p": 1.969,
+   "lat": 42.824167,
+   "lon": -1.563056
+  },
+  {
    "n": "Repsol",
    "d": "N-240 km 378 (Noain)",
    "p": 1.969,
@@ -339,6 +409,13 @@
    "p": 1.982,
    "lat": 42.7255,
    "lon": -1.616389
+  },
+  {
+   "n": "Cepsa",
+   "d": "Autovia A-12 km 7,3 (Gazolaz)",
+   "p": 1.989,
+   "lat": 42.7775,
+   "lon": -1.707611
   }
  ],
  "g95": [
@@ -348,6 +425,13 @@
    "p": 1.449,
    "lat": 42.846556,
    "lon": -1.686417
+  },
+  {
+   "n": "Ballenoil",
+   "d": "Autovia A-12 km 7,3 (Astrain)",
+   "p": 1.499,
+   "lat": 42.778278,
+   "lon": -1.707139
   },
   {
    "n": "E.Leclerc",
@@ -455,6 +539,13 @@
    "lon": -1.624917
   },
   {
+   "n": "Petro Swap",
+   "d": "Parque Empresarial la Muga, 7 (Orcoyen)",
+   "p": 1.579,
+   "lat": 42.821639,
+   "lon": -1.688694
+  },
+  {
    "n": "Avanza OIL Pamplona",
    "d": "Poligono Landaben, Calle F, 2",
    "p": 1.589,
@@ -462,11 +553,32 @@
    "lon": -1.684528
   },
   {
+   "n": "AN Energeticos - Sarriguren",
+   "d": "Calle Olaz, 3 (Olaz)",
+   "p": 1.609,
+   "lat": 42.815556,
+   "lon": -1.590667
+  },
+  {
    "n": "AN Energeticos - Huarte",
    "d": "Calle Olaz Chipi s/n, s/n (Huarte)",
    "p": 1.609,
    "lat": 42.827806,
    "lon": -1.597611
+  },
+  {
+   "n": "DST",
+   "d": "Carretera Na150 km 1,56 (Alzuza)",
+   "p": 1.629,
+   "lat": 42.826944,
+   "lon": -1.567917
+  },
+  {
+   "n": "AN Energeticos - Urroz",
+   "d": "Carretera NA-150 km 2 (Egues)",
+   "p": 1.629,
+   "lat": 42.826028,
+   "lon": -1.562972
   },
   {
    "n": "Galp",
@@ -495,6 +607,13 @@
    "p": 1.699,
    "lat": 42.725194,
    "lon": -1.611111
+  },
+  {
+   "n": "Petronor",
+   "d": "Carretera Cr NA-7000, 5,3 km 5,3 (Arazuri)",
+   "p": 1.7,
+   "lat": 42.818417,
+   "lon": -1.718111
   },
   {
    "n": "Petronor",
@@ -582,6 +701,20 @@
   },
   {
    "n": "Repsol",
+   "d": "Cr N-135, 4,6 (Olaz)",
+   "p": 1.74,
+   "lat": 42.816111,
+   "lon": -1.593222
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-135 km 4,6 (Olaz)",
+   "p": 1.74,
+   "lat": 42.817194,
+   "lon": -1.59275
+  },
+  {
+   "n": "Repsol",
    "d": "Calle Altxutxate, 50 (Huarte)",
    "p": 1.74,
    "lat": 42.818278,
@@ -614,6 +747,13 @@
    "p": 1.749,
    "lat": 42.806861,
    "lon": -1.67675
+  },
+  {
+   "n": "Cepsa",
+   "d": "Autovia A-12 km 7,3 (Gazolaz)",
+   "p": 1.769,
+   "lat": 42.7775,
+   "lon": -1.707611
   },
   {
    "n": "Repsol",
