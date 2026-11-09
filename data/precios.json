@@ -1,8 +1,8 @@
 {
- "ts": "2026-11-09T09:08:40+01:00",
+ "ts": "2026-11-09T09:22:41+01:00",
  "fecha": "2026-11-09",
  "fuente": "Ministerio para la Transición Ecológica (geoportalgasolineras.es)",
- "fecha_ministerio": "09/11/2026 9:08:38",
+ "fecha_ministerio": "09/11/2026 9:22:40",
  "diesel": [
   {
    "n": "Ballenoil",
@@ -773,6 +773,162 @@
    "n": "Repsol",
    "d": "N-240 km 378 (Noain)",
    "p": 1.799,
+   "lat": 42.756667,
+   "lon": -1.624167
+  }
+ ],
+ "g98": [
+  {
+   "n": "Adelfas",
+   "d": "Calle Maria Viscarret - Nuevo Artica, 39 (Berrioplano)",
+   "p": 1.759,
+   "lat": 42.842889,
+   "lon": -1.681833
+  },
+  {
+   "n": "Alcampo",
+   "d": "Poligono Mugazuri Parcela B, 4 (Burlada)",
+   "p": 1.769,
+   "lat": 42.830778,
+   "lon": -1.61925
+  },
+  {
+   "n": "Galp",
+   "d": "Calle Artica Esq C/ansoain, sn (Artica)",
+   "p": 1.804,
+   "lat": 42.831583,
+   "lon": -1.651222
+  },
+  {
+   "n": "Moeve",
+   "d": "Autopista AP-15 km 78 (Imarcoain)",
+   "p": 1.825,
+   "lat": 42.731944,
+   "lon": -1.616889
+  },
+  {
+   "n": "BP Huarte",
+   "d": "Calle Intxaurdia, 6 (Huarte)",
+   "p": 1.835,
+   "lat": 42.831361,
+   "lon": -1.585417
+  },
+  {
+   "n": "BP Villava",
+   "d": "Avenida Carretera Francia s/n, s/n (Villava O Atarrabia)",
+   "p": 1.835,
+   "lat": 42.834944,
+   "lon": -1.609389
+  },
+  {
+   "n": "Aralar",
+   "d": "Avenida Juan Pablo Ii, 23",
+   "p": 1.839,
+   "lat": 42.804028,
+   "lon": -1.627861
+  },
+  {
+   "n": "Andamur \"pamplona\"",
+   "d": "Avenida Este (ciudad del Transporte Pamplona), 1 (Imarcoain)",
+   "p": 1.848,
+   "lat": 42.732583,
+   "lon": -1.613972
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Estella, 9 (Zizur Mayor)",
+   "p": 1.85,
+   "lat": 42.792917,
+   "lon": -1.684194
+  },
+  {
+   "n": "Petronor",
+   "d": "Cl Poligono Landaben, S.n.",
+   "p": 1.864,
+   "lat": 42.814333,
+   "lon": -1.684278
+  },
+  {
+   "n": "Avia",
+   "d": "Calle Carretera Baodstain, 2",
+   "p": 1.869,
+   "lat": 42.813306,
+   "lon": -1.626333
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera Avd. Guipuzcoa N-240 km 4 (Berriozar)",
+   "p": 1.87,
+   "lat": 42.836861,
+   "lon": -1.672889
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-121, 5 (Noain)",
+   "p": 1.87,
+   "lat": 42.775972,
+   "lon": -1.635278
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-135, 4,6 (Olaz)",
+   "p": 1.9,
+   "lat": 42.816111,
+   "lon": -1.593222
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-135 km 4,6 (Olaz)",
+   "p": 1.9,
+   "lat": 42.817194,
+   "lon": -1.59275
+  },
+  {
+   "n": "Repsol",
+   "d": "Cl Carretera de Artica,s.n.",
+   "p": 1.9,
+   "lat": 42.8355,
+   "lon": -1.653361
+  },
+  {
+   "n": "Moeve",
+   "d": "Calle Sancho Ramirez, 2",
+   "p": 1.905,
+   "lat": 42.806833,
+   "lon": -1.661611
+  },
+  {
+   "n": "Repsol",
+   "d": "Calle Sadar s/n, s/n",
+   "p": 1.905,
+   "lat": 42.797694,
+   "lon": -1.645583
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
+   "p": 1.939,
+   "lat": 42.800611,
+   "lon": -1.611611
+  },
+  {
+   "n": "Cepsa",
+   "d": "Autovia A-12 km 7,3 (Gazolaz)",
+   "p": 1.939,
+   "lat": 42.7775,
+   "lon": -1.707611
+  },
+  {
+   "n": "Repsol",
+   "d": "Calle Real, 66 (Noain)",
+   "p": 1.939,
+   "lat": 42.762889,
+   "lon": -1.633722
+  },
+  {
+   "n": "Repsol",
+   "d": "N-240 km 378 (Noain)",
+   "p": 1.949,
    "lat": 42.756667,
    "lon": -1.624167
   }
