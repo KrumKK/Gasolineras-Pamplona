@@ -109,6 +109,13 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--lav-ink);outlin
 .ver-mas{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;border-radius:14px;padding:12px;font-weight:700;width:100%}
 .ver-mas:hover{background:rgba(255,255,255,.14)}
 @media (max-width:420px){.st summary{grid-template-columns:28px 34px 1fr auto;gap:8px;padding:11px 12px 9px}.marca{width:34px;height:34px;border-radius:10px;font-size:.9rem}.rank{width:26px;height:26px;line-height:26px;font-size:.85rem}}
+.near-opts{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.near-opts .chips{gap:6px}
+.near-opts .chip{padding:5px 11px;font-size:.84rem}
+.sublabel{font-size:.72rem;color:var(--muted);font-weight:700;margin-bottom:5px}
+.geo-msg{margin-top:10px;font-size:.84rem;border-radius:12px;padding:8px 12px;background:var(--sky);color:var(--sky-ink)}
+.geo-msg.err{background:var(--peach);color:var(--peach-ink)}
+.km{font:700 .74rem var(--mono);color:var(--sky-ink);background:var(--sky);border-radius:999px;padding:0 7px;margin-left:2px;white-space:nowrap}
 .empty{padding:16px;border-radius:14px;border:1px dashed var(--line);color:var(--muted);text-align:center}
 .note{font-size:.75rem;color:var(--muted);text-align:center}
 .note a{color:var(--sky-ink)}
@@ -200,6 +207,28 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-grad
         <div class="quick" id="quick"></div>
       </div>
     </div>
+    <div>
+      <div class="label">Dónde buscar</div>
+      <div class="chips" id="zona">
+        <button class="chip" type="button" data-z="all" aria-pressed="true">Toda la comarca</button>
+        <button class="chip" type="button" data-z="near" aria-pressed="false">📍 Cerca de mí</button>
+      </div>
+      <div class="near-opts" id="nearOpts" hidden>
+        <div><div class="sublabel">Distancia máxima</div>
+          <div class="chips" id="radios">
+            <button class="chip" type="button" data-r="2">2 km</button>
+            <button class="chip" type="button" data-r="5">5 km</button>
+            <button class="chip" type="button" data-r="10">10 km</button>
+            <button class="chip" type="button" data-r="20">20 km</button>
+          </div></div>
+        <div><div class="sublabel">Ordenar por</div>
+          <div class="chips" id="orden">
+            <button class="chip" type="button" data-o="precio">Más barata</button>
+            <button class="chip" type="button" data-o="cerca">Más cerca</button>
+          </div></div>
+      </div>
+      <div class="geo-msg" id="geoMsg" hidden></div>
+    </div>
   </section>
 
   <div class="summary" id="summary" hidden>
@@ -211,7 +240,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-grad
   <div class="top-head" id="topHead" hidden><h3 id="topTitle">Top 10</h3><span id="topSub"></span></div>
   <ol class="list" id="list"><li class="empty">Aquí aparecerán las gasolineras de Pamplona y comarca ordenadas de más barata a más cara.</li></ol>
   <button class="ver-mas" type="button" id="verMas" hidden></button>
-  <p class="note">Precios de las propias estaciones, publicados por el Ministerio para la Transición Ecológica. Se actualizan solos cada mañana y cada tarde. <a href="https://github.com/KrumKK/Gasolineras-Pamplona">Código en GitHub</a>.</p>
+  <p class="note">Precios de las propias estaciones, publicados por el Ministerio para la Transición Ecológica. Se revisan solos cada hora. <a href="https://github.com/KrumKK/Gasolineras-Pamplona">Código en GitHub</a>.</p>
   <div class="firma"><img src="kkk-logo.png" alt="" width="30" height="30"><span>Diseñada y desarrollada por <b>KKK</b></span></div>
 </div>
 
@@ -226,7 +255,8 @@ const esc = t => String(t??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">"
 function get(k,d){try{return localStorage.getItem("gp_"+k) ?? d}catch(e){return d}}
 function put(k,v){try{localStorage.setItem("gp_"+k,v)}catch(e){}}
 
-const st = {fuel: get("fuel","diesel"), modo: get("modo","L"), litros: +get("litros",50) || 50, euros: +get("euros",50) || 50, doc: null, hist: {}, todas: false};
+const st = {fuel: get("fuel","diesel"), modo: get("modo","L"), litros: +get("litros",50) || 50, euros: +get("euros",50) || 50, doc: null, hist: {}, todas: false,
+  zona: get("zona","all"), radio: +get("radio",5) || 5, orden: get("orden","precio"), pos: null};
 const lt = n => n.toLocaleString("es-ES",{minimumFractionDigits:1,maximumFractionDigits:1})+" L";
 const cant = () => st.modo==="E" ? st.euros : st.litros;
 
@@ -248,6 +278,47 @@ function guarda(v){ if(st.modo==="E"){ st.euros=v; put("euros",v); } else { st.l
 function setL(v){ $("litros").value=v; guarda(v); }
 pintaControles();
 
+/* ===== Cerca de mí (opcional): usa la ubicación del móvil ===== */
+const kmTxt = k => k < 1 ? Math.round(k*1000/50)*50 + " m" : k.toLocaleString("es-ES",{maximumFractionDigits:1}) + " km";
+function distKm(a,b){
+  const R=6371, r=Math.PI/180, dLa=(b.lat-a.lat)*r, dLo=(b.lon-a.lon)*r;
+  const h=Math.sin(dLa/2)**2 + Math.cos(a.lat*r)*Math.cos(b.lat*r)*Math.sin(dLo/2)**2;
+  return 2*R*Math.asin(Math.sqrt(h));
+}
+function geoMsg(t, err){ $("geoMsg").textContent=t||""; $("geoMsg").hidden=!t; $("geoMsg").classList.toggle("err", !!err); }
+function pintaZona(){
+  [...$("zona").children].forEach(c=>c.setAttribute("aria-pressed", c.dataset.z===st.zona));
+  [...$("radios").children].forEach(c=>c.setAttribute("aria-pressed", +c.dataset.r===st.radio));
+  [...$("orden").children].forEach(c=>c.setAttribute("aria-pressed", c.dataset.o===st.orden));
+  $("nearOpts").hidden = st.zona!=="near";
+}
+let buscando = false;
+function pedirUbicacion(silencioso){
+  if (!("geolocation" in navigator)){ geoMsg("Este navegador no permite usar la ubicación.", true); st.zona="all"; put("zona","all"); pintaZona(); render(); return; }
+  if (buscando) return; buscando = true;
+  if (!silencioso || !st.pos) geoMsg("Buscando tu ubicación…");
+  navigator.geolocation.getCurrentPosition(p=>{
+    buscando=false; st.pos={lat:p.coords.latitude, lon:p.coords.longitude}; geoMsg(""); render();
+  }, e=>{
+    buscando=false;
+    if (st.pos && silencioso) return;
+    st.zona="all"; put("zona","all"); pintaZona();
+    geoMsg(e.code===1
+      ? "Has bloqueado la ubicación para esta app. Para usar «Cerca de mí», permítela en los ajustes del móvil (iPhone: Ajustes → Privacidad → Localización; Android: ajustes del sitio en Chrome)."
+      : "No he podido saber dónde estás. Comprueba que la ubicación del móvil está activada y vuelve a intentarlo.", true);
+    render();
+  }, {enableHighAccuracy:false, timeout:15000, maximumAge:120000});
+}
+$("zona").onclick = e => { const b=e.target.closest(".chip"); if(!b) return;
+  st.zona=b.dataset.z; put("zona",st.zona); st.todas=false; pintaZona();
+  if (st.zona==="near") pedirUbicacion(false); else geoMsg("");
+  render(); };
+$("radios").onclick = e => { const b=e.target.closest(".chip"); if(!b) return; st.radio=+b.dataset.r; put("radio",st.radio); pintaZona(); render(); };
+$("orden").onclick = e => { const b=e.target.closest(".chip"); if(!b) return; st.orden=b.dataset.o; put("orden",st.orden); pintaZona(); render(); };
+document.addEventListener("visibilitychange", ()=>{ if(document.visibilityState==="visible" && st.zona==="near") pedirUbicacion(true); });
+pintaZona();
+if (st.zona==="near") pedirUbicacion(false);
+
 function render(){
   [...$("fuels").children].forEach(c=>c.setAttribute("aria-pressed", c.dataset.k===st.fuel));
   if (st.doc){
@@ -265,40 +336,60 @@ function mapa(x){
 }
 
 function renderList(doc){
-  const rows = (doc?.[st.fuel] || []).filter(x=>x && x.p>0).slice().sort((a,b)=>a.p-b.p);
+  let rows = (doc?.[st.fuel] || []).filter(x=>x && x.p>0).map(x=>({...x})).sort((a,b)=>a.p-b.p);
+  const cerca = st.zona==="near" && st.pos;
+  if (cerca && rows.length){
+    rows.forEach(x=>{ x.km = (x.lat && x.lon) ? distKm(st.pos, x) : null; });
+    const conDist = rows.filter(x=>x.km!==null);
+    rows = conDist.filter(x=>x.km<=st.radio);
+    if (!rows.length){
+      const masCerca = conDist.sort((a,b)=>a.km-b.km)[0];
+      $("summary").hidden=true; $("heroSave").innerHTML=""; $("topHead").hidden=true; $("verMas").hidden=true;
+      $("list").innerHTML = `<li class="empty">No hay gasolineras con ${FUEL_N[st.fuel]} a menos de ${st.radio} km de ti.${masCerca?` La más cercana está a ${kmTxt(masCerca.km)} (${esc(masCerca.n)}).`:""} Prueba con una distancia mayor.</li>`;
+      return;
+    }
+    if (st.orden==="cerca") rows.sort((a,b)=>a.km-b.km);
+  }
   if (!rows.length){
     $("summary").hidden=true; $("heroSave").innerHTML=""; $("topHead").hidden=true; $("verMas").hidden=true;
     if (doc) $("list").innerHTML = `<li class="empty">Todavía no hay precios de ${FUEL_N[st.fuel]}. Aparecerán en la próxima actualización.</li>`;
     return;
   }
-  const fuel = FUEL_N[st.fuel], pMin = rows[0].p, pMax = rows[rows.length-1].p;
+  const fuel = FUEL_N[st.fuel], ps = rows.map(x=>x.p), pMin = Math.min(...ps), pMax = Math.max(...ps);
+  const aqui = cerca ? ` cerca de ti (${st.radio} km)` : "";
   let filas;
   if (st.modo==="E"){
     const E = st.euros, lMax = E/pMin, lMin = E/pMax;
-    $("heroSave").innerHTML = `Hoy, con ${eur(E)} eligiendo bien te llevas hasta<b>${lt(lMax-lMin)} más</b>de ${fuel} que en la más cara`;
+    $("heroSave").innerHTML = `Hoy${aqui}, con ${eur(E)} eligiendo bien te llevas hasta<b>${lt(lMax-lMin)} más</b>de ${fuel} que en la más cara`;
     $("lMin").textContent="Más litros"; $("lMax").textContent="Menos litros"; $("lSave").textContent="Diferencia";
     $("sMin").textContent=lt(lMax); $("sMax").textContent=lt(lMin); $("sSave").textContent=lt(lMax-lMin);
-    filas = rows.map((x,i)=>({x, big:lt(E/x.p), diff: i===0?"Más litros":"−"+lt(lMax-E/x.p)}));
+    filas = rows.map(x=>({x, big:lt(E/x.p), diff: x.p===pMin?"Más litros":"−"+lt(lMax-E/x.p)}));
   } else {
     const L = st.litros, min = pMin*L, max = pMax*L;
-    $("heroSave").innerHTML = `Hoy, elegir bien te ahorra hasta<b>${eur(max-min)}</b>en un repostaje de ${L} L de ${fuel}`;
+    $("heroSave").innerHTML = `Hoy${aqui}, elegir bien te ahorra hasta<b>${eur(max-min)}</b>en un repostaje de ${L} L de ${fuel}`;
     $("lMin").textContent="Más barata"; $("lMax").textContent="Más cara"; $("lSave").textContent="Ahorro máx.";
     $("sMin").textContent=eur(min); $("sMax").textContent=eur(max); $("sSave").textContent=eur(max-min);
-    filas = rows.map((x,i)=>({x, big:eur(x.p*L), diff: i===0?"La más barata":"+"+eur(x.p*L-min)}));
+    filas = rows.map(x=>({x, big:eur(x.p*L), diff: x.p===pMin?"La más barata":"+"+eur(x.p*L-min)}));
   }
   $("summary").hidden=false;
   const N = 10, vis = st.todas ? filas : filas.slice(0,N), span = Math.max(pMax-pMin, 0.001);
   $("topHead").hidden=false;
-  $("topTitle").textContent = st.todas ? `Las ${filas.length} gasolineras` : `Top ${Math.min(N,filas.length)} más baratas`;
-  $("topSub").textContent = `${fuel} · toca una para ver cómo llegar`;
+  const porCerca = cerca && st.orden==="cerca";
+  $("topTitle").textContent = cerca
+    ? (porCerca ? `Las más cercanas a ti` : `Las más baratas cerca de ti`)
+    : (st.todas ? `Las ${filas.length} gasolineras` : `Top ${Math.min(N,filas.length)} más baratas`);
+  $("topSub").textContent = cerca
+    ? `${fuel} · ${filas.length} a menos de ${st.radio} km · toca una para ver cómo llegar`
+    : `${fuel} · toca una para ver cómo llegar`;
   $("list").innerHTML = vis.map(({x,big,diff},i)=>{
     const loc=/\(([^)]+)\)\s*$/.exec(x.d||""), calle=loc?x.d.slice(0,loc.index).trim():x.d, sitio=loc?loc[1]:"Pamplona";
     const pos = Math.round(100*(x.p-pMin)/span);
-    return `<li><details class="st${i<3?" m"+(i+1):""}">
+    const medalla = porCerca ? (x.p===pMin?" m1":"") : (i<3?" m"+(i+1):"");
+    return `<li><details class="st${medalla}">
       <summary>
         <div class="rank">${i+1}</div>
         <div class="marca" style="background:${colorMarca(x.n)}">${esc(inicial(x.n))}</div>
-        <div class="info"><div class="name">${esc(x.n)}</div><div class="loc">📍 ${esc(sitio)}</div></div>
+        <div class="info"><div class="name">${esc(x.n)}</div><div class="loc">📍 ${esc(sitio)}${x.km!=null?` <span class="km">${kmTxt(x.km)}</span>`:""}</div></div>
         <div class="price"><div class="total">${big}</div><div class="pl">${f3(x.p)} €/L</div><span class="diff">${diff}</span></div>
         <div class="meter" title="Posición entre la más barata y la más cara"><i style="left:${pos}%"></i></div>
       </summary>
