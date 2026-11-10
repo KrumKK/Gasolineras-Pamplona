@@ -1,8 +1,8 @@
 {
- "ts": "2026-11-10T18:06:49+01:00",
+ "ts": "2026-11-10T23:24:40+01:00",
  "fecha": "2026-11-10",
  "fuente": "Ministerio para la Transición Ecológica (geoportalgasolineras.es)",
- "fecha_ministerio": "10/11/2026 18:06:48",
+ "fecha_ministerio": "10/11/2026 23:24:39",
  "diesel": [
   {
    "n": "Ballenoil",
@@ -61,6 +61,13 @@
    "lon": -1.652306
   },
   {
+   "n": "Alcampo",
+   "d": "Poligono Mugazuri Parcela B, 4 (Burlada)",
+   "p": 1.719,
+   "lat": 42.830778,
+   "lon": -1.61925
+  },
+  {
    "n": "Plenergy",
    "d": "Poligono Mugazuri, 3 (Burlada)",
    "p": 1.719,
@@ -68,11 +75,11 @@
    "lon": -1.620389
   },
   {
-   "n": "Alcampo",
-   "d": "Poligono Mugazuri Parcela B, 4 (Burlada)",
+   "n": "AN Energeticos - Urroz",
+   "d": "Carretera NA-150 km 2 (Egues)",
    "p": 1.719,
-   "lat": 42.830778,
-   "lon": -1.61925
+   "lat": 42.826028,
+   "lon": -1.562972
   },
   {
    "n": "Bidasoa Combustibles",
@@ -159,13 +166,6 @@
    "lon": -1.689
   },
   {
-   "n": "AN Energeticos - Urroz",
-   "d": "Carretera NA-150 km 2 (Egues)",
-   "p": 1.759,
-   "lat": 42.826028,
-   "lon": -1.562972
-  },
-  {
    "n": "Eurocam",
    "d": "Pol.agustinos Calle a Parcela 3b",
    "p": 1.759,
@@ -215,20 +215,6 @@
    "lon": -1.651222
   },
   {
-   "n": "Moeve",
-   "d": "Au A-15, 78 (Imarcoain)",
-   "p": 1.894,
-   "lat": 42.731944,
-   "lon": -1.618028
-  },
-  {
-   "n": "Moeve",
-   "d": "Avenida Guipuzcoa, 1",
-   "p": 1.894,
-   "lat": 42.820528,
-   "lon": -1.655806
-  },
-  {
    "n": "Andamur \"pamplona\"",
    "d": "Avenida Este (ciudad del Transporte Pamplona), 1 (Imarcoain)",
    "p": 1.898,
@@ -251,10 +237,24 @@
   },
   {
    "n": "Moeve",
+   "d": "Au A-15, 78 (Imarcoain)",
+   "p": 1.909,
+   "lat": 42.731944,
+   "lon": -1.618028
+  },
+  {
+   "n": "Moeve",
    "d": "Autopista AP-15 km 78 (Imarcoain)",
    "p": 1.909,
    "lat": 42.731944,
    "lon": -1.616889
+  },
+  {
+   "n": "Moeve",
+   "d": "Avenida Guipuzcoa, 1",
+   "p": 1.909,
+   "lat": 42.820528,
+   "lon": -1.655806
   },
   {
    "n": "Avia",
@@ -323,8 +323,8 @@
    "n": "Repsol",
    "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
    "p": 1.929,
-   "lat": 42.80175,
-   "lon": -1.612667
+   "lat": 42.800611,
+   "lon": -1.611611
   },
   {
    "n": "Repsol",
@@ -349,6 +349,20 @@
   },
   {
    "n": "Repsol",
+   "d": "Carretera N-135 km 4,6 (Olaz)",
+   "p": 1.93,
+   "lat": 42.817194,
+   "lon": -1.59275
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-135, 4,6 (Olaz)",
+   "p": 1.93,
+   "lat": 42.816111,
+   "lon": -1.593222
+  },
+  {
+   "n": "Repsol",
    "d": "Calle Altxutxate, 50 (Huarte)",
    "p": 1.93,
    "lat": 42.818278,
@@ -369,6 +383,13 @@
    "lon": -1.645583
   },
   {
+   "n": "Repsol",
+   "d": "Cl Carretera de Artica,s.n.",
+   "p": 1.93,
+   "lat": 42.8355,
+   "lon": -1.653361
+  },
+  {
    "n": "Cepsa",
    "d": "Ronda de Barañain, 2 (Barañain)",
    "p": 1.939,
@@ -383,25 +404,11 @@
    "lon": -1.624167
   },
   {
-   "n": "Repsol",
-   "d": "Carretera N-135 km 4,6 (Olaz)",
-   "p": 1.94,
-   "lat": 42.817194,
-   "lon": -1.59275
-  },
-  {
-   "n": "Repsol",
-   "d": "Cr N-135, 4,6 (Olaz)",
-   "p": 1.94,
-   "lat": 42.816111,
-   "lon": -1.593222
-  },
-  {
-   "n": "Repsol",
-   "d": "Cl Carretera de Artica,s.n.",
-   "p": 1.94,
-   "lat": 42.8355,
-   "lon": -1.653361
+   "n": "Cepsa",
+   "d": "Autovia A-12 km 7,3 (Gazolaz)",
+   "p": 1.944,
+   "lat": 42.7775,
+   "lon": -1.707611
   },
   {
    "n": "Igoa Y Patxi SL",
@@ -409,13 +416,6 @@
    "p": 1.969,
    "lat": 42.824167,
    "lon": -1.563056
-  },
-  {
-   "n": "Cepsa",
-   "d": "Autovia A-12 km 7,3 (Gazolaz)",
-   "p": 1.989,
-   "lat": 42.7775,
-   "lon": -1.707611
   }
  ],
  "g95": [
@@ -427,18 +427,18 @@
    "lon": -1.686417
   },
   {
+   "n": "Ballenoil",
+   "d": "Autovia A-12 km 7,3 (Astrain)",
+   "p": 1.379,
+   "lat": 42.778278,
+   "lon": -1.707139
+  },
+  {
    "n": "Petroprix",
    "d": "Calle Artica, 30 (Berrioplano)",
    "p": 1.399,
    "lat": 42.833667,
    "lon": -1.652306
-  },
-  {
-   "n": "Plenergy",
-   "d": "Poligono Mugazuri, 3 (Burlada)",
-   "p": 1.399,
-   "lat": 42.831222,
-   "lon": -1.620389
   },
   {
    "n": "Alcampo",
@@ -448,11 +448,11 @@
    "lon": -1.61925
   },
   {
-   "n": "Ballenoil",
-   "d": "Autovia A-12 km 7,3 (Astrain)",
+   "n": "Plenergy",
+   "d": "Poligono Mugazuri, 3 (Burlada)",
    "p": 1.399,
-   "lat": 42.778278,
-   "lon": -1.707139
+   "lat": 42.831222,
+   "lon": -1.620389
   },
   {
    "n": "E.Leclerc",
@@ -511,6 +511,13 @@
    "lon": -1.624917
   },
   {
+   "n": "AN Energeticos - Urroz",
+   "d": "Carretera NA-150 km 2 (Egues)",
+   "p": 1.499,
+   "lat": 42.826028,
+   "lon": -1.562972
+  },
+  {
    "n": "Petroprix",
    "d": "Calle E, 1",
    "p": 1.499,
@@ -567,13 +574,6 @@
    "lon": -1.681833
   },
   {
-   "n": "AN Energeticos - Urroz",
-   "d": "Carretera NA-150 km 2 (Egues)",
-   "p": 1.579,
-   "lat": 42.826028,
-   "lon": -1.562972
-  },
-  {
    "n": "DST",
    "d": "Carretera Na150 km 1,56 (Alzuza)",
    "p": 1.589,
@@ -586,27 +586,6 @@
    "p": 1.639,
    "lat": 42.831583,
    "lon": -1.651222
-  },
-  {
-   "n": "Moeve",
-   "d": "Au A-15, 78 (Imarcoain)",
-   "p": 1.695,
-   "lat": 42.731944,
-   "lon": -1.618028
-  },
-  {
-   "n": "Moeve",
-   "d": "Autopista AP-15 km 78 (Imarcoain)",
-   "p": 1.695,
-   "lat": 42.731944,
-   "lon": -1.616889
-  },
-  {
-   "n": "Moeve",
-   "d": "Avenida Guipuzcoa, 1",
-   "p": 1.695,
-   "lat": 42.820528,
-   "lon": -1.655806
   },
   {
    "n": "Ural Energy",
@@ -679,11 +658,32 @@
    "lon": -1.639611
   },
   {
+   "n": "Moeve",
+   "d": "Au A-15, 78 (Imarcoain)",
+   "p": 1.71,
+   "lat": 42.731944,
+   "lon": -1.618028
+  },
+  {
+   "n": "Moeve",
+   "d": "Autopista AP-15 km 78 (Imarcoain)",
+   "p": 1.71,
+   "lat": 42.731944,
+   "lon": -1.616889
+  },
+  {
    "n": "Repsol",
    "d": "Cr N-121, 5 (Noain)",
    "p": 1.71,
    "lat": 42.775972,
    "lon": -1.635278
+  },
+  {
+   "n": "Moeve",
+   "d": "Avenida Guipuzcoa, 1",
+   "p": 1.71,
+   "lat": 42.820528,
+   "lon": -1.655806
   },
   {
    "n": "BP Huarte",
@@ -698,6 +698,27 @@
    "p": 1.719,
    "lat": 42.834944,
    "lon": -1.609389
+  },
+  {
+   "n": "Cepsa",
+   "d": "Autovia A-12 km 7,3 (Gazolaz)",
+   "p": 1.73,
+   "lat": 42.7775,
+   "lon": -1.707611
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-135 km 4,6 (Olaz)",
+   "p": 1.74,
+   "lat": 42.817194,
+   "lon": -1.59275
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-135, 4,6 (Olaz)",
+   "p": 1.74,
+   "lat": 42.816111,
+   "lon": -1.593222
   },
   {
    "n": "Repsol",
@@ -715,6 +736,13 @@
   },
   {
    "n": "Repsol",
+   "d": "Cl Carretera de Artica,s.n.",
+   "p": 1.74,
+   "lat": 42.8355,
+   "lon": -1.653361
+  },
+  {
+   "n": "Repsol",
    "d": "Avenida Estella, 9 (Zizur Mayor)",
    "p": 1.74,
    "lat": 42.792917,
@@ -724,8 +752,8 @@
    "n": "Repsol",
    "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
    "p": 1.749,
-   "lat": 42.80175,
-   "lon": -1.612667
+   "lat": 42.800611,
+   "lon": -1.611611
   },
   {
    "n": "Cepsa",
@@ -743,38 +771,10 @@
   },
   {
    "n": "Repsol",
-   "d": "Carretera N-135 km 4,6 (Olaz)",
-   "p": 1.75,
-   "lat": 42.817194,
-   "lon": -1.59275
-  },
-  {
-   "n": "Repsol",
-   "d": "Cr N-135, 4,6 (Olaz)",
-   "p": 1.75,
-   "lat": 42.816111,
-   "lon": -1.593222
-  },
-  {
-   "n": "Repsol",
-   "d": "Cl Carretera de Artica,s.n.",
-   "p": 1.75,
-   "lat": 42.8355,
-   "lon": -1.653361
-  },
-  {
-   "n": "Repsol",
    "d": "N-240 km 378 (Noain)",
    "p": 1.759,
    "lat": 42.756667,
    "lon": -1.624167
-  },
-  {
-   "n": "Cepsa",
-   "d": "Autovia A-12 km 7,3 (Gazolaz)",
-   "p": 1.769,
-   "lat": 42.7775,
-   "lon": -1.707611
   }
  ],
  "g98": [
@@ -812,6 +812,13 @@
    "p": 1.839,
    "lat": 42.804028,
    "lon": -1.627861
+  },
+  {
+   "n": "Cepsa",
+   "d": "Autovia A-12 km 7,3 (Gazolaz)",
+   "p": 1.845,
+   "lat": 42.7775,
+   "lon": -1.707611
   },
   {
    "n": "Andamur \"pamplona\"",
@@ -880,8 +887,8 @@
    "n": "Repsol",
    "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
    "p": 1.889,
-   "lat": 42.80175,
-   "lon": -1.612667
+   "lat": 42.800611,
+   "lon": -1.611611
   },
   {
    "n": "Repsol",
@@ -924,13 +931,6 @@
    "p": 1.905,
    "lat": 42.797694,
    "lon": -1.645583
-  },
-  {
-   "n": "Cepsa",
-   "d": "Autovia A-12 km 7,3 (Gazolaz)",
-   "p": 1.939,
-   "lat": 42.7775,
-   "lon": -1.707611
   }
  ]
 }
