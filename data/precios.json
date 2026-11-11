@@ -1,8 +1,8 @@
 {
- "ts": "2026-11-10T23:24:40+01:00",
- "fecha": "2026-11-10",
+ "ts": "2026-11-11T03:51:12+01:00",
+ "fecha": "2026-11-11",
  "fuente": "Ministerio para la Transición Ecológica (geoportalgasolineras.es)",
- "fecha_ministerio": "10/11/2026 23:24:39",
+ "fecha_ministerio": "11/11/2026 3:51:11",
  "diesel": [
   {
    "n": "Ballenoil",
@@ -40,6 +40,13 @@
    "lon": -1.630694
   },
   {
+   "n": "Eurocam",
+   "d": "Pol.agustinos Calle a Parcela 3b",
+   "p": 1.709,
+   "lat": 42.829722,
+   "lon": -1.686222
+  },
+  {
    "n": "Gasolinera Noáin",
    "d": "Poligono Talluntxe Ii, s/n (Aranguren)",
    "p": 1.719,
@@ -61,18 +68,18 @@
    "lon": -1.652306
   },
   {
-   "n": "Alcampo",
-   "d": "Poligono Mugazuri Parcela B, 4 (Burlada)",
-   "p": 1.719,
-   "lat": 42.830778,
-   "lon": -1.61925
-  },
-  {
    "n": "Plenergy",
    "d": "Poligono Mugazuri, 3 (Burlada)",
    "p": 1.719,
    "lat": 42.831222,
    "lon": -1.620389
+  },
+  {
+   "n": "Alcampo",
+   "d": "Poligono Mugazuri Parcela B, 4 (Burlada)",
+   "p": 1.719,
+   "lat": 42.830778,
+   "lon": -1.61925
   },
   {
    "n": "AN Energeticos - Urroz",
@@ -89,18 +96,18 @@
    "lon": -1.636972
   },
   {
-   "n": "Petroprix",
-   "d": "Calle E, 1",
-   "p": 1.719,
-   "lat": 42.814806,
-   "lon": -1.684778
-  },
-  {
    "n": "Avanza OIL Pamplona",
    "d": "Poligono Landaben, Calle F, 2",
    "p": 1.719,
    "lat": 42.814028,
    "lon": -1.684528
+  },
+  {
+   "n": "Petroprix",
+   "d": "Calle E, 1",
+   "p": 1.719,
+   "lat": 42.814806,
+   "lon": -1.684778
   },
   {
    "n": "Bideko Aterpe",
@@ -166,13 +173,6 @@
    "lon": -1.689
   },
   {
-   "n": "Eurocam",
-   "d": "Pol.agustinos Calle a Parcela 3b",
-   "p": 1.759,
-   "lat": 42.829722,
-   "lon": -1.686222
-  },
-  {
    "n": "Ballenoil",
    "d": "N-121 Pamplona-zaragoza km 9,4 (Beriain)",
    "p": 1.769,
@@ -215,11 +215,53 @@
    "lon": -1.651222
   },
   {
+   "n": "Petronor",
+   "d": "Carretera Cr NA-7000, 5,3 km 5,3 (Arazuri)",
+   "p": 1.885,
+   "lat": 42.818417,
+   "lon": -1.718111
+  },
+  {
+   "n": "Moeve",
+   "d": "Au A-15, 78 (Imarcoain)",
+   "p": 1.889,
+   "lat": 42.731944,
+   "lon": -1.618028
+  },
+  {
+   "n": "Moeve",
+   "d": "Autopista AP-15 km 78 (Imarcoain)",
+   "p": 1.889,
+   "lat": 42.731944,
+   "lon": -1.616889
+  },
+  {
+   "n": "Moeve",
+   "d": "Avenida Guipuzcoa, 1",
+   "p": 1.889,
+   "lat": 42.820528,
+   "lon": -1.655806
+  },
+  {
+   "n": "Petronor",
+   "d": "Cl Poligono Landaben, S.n.",
+   "p": 1.895,
+   "lat": 42.814333,
+   "lon": -1.684278
+  },
+  {
    "n": "Andamur \"pamplona\"",
    "d": "Avenida Este (ciudad del Transporte Pamplona), 1 (Imarcoain)",
    "p": 1.898,
    "lat": 42.732583,
    "lon": -1.613972
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Estella, 9 (Zizur Mayor)",
+   "p": 1.899,
+   "lat": 42.792833,
+   "lon": -1.686583
   },
   {
    "n": "Moeve",
@@ -234,27 +276,6 @@
    "p": 1.909,
    "lat": 42.789778,
    "lon": -1.639611
-  },
-  {
-   "n": "Moeve",
-   "d": "Au A-15, 78 (Imarcoain)",
-   "p": 1.909,
-   "lat": 42.731944,
-   "lon": -1.618028
-  },
-  {
-   "n": "Moeve",
-   "d": "Autopista AP-15 km 78 (Imarcoain)",
-   "p": 1.909,
-   "lat": 42.731944,
-   "lon": -1.616889
-  },
-  {
-   "n": "Moeve",
-   "d": "Avenida Guipuzcoa, 1",
-   "p": 1.909,
-   "lat": 42.820528,
-   "lon": -1.655806
   },
   {
    "n": "Avia",
@@ -278,11 +299,53 @@
    "lon": -1.633889
   },
   {
-   "n": "Petronor",
-   "d": "Carretera Cr NA-7000, 5,3 km 5,3 (Arazuri)",
-   "p": 1.914,
-   "lat": 42.818417,
-   "lon": -1.718111
+   "n": "Repsol",
+   "d": "Carretera N-121 km 5 (Aranguren)",
+   "p": 1.915,
+   "lat": 42.776111,
+   "lon": -1.634722
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera Avd. Guipuzcoa N-240 km 4 (Berriozar)",
+   "p": 1.915,
+   "lat": 42.836861,
+   "lon": -1.672889
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-135, 4,6 (Olaz)",
+   "p": 1.915,
+   "lat": 42.816111,
+   "lon": -1.593222
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-135 km 4,6 (Olaz)",
+   "p": 1.915,
+   "lat": 42.817194,
+   "lon": -1.59275
+  },
+  {
+   "n": "Repsol",
+   "d": "Calle Altxutxate, 50 (Huarte)",
+   "p": 1.915,
+   "lat": 42.818278,
+   "lon": -1.60325
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-121, 5 (Noain)",
+   "p": 1.915,
+   "lat": 42.775972,
+   "lon": -1.635278
+  },
+  {
+   "n": "Repsol",
+   "d": "Cl Carretera de Artica,s.n.",
+   "p": 1.915,
+   "lat": 42.8355,
+   "lon": -1.653361
   },
   {
    "n": "BP Huarte",
@@ -307,24 +370,10 @@
   },
   {
    "n": "Repsol",
-   "d": "Avenida Estella, 9 (Zizur Mayor)",
-   "p": 1.92,
-   "lat": 42.792917,
-   "lon": -1.684194
-  },
-  {
-   "n": "Petronor",
-   "d": "Cl Poligono Landaben, S.n.",
-   "p": 1.924,
-   "lat": 42.814333,
-   "lon": -1.684278
-  },
-  {
-   "n": "Repsol",
    "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
    "p": 1.929,
-   "lat": 42.800611,
-   "lon": -1.611611
+   "lat": 42.80175,
+   "lon": -1.612667
   },
   {
    "n": "Repsol",
@@ -335,59 +384,10 @@
   },
   {
    "n": "Repsol",
-   "d": "Carretera N-121 km 5 (Aranguren)",
-   "p": 1.93,
-   "lat": 42.776111,
-   "lon": -1.634722
-  },
-  {
-   "n": "Repsol",
-   "d": "Carretera Avd. Guipuzcoa N-240 km 4 (Berriozar)",
-   "p": 1.93,
-   "lat": 42.836861,
-   "lon": -1.672889
-  },
-  {
-   "n": "Repsol",
-   "d": "Carretera N-135 km 4,6 (Olaz)",
-   "p": 1.93,
-   "lat": 42.817194,
-   "lon": -1.59275
-  },
-  {
-   "n": "Repsol",
-   "d": "Cr N-135, 4,6 (Olaz)",
-   "p": 1.93,
-   "lat": 42.816111,
-   "lon": -1.593222
-  },
-  {
-   "n": "Repsol",
-   "d": "Calle Altxutxate, 50 (Huarte)",
-   "p": 1.93,
-   "lat": 42.818278,
-   "lon": -1.60325
-  },
-  {
-   "n": "Repsol",
-   "d": "Cr N-121, 5 (Noain)",
-   "p": 1.93,
-   "lat": 42.775972,
-   "lon": -1.635278
-  },
-  {
-   "n": "Repsol",
    "d": "Calle Sadar s/n, s/n",
    "p": 1.93,
    "lat": 42.797694,
    "lon": -1.645583
-  },
-  {
-   "n": "Repsol",
-   "d": "Cl Carretera de Artica,s.n.",
-   "p": 1.93,
-   "lat": 42.8355,
-   "lon": -1.653361
   },
   {
    "n": "Cepsa",
@@ -441,13 +441,6 @@
    "lon": -1.652306
   },
   {
-   "n": "Alcampo",
-   "d": "Poligono Mugazuri Parcela B, 4 (Burlada)",
-   "p": 1.399,
-   "lat": 42.830778,
-   "lon": -1.61925
-  },
-  {
    "n": "Plenergy",
    "d": "Poligono Mugazuri, 3 (Burlada)",
    "p": 1.399,
@@ -455,11 +448,25 @@
    "lon": -1.620389
   },
   {
+   "n": "Alcampo",
+   "d": "Poligono Mugazuri Parcela B, 4 (Burlada)",
+   "p": 1.399,
+   "lat": 42.830778,
+   "lon": -1.61925
+  },
+  {
    "n": "E.Leclerc",
    "d": "Barrio la Morea, (Cordovilla)",
    "p": 1.459,
    "lat": 42.785194,
    "lon": -1.634278
+  },
+  {
+   "n": "Eurocam",
+   "d": "Pol.agustinos Calle a Parcela 3b",
+   "p": 1.459,
+   "lat": 42.829722,
+   "lon": -1.686222
   },
   {
    "n": "E. Leclerc",
@@ -518,18 +525,18 @@
    "lon": -1.562972
   },
   {
-   "n": "Petroprix",
-   "d": "Calle E, 1",
-   "p": 1.499,
-   "lat": 42.814806,
-   "lon": -1.684778
-  },
-  {
    "n": "Avanza OIL Pamplona",
    "d": "Poligono Landaben, Calle F, 2",
    "p": 1.499,
    "lat": 42.814028,
    "lon": -1.684528
+  },
+  {
+   "n": "Petroprix",
+   "d": "Calle E, 1",
+   "p": 1.499,
+   "lat": 42.814806,
+   "lon": -1.684778
   },
   {
    "n": "AN Energeticos - Sarriguren",
@@ -544,13 +551,6 @@
    "p": 1.529,
    "lat": 42.827806,
    "lon": -1.597611
-  },
-  {
-   "n": "Eurocam",
-   "d": "Pol.agustinos Calle a Parcela 3b",
-   "p": 1.529,
-   "lat": 42.829722,
-   "lon": -1.686222
   },
   {
    "n": "Ballenoil",
@@ -588,6 +588,62 @@
    "lon": -1.651222
   },
   {
+   "n": "Petronor",
+   "d": "Carretera Cr NA-7000, 5,3 km 5,3 (Arazuri)",
+   "p": 1.665,
+   "lat": 42.818417,
+   "lon": -1.718111
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-121 km 5 (Aranguren)",
+   "p": 1.675,
+   "lat": 42.776111,
+   "lon": -1.634722
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-121, 5 (Noain)",
+   "p": 1.675,
+   "lat": 42.775972,
+   "lon": -1.635278
+  },
+  {
+   "n": "Petronor",
+   "d": "Cl Poligono Landaben, S.n.",
+   "p": 1.675,
+   "lat": 42.814333,
+   "lon": -1.684278
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera Avd. Guipuzcoa N-240 km 4 (Berriozar)",
+   "p": 1.685,
+   "lat": 42.836861,
+   "lon": -1.672889
+  },
+  {
+   "n": "Moeve",
+   "d": "Au A-15, 78 (Imarcoain)",
+   "p": 1.69,
+   "lat": 42.731944,
+   "lon": -1.618028
+  },
+  {
+   "n": "Moeve",
+   "d": "Autopista AP-15 km 78 (Imarcoain)",
+   "p": 1.69,
+   "lat": 42.731944,
+   "lon": -1.616889
+  },
+  {
+   "n": "Moeve",
+   "d": "Avenida Guipuzcoa, 1",
+   "p": 1.69,
+   "lat": 42.820528,
+   "lon": -1.655806
+  },
+  {
    "n": "Ural Energy",
    "d": "Olite s/n (ciudad del Transporte de Pamplona) (Imarcoain)",
    "p": 1.699,
@@ -602,13 +658,6 @@
    "lon": -1.626333
   },
   {
-   "n": "Petronor",
-   "d": "Carretera Cr NA-7000, 5,3 km 5,3 (Arazuri)",
-   "p": 1.7,
-   "lat": 42.818417,
-   "lon": -1.718111
-  },
-  {
    "n": "Moeve",
    "d": "Calle Sancho Ramirez, 2",
    "p": 1.7,
@@ -616,11 +665,39 @@
    "lon": -1.661611
   },
   {
-   "n": "Petronor",
-   "d": "Cl Poligono Landaben, S.n.",
-   "p": 1.704,
-   "lat": 42.814333,
-   "lon": -1.684278
+   "n": "Repsol",
+   "d": "Cr N-135, 4,6 (Olaz)",
+   "p": 1.705,
+   "lat": 42.816111,
+   "lon": -1.593222
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-135 km 4,6 (Olaz)",
+   "p": 1.705,
+   "lat": 42.817194,
+   "lon": -1.59275
+  },
+  {
+   "n": "Repsol",
+   "d": "Calle Altxutxate, 50 (Huarte)",
+   "p": 1.705,
+   "lat": 42.818278,
+   "lon": -1.60325
+  },
+  {
+   "n": "Repsol",
+   "d": "Cl Carretera de Artica,s.n.",
+   "p": 1.705,
+   "lat": 42.8355,
+   "lon": -1.653361
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Estella, 9 (Zizur Mayor)",
+   "p": 1.705,
+   "lat": 42.792833,
+   "lon": -1.686583
   },
   {
    "n": "Andamur \"pamplona\"",
@@ -630,13 +707,6 @@
    "lon": -1.613972
   },
   {
-   "n": "Repsol",
-   "d": "Carretera N-121 km 5 (Aranguren)",
-   "p": 1.71,
-   "lat": 42.776111,
-   "lon": -1.634722
-  },
-  {
    "n": "Moeve",
    "d": "N-121 km 9,4, (Beriain)",
    "p": 1.71,
@@ -644,46 +714,11 @@
    "lon": -1.633556
   },
   {
-   "n": "Repsol",
-   "d": "Carretera Avd. Guipuzcoa N-240 km 4 (Berriozar)",
-   "p": 1.71,
-   "lat": 42.836861,
-   "lon": -1.672889
-  },
-  {
    "n": "Moeve",
    "d": "Poligono Poligono Industrial Cordovilla-galar, Parcela 382, s/n (Cordovilla)",
    "p": 1.71,
    "lat": 42.789778,
    "lon": -1.639611
-  },
-  {
-   "n": "Moeve",
-   "d": "Au A-15, 78 (Imarcoain)",
-   "p": 1.71,
-   "lat": 42.731944,
-   "lon": -1.618028
-  },
-  {
-   "n": "Moeve",
-   "d": "Autopista AP-15 km 78 (Imarcoain)",
-   "p": 1.71,
-   "lat": 42.731944,
-   "lon": -1.616889
-  },
-  {
-   "n": "Repsol",
-   "d": "Cr N-121, 5 (Noain)",
-   "p": 1.71,
-   "lat": 42.775972,
-   "lon": -1.635278
-  },
-  {
-   "n": "Moeve",
-   "d": "Avenida Guipuzcoa, 1",
-   "p": 1.71,
-   "lat": 42.820528,
-   "lon": -1.655806
   },
   {
    "n": "BP Huarte",
@@ -708,27 +743,6 @@
   },
   {
    "n": "Repsol",
-   "d": "Carretera N-135 km 4,6 (Olaz)",
-   "p": 1.74,
-   "lat": 42.817194,
-   "lon": -1.59275
-  },
-  {
-   "n": "Repsol",
-   "d": "Cr N-135, 4,6 (Olaz)",
-   "p": 1.74,
-   "lat": 42.816111,
-   "lon": -1.593222
-  },
-  {
-   "n": "Repsol",
-   "d": "Calle Altxutxate, 50 (Huarte)",
-   "p": 1.74,
-   "lat": 42.818278,
-   "lon": -1.60325
-  },
-  {
-   "n": "Repsol",
    "d": "Calle Sadar s/n, s/n",
    "p": 1.74,
    "lat": 42.797694,
@@ -736,24 +750,10 @@
   },
   {
    "n": "Repsol",
-   "d": "Cl Carretera de Artica,s.n.",
-   "p": 1.74,
-   "lat": 42.8355,
-   "lon": -1.653361
-  },
-  {
-   "n": "Repsol",
-   "d": "Avenida Estella, 9 (Zizur Mayor)",
-   "p": 1.74,
-   "lat": 42.792917,
-   "lon": -1.684194
-  },
-  {
-   "n": "Repsol",
    "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
    "p": 1.749,
-   "lat": 42.800611,
-   "lon": -1.611611
+   "lat": 42.80175,
+   "lon": -1.612667
   },
   {
    "n": "Cepsa",
@@ -802,9 +802,30 @@
   {
    "n": "Moeve",
    "d": "Autopista AP-15 km 78 (Imarcoain)",
-   "p": 1.825,
+   "p": 1.805,
    "lat": 42.731944,
    "lon": -1.616889
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Estella, 9 (Zizur Mayor)",
+   "p": 1.815,
+   "lat": 42.792833,
+   "lon": -1.686583
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-121, 5 (Noain)",
+   "p": 1.835,
+   "lat": 42.775972,
+   "lon": -1.635278
+  },
+  {
+   "n": "Petronor",
+   "d": "Cl Poligono Landaben, S.n.",
+   "p": 1.835,
+   "lat": 42.814333,
+   "lon": -1.684278
   },
   {
    "n": "Aralar",
@@ -812,6 +833,13 @@
    "p": 1.839,
    "lat": 42.804028,
    "lon": -1.627861
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera Avd. Guipuzcoa N-240 km 4 (Berriozar)",
+   "p": 1.845,
+   "lat": 42.836861,
+   "lon": -1.672889
   },
   {
    "n": "Cepsa",
@@ -826,13 +854,6 @@
    "p": 1.848,
    "lat": 42.732583,
    "lon": -1.613972
-  },
-  {
-   "n": "Repsol",
-   "d": "Avenida Estella, 9 (Zizur Mayor)",
-   "p": 1.85,
-   "lat": 42.792917,
-   "lon": -1.684194
   },
   {
    "n": "BP Huarte",
@@ -856,11 +877,25 @@
    "lon": -1.661611
   },
   {
-   "n": "Petronor",
-   "d": "Cl Poligono Landaben, S.n.",
-   "p": 1.864,
-   "lat": 42.814333,
-   "lon": -1.684278
+   "n": "Repsol",
+   "d": "Cr N-135, 4,6 (Olaz)",
+   "p": 1.865,
+   "lat": 42.816111,
+   "lon": -1.593222
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-135 km 4,6 (Olaz)",
+   "p": 1.865,
+   "lat": 42.817194,
+   "lon": -1.59275
+  },
+  {
+   "n": "Repsol",
+   "d": "Cl Carretera de Artica,s.n.",
+   "p": 1.865,
+   "lat": 42.8355,
+   "lon": -1.653361
   },
   {
    "n": "Avia",
@@ -871,24 +906,10 @@
   },
   {
    "n": "Repsol",
-   "d": "Carretera Avd. Guipuzcoa N-240 km 4 (Berriozar)",
-   "p": 1.87,
-   "lat": 42.836861,
-   "lon": -1.672889
-  },
-  {
-   "n": "Repsol",
-   "d": "Cr N-121, 5 (Noain)",
-   "p": 1.87,
-   "lat": 42.775972,
-   "lon": -1.635278
-  },
-  {
-   "n": "Repsol",
    "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
    "p": 1.889,
-   "lat": 42.800611,
-   "lon": -1.611611
+   "lat": 42.80175,
+   "lon": -1.612667
   },
   {
    "n": "Repsol",
@@ -903,27 +924,6 @@
    "p": 1.899,
    "lat": 42.756667,
    "lon": -1.624167
-  },
-  {
-   "n": "Repsol",
-   "d": "Carretera N-135 km 4,6 (Olaz)",
-   "p": 1.9,
-   "lat": 42.817194,
-   "lon": -1.59275
-  },
-  {
-   "n": "Repsol",
-   "d": "Cr N-135, 4,6 (Olaz)",
-   "p": 1.9,
-   "lat": 42.816111,
-   "lon": -1.593222
-  },
-  {
-   "n": "Repsol",
-   "d": "Cl Carretera de Artica,s.n.",
-   "p": 1.9,
-   "lat": 42.8355,
-   "lon": -1.653361
   },
   {
    "n": "Repsol",
