@@ -1,8 +1,8 @@
 {
- "ts": "2026-11-12T02:34:30+01:00",
+ "ts": "2026-11-12T10:55:44+01:00",
  "fecha": "2026-11-12",
  "fuente": "Ministerio para la Transición Ecológica (geoportalgasolineras.es)",
- "fecha_ministerio": "12/11/2026 2:34:29",
+ "fecha_ministerio": "12/11/2026 10:55:42",
  "diesel": [
   {
    "n": "Ballenoil",
@@ -17,6 +17,13 @@
    "p": 1.679,
    "lat": 42.846556,
    "lon": -1.686417
+  },
+  {
+   "n": "Gasolinera Noáin",
+   "d": "Poligono Talluntxe Ii, s/n (Aranguren)",
+   "p": 1.689,
+   "lat": 42.774333,
+   "lon": -1.633278
   },
   {
    "n": "Petroprix",
@@ -61,13 +68,6 @@
    "lon": -1.688083
   },
   {
-   "n": "Gasolinera Noáin",
-   "d": "Poligono Talluntxe Ii, s/n (Aranguren)",
-   "p": 1.709,
-   "lat": 42.774333,
-   "lon": -1.633278
-  },
-  {
    "n": "Abycer",
    "d": "Poligono Errekaldea A, 3 (Beriain)",
    "p": 1.709,
@@ -87,6 +87,13 @@
    "p": 1.709,
    "lat": 42.829722,
    "lon": -1.686222
+  },
+  {
+   "n": "Eroski",
+   "d": "Calle Poligono Agustinos,calle A, Local 1598,",
+   "p": 1.709,
+   "lat": 42.832389,
+   "lon": -1.677639
   },
   {
    "n": "AN Energéticos - Tajonar",
@@ -150,13 +157,6 @@
    "p": 1.725,
    "lat": 42.761083,
    "lon": -1.661194
-  },
-  {
-   "n": "Eroski",
-   "d": "Calle Poligono Agustinos,calle A, Local 1598,",
-   "p": 1.729,
-   "lat": 42.832389,
-   "lon": -1.677639
   },
   {
    "n": "DST",
@@ -237,6 +237,13 @@
   },
   {
    "n": "Moeve",
+   "d": "Avenida Guipuzcoa, 1",
+   "p": 1.879,
+   "lat": 42.820528,
+   "lon": -1.655806
+  },
+  {
+   "n": "Moeve",
    "d": "N-121 km 9,4, (Beriain)",
    "p": 1.889,
    "lat": 42.734444,
@@ -251,24 +258,10 @@
   },
   {
    "n": "Moeve",
-   "d": "Au A-15, 78 (Imarcoain)",
-   "p": 1.889,
-   "lat": 42.731944,
-   "lon": -1.618028
-  },
-  {
-   "n": "Moeve",
    "d": "Autopista AP-15 km 78 (Imarcoain)",
    "p": 1.889,
    "lat": 42.731944,
    "lon": -1.616889
-  },
-  {
-   "n": "Moeve",
-   "d": "Avenida Guipuzcoa, 1",
-   "p": 1.889,
-   "lat": 42.820528,
-   "lon": -1.655806
   },
   {
    "n": "BP Huarte",
@@ -285,11 +278,18 @@
    "lon": -1.609389
   },
   {
+   "n": "Moeve",
+   "d": "Au A-15, 78 (Imarcoain)",
+   "p": 1.899,
+   "lat": 42.731944,
+   "lon": -1.618028
+  },
+  {
    "n": "Repsol",
    "d": "Avenida Estella, 9 (Zizur Mayor)",
    "p": 1.899,
-   "lat": 42.792833,
-   "lon": -1.686583
+   "lat": 42.792917,
+   "lon": -1.684194
   },
   {
    "n": "Repsol",
@@ -335,10 +335,10 @@
   },
   {
    "n": "Repsol",
-   "d": "Cl Carretera de Artica,s.n.",
+   "d": "Calle Sadar s/n, s/n",
    "p": 1.905,
-   "lat": 42.8355,
-   "lon": -1.653361
+   "lat": 42.797694,
+   "lon": -1.645583
   },
   {
    "n": "Avia",
@@ -363,10 +363,10 @@
   },
   {
    "n": "Repsol",
-   "d": "Calle Sadar s/n, s/n",
+   "d": "Cl Carretera de Artica,s.n.",
    "p": 1.915,
-   "lat": 42.797694,
-   "lon": -1.645583
+   "lat": 42.8355,
+   "lon": -1.653361
   },
   {
    "n": "Moeve",
@@ -455,6 +455,13 @@
    "lon": -1.61925
   },
   {
+   "n": "Gasolinera Noáin",
+   "d": "Poligono Talluntxe Ii, s/n (Aranguren)",
+   "p": 1.449,
+   "lat": 42.774333,
+   "lon": -1.633278
+  },
+  {
    "n": "Estacion DE Servicio Aralar",
    "d": "Ctra.guipuzcoa-n-240 km 5,5 (Aizoain)",
    "p": 1.449,
@@ -490,6 +497,13 @@
    "lon": -1.684778
   },
   {
+   "n": "Eroski",
+   "d": "Calle Poligono Agustinos,calle A, Local 1598,",
+   "p": 1.459,
+   "lat": 42.832389,
+   "lon": -1.677639
+  },
+  {
    "n": "E. Leclerc",
    "d": "Calle Arrobia Kalea, s/n (Zizur Mayor)",
    "p": 1.459,
@@ -497,25 +511,11 @@
    "lon": -1.698306
   },
   {
-   "n": "Gasolinera Noáin",
-   "d": "Poligono Talluntxe Ii, s/n (Aranguren)",
-   "p": 1.469,
-   "lat": 42.774333,
-   "lon": -1.633278
-  },
-  {
    "n": "Bidasoa Combustibles",
    "d": "Poligono Y, 10 (Noain)",
    "p": 1.469,
    "lat": 42.776194,
    "lon": -1.636972
-  },
-  {
-   "n": "Eroski",
-   "d": "Calle Poligono Agustinos,calle A, Local 1598,",
-   "p": 1.479,
-   "lat": 42.832389,
-   "lon": -1.677639
   },
   {
    "n": "AN Energéticos - Tajonar",
@@ -630,32 +630,25 @@
    "lon": -1.609389
   },
   {
-   "n": "Moeve",
-   "d": "Au A-15, 78 (Imarcoain)",
-   "p": 1.67,
-   "lat": 42.731944,
-   "lon": -1.618028
-  },
-  {
-   "n": "Moeve",
-   "d": "Autopista AP-15 km 78 (Imarcoain)",
-   "p": 1.67,
-   "lat": 42.731944,
-   "lon": -1.616889
-  },
-  {
-   "n": "Moeve",
-   "d": "Avenida Guipuzcoa, 1",
-   "p": 1.67,
-   "lat": 42.820528,
-   "lon": -1.655806
-  },
-  {
    "n": "Repsol",
    "d": "Carretera Avd. Guipuzcoa N-240 km 4 (Berriozar)",
    "p": 1.679,
    "lat": 42.836861,
    "lon": -1.672889
+  },
+  {
+   "n": "Moeve",
+   "d": "Autopista AP-15 km 78 (Imarcoain)",
+   "p": 1.68,
+   "lat": 42.731944,
+   "lon": -1.616889
+  },
+  {
+   "n": "Moeve",
+   "d": "Au A-15, 78 (Imarcoain)",
+   "p": 1.68,
+   "lat": 42.731944,
+   "lon": -1.618028
   },
   {
    "n": "Repsol",
@@ -666,17 +659,17 @@
   },
   {
    "n": "Repsol",
-   "d": "Carretera N-135 km 4,6 (Olaz)",
-   "p": 1.685,
-   "lat": 42.817194,
-   "lon": -1.59275
-  },
-  {
-   "n": "Repsol",
    "d": "Calle Altxutxate, 50 (Huarte)",
    "p": 1.685,
    "lat": 42.818278,
    "lon": -1.60325
+  },
+  {
+   "n": "Repsol",
+   "d": "Calle Sadar s/n, s/n",
+   "p": 1.685,
+   "lat": 42.797694,
+   "lon": -1.645583
   },
   {
    "n": "Repsol",
@@ -689,8 +682,8 @@
    "n": "Repsol",
    "d": "Avenida Estella, 9 (Zizur Mayor)",
    "p": 1.685,
-   "lat": 42.792833,
-   "lon": -1.686583
+   "lat": 42.792917,
+   "lon": -1.684194
   },
   {
    "n": "Andamur \"pamplona\"",
@@ -714,6 +707,20 @@
    "lon": -1.639611
   },
   {
+   "n": "Moeve",
+   "d": "Avenida Guipuzcoa, 1",
+   "p": 1.69,
+   "lat": 42.820528,
+   "lon": -1.655806
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-135 km 4,6 (Olaz)",
+   "p": 1.695,
+   "lat": 42.817194,
+   "lon": -1.59275
+  },
+  {
    "n": "Ural Energy",
    "d": "Olite s/n (ciudad del Transporte de Pamplona) (Imarcoain)",
    "p": 1.699,
@@ -733,13 +740,6 @@
    "p": 1.7,
    "lat": 42.806833,
    "lon": -1.661611
-  },
-  {
-   "n": "Repsol",
-   "d": "Calle Sadar s/n, s/n",
-   "p": 1.705,
-   "lat": 42.797694,
-   "lon": -1.645583
   },
   {
    "n": "Cepsa",
@@ -803,8 +803,8 @@
    "n": "Repsol",
    "d": "Avenida Estella, 9 (Zizur Mayor)",
    "p": 1.795,
-   "lat": 42.792833,
-   "lon": -1.686583
+   "lat": 42.792917,
+   "lon": -1.684194
   },
   {
    "n": "Galp",
@@ -885,6 +885,13 @@
   },
   {
    "n": "Repsol",
+   "d": "Calle Sadar s/n, s/n",
+   "p": 1.845,
+   "lat": 42.797694,
+   "lon": -1.645583
+  },
+  {
+   "n": "Repsol",
    "d": "Cl Carretera de Artica,s.n.",
    "p": 1.845,
    "lat": 42.8355,
@@ -896,13 +903,6 @@
    "p": 1.86,
    "lat": 42.806833,
    "lon": -1.661611
-  },
-  {
-   "n": "Repsol",
-   "d": "Calle Sadar s/n, s/n",
-   "p": 1.865,
-   "lat": 42.797694,
-   "lon": -1.645583
   },
   {
    "n": "Avia",
