@@ -1,13 +1,113 @@
 {
- "ts": "2026-11-13T07:37:52+01:00",
+ "ts": "2026-11-13T08:34:36+01:00",
  "fecha": "2026-11-13",
  "fuente": "Ministerio para la Transición Ecológica (geoportalgasolineras.es)",
- "fecha_ministerio": "13/11/2026 7:37:51",
+ "fecha_ministerio": "13/11/2026 8:34:35",
  "diesel": [
+  {
+   "n": "Plenergy",
+   "d": "Avenida Zaragoza, s/n (Tudela)",
+   "p": 1.615,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.047111,
+   "lon": -1.594472
+  },
+  {
+   "n": "Petroprix",
+   "d": "Calle Canal de Tauste, 290 (Tudela)",
+   "p": 1.615,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.040639,
+   "lon": -1.590028
+  },
+  {
+   "n": "Bonarea",
+   "d": "Calle Canal de Mañeru, 332 (Tudela)",
+   "p": 1.616,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.039139,
+   "lon": -1.589083
+  },
+  {
+   "n": "Plenergy",
+   "d": "Autovia A-68 km 99 (Bocal (el))",
+   "p": 1.619,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.023583,
+   "lon": -1.580222
+  },
+  {
+   "n": "Plenergy",
+   "d": "Carretera A-68 km 99,82 (Fontellas)",
+   "p": 1.619,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.024778,
+   "lon": -1.580333
+  },
+  {
+   "n": "E.S. Bardenas",
+   "d": "Poligono la Serna - Calle B - A68(N232) Salida 91, s/n (Tudela)",
+   "p": 1.619,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.076222,
+   "lon": -1.642889
+  },
+  {
+   "n": "Avia",
+   "d": "Poligono Reparcelacion de la UE-1 del AR-3, 3 (San Adrian)",
+   "p": 1.629,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.343417,
+   "lon": -1.942222
+  },
+  {
+   "n": "GM OIL",
+   "d": "Carrer Canal de Lodosa, s/n (Tudela)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.042972,
+   "lon": -1.591278
+  },
+  {
+   "n": "Plenergy",
+   "d": "Carrera Corella, 2 (Tudela)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.062278,
+   "lon": -1.620111
+  },
+  {
+   "n": "Plenergy",
+   "d": "Carretera Corella km s/n (Tudela)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.061194,
+   "lon": -1.622472
+  },
+  {
+   "n": "Eroski",
+   "d": "Carretera Ctra. Zaragoza km s/n (Tudela)",
+   "p": 1.645,
+   "c": 0,
+   "h": "L-S: 09:30-22:00",
+   "lat": 42.0355,
+   "lon": -1.588
+  },
   {
    "n": "Ballenoil",
    "d": "Autovia A-12 km 7,3 (Astrain)",
    "p": 1.649,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.778278,
    "lon": -1.707139
@@ -16,6 +116,7 @@
    "n": "Gasoleos Mercadaiz",
    "d": "Paraje San Babil 1, Bajo (Salinas de Pamplona)",
    "p": 1.67,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.761083,
    "lon": -1.661194
@@ -24,22 +125,43 @@
    "n": "Plenergy",
    "d": "Carretera Carretera de Guipuzkoa km 8 (Berrioplano)",
    "p": 1.679,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.846556,
    "lon": -1.686417
   },
   {
+   "n": "Alcampo",
+   "d": "Calle Carlos Vii, 28 (Estella O Lizarra)",
+   "p": 1.68,
+   "c": 0,
+   "h": "L-D: 08:00-21:30",
+   "lat": 42.660972,
+   "lon": -2.034167
+  },
+  {
    "n": "Gasolinera Noáin",
    "d": "Poligono Talluntxe Ii, s/n (Aranguren)",
    "p": 1.689,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.774333,
    "lon": -1.633278
   },
   {
+   "n": "Neumaticos Bidasoa",
+   "d": "Ziobi,6. Pol. Industrial Alkaiaga (Lesaka)",
+   "p": 1.689,
+   "c": 0,
+   "h": "L-V: 08:00-20:00; S: 08:00-14:00",
+   "lat": 43.279444,
+   "lon": -1.692167
+  },
+  {
    "n": "Bidasoa Combustibles",
    "d": "Poligono Y, 10 (Noain)",
    "p": 1.689,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.776194,
    "lon": -1.636972
@@ -48,14 +170,43 @@
    "n": "Eurocam",
    "d": "Pol.agustinos Calle a Parcela 3b",
    "p": 1.689,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.829722,
    "lon": -1.686222
   },
   {
+   "n": "Eurocam",
+   "d": "Poligono las Labradas Manzana 12 (Tudela)",
+   "p": 1.689,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.0685,
+   "lon": -1.637591
+  },
+  {
+   "n": "Eurocam",
+   "d": "Poligono las Labradas Vial Asturias, 378 (Tudela)",
+   "p": 1.689,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.070167,
+   "lon": -1.638444
+  },
+  {
+   "n": "Transportes Cruz",
+   "d": "Vial Rioja, 3,1 (Tudela)",
+   "p": 1.692,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.064333,
+   "lon": -1.634778
+  },
+  {
    "n": "Estacion DE Servicio Aralar",
    "d": "Ctra.guipuzcoa-n-240 km 5,5 (Aizoain)",
    "p": 1.699,
+   "c": 1,
    "h": "L-S: 05:30-22:30; D: 06:00-22:30",
    "lat": 42.84325,
    "lon": -1.681528
@@ -64,22 +215,61 @@
    "n": "Petroprix",
    "d": "Calle Artica, 30 (Berrioplano)",
    "p": 1.699,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.833667,
    "lon": -1.652306
   },
   {
+   "n": "Euronor Energy",
+   "d": "Paseo del Ebro, 10 (Buñuel)",
+   "p": 1.699,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 41.975444,
+   "lon": -1.44
+  },
+  {
    "n": "Plenergy",
    "d": "Poligono Mugazuri, 3 (Burlada)",
    "p": 1.699,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.831222,
    "lon": -1.620389
   },
   {
+   "n": "Beroil",
+   "d": "Carretera N-232 km 83,7 (Castejon)",
+   "p": 1.699,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.135028,
+   "lon": -1.700306
+  },
+  {
+   "n": "E.S. Kontxa S.L.",
+   "d": "Carretera Nacional 121-a km 48,5 (Doneztebe)",
+   "p": 1.699,
+   "c": 0,
+   "h": "L-S: 07:00-21:00; D: 08:00-15:00",
+   "lat": 43.155889,
+   "lon": -1.670167
+  },
+  {
+   "n": "Aralar",
+   "d": "Carretera N-121-A km 7,6 (Oricain)",
+   "p": 1.699,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.856083,
+   "lon": -1.618917
+  },
+  {
    "n": "E.Leclerc",
    "d": "Barrio la Morea, (Cordovilla)",
    "p": 1.699,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.785194,
    "lon": -1.634278
@@ -88,6 +278,7 @@
    "n": "Petroprix",
    "d": "Calle E, 1",
    "p": 1.699,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.814806,
    "lon": -1.684778
@@ -96,6 +287,7 @@
    "n": "Avanza OIL Pamplona",
    "d": "Poligono Landaben, Calle F, 2",
    "p": 1.699,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.814028,
    "lon": -1.684528
@@ -104,6 +296,7 @@
    "n": "Aralar",
    "d": "Avenida Juan Pablo Ii, 23",
    "p": 1.699,
+   "c": 1,
    "h": "L: 06:30-22:30; M-D: 06:30-14:29 y 14:30-22:30",
    "lat": 42.804028,
    "lon": -1.627861
@@ -112,6 +305,7 @@
    "n": "E. Leclerc",
    "d": "Calle Arrobia Kalea, s/n (Zizur Mayor)",
    "p": 1.699,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.787028,
    "lon": -1.698306
@@ -120,14 +314,25 @@
    "n": "Argi",
    "d": "Pol. Comarca I, Parcela D 25 (Orcoyen)",
    "p": 1.7,
+   "c": 1,
    "h": "L-V: 08:30-13:30 y 15:00-18:00",
    "lat": 42.826417,
    "lon": -1.688083
   },
   {
+   "n": "CAN S.L.",
+   "d": "Calle Joaquin Maria Gaston, 12 (Arcos (los))",
+   "p": 1.709,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.573972,
+   "lon": -2.194278
+  },
+  {
    "n": "Abycer",
    "d": "Poligono Errekaldea A, 3 (Beriain)",
    "p": 1.709,
+   "c": 1,
    "h": "L-V: 08:30-13:30 y 15:30-18:30",
    "lat": 42.737417,
    "lon": -1.630694
@@ -136,6 +341,7 @@
    "n": "Transportes Cruz",
    "d": "Poligono Comarca I Calle D, s/n (Berrioplano)",
    "p": 1.709,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.835722,
    "lon": -1.689
@@ -144,46 +350,457 @@
    "n": "Eroski",
    "d": "Calle Poligono Agustinos,calle A, Local 1598,",
    "p": 1.709,
+   "c": 1,
    "h": "L: 08:00-22:00",
    "lat": 42.832389,
    "lon": -1.677639
   },
   {
+   "n": "AN Energeticos - Artajona",
+   "d": "Travesía San Isidro Labrador, s/n (Artajona)",
+   "p": 1.71,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.586972,
+   "lon": -1.766083
+  },
+  {
+   "n": "Eroski",
+   "d": "Calle Merkatondoa, 7 (Estella O Lizarra)",
+   "p": 1.71,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.663028,
+   "lon": -2.031194
+  },
+  {
+   "n": "AN Energeticos - Lerin",
+   "d": "NA-122 km 24,5 (Lerin)",
+   "p": 1.71,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.459167,
+   "lon": -1.972917
+  },
+  {
+   "n": "Talleres Arrubla",
+   "d": "Ctra. Solchaga, s/n (Barasoain)",
+   "p": 1.718,
+   "c": 0,
+   "h": "L-S: 08:00-22:00",
+   "lat": 42.60225,
+   "lon": -1.644417
+  },
+  {
+   "n": "AN Energeticos - Andosilla Bodega SAN Sebastian",
+   "d": "Carretera Eje del Ebro km 55 (Andosilla)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.379861,
+   "lon": -1.957333
+  },
+  {
    "n": "AN Energéticos - Tajonar",
    "d": "Campa Campo de Tajonar, s/n (Tajonar)",
    "p": 1.719,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.770083,
    "lon": -1.624917
   },
   {
+   "n": "AN Energeticos - LOS Arcos",
+   "d": "Carretera Carretera los Arcos-acedo km 1,5 (Arcos (los))",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.577278,
+   "lon": -2.198417
+  },
+  {
+   "n": "AN Energeticos - Arguedas",
+   "d": "Camino Bardenas Reales, s/n (Arguedas)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.171139,
+   "lon": -1.587944
+  },
+  {
+   "n": "AN Energéticos - Ezkibel",
+   "d": "Poligono Poligono Industrial 10, 10 (Arroniz)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.584222,
+   "lon": -2.09075
+  },
+  {
+   "n": "AN Energeticos - Berbinzana",
+   "d": "Ctra. Lerin s/n (Berbinzana)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.522889,
+   "lon": -1.837889
+  },
+  {
    "n": "Alcampo",
    "d": "Poligono Mugazuri Parcela B, 4 (Burlada)",
    "p": 1.719,
+   "c": 1,
    "h": "L-D: 08:00-21:30",
    "lat": 42.830778,
    "lon": -1.61925
   },
   {
+   "n": "AN Energeticos - Caparroso",
+   "d": "Camino Camino del Cementerio, s/n (Caparroso)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.338722,
+   "lon": -1.646167
+  },
+  {
+   "n": "AN Energeticos - Carcastillo",
+   "d": "Avenida Aragon 50 (Carcastillo)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.373833,
+   "lon": -1.443222
+  },
+  {
+   "n": "AN Energeticos - Caseda",
+   "d": "Ctra. Gallipienzo km 1 (Caseda)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.529306,
+   "lon": -1.364778
+  },
+  {
+   "n": "AN Energeticos - Castejon",
+   "d": "Carretera N-113 km 77 (Castejon)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.179222,
+   "lon": -1.696611
+  },
+  {
+   "n": "Atugas",
+   "d": "Calle Final Calle San Jose S.n, s/n (Castejon)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 07:00-22:00",
+   "lat": 42.173278,
+   "lon": -1.699139
+  },
+  {
+   "n": "AN Energeticos - Cintruenigo Bodega Cirbonera",
+   "d": "Poligono Poligono Industrial s/n, 2 (Cintruenigo)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.072611,
+   "lon": -1.793361
+  },
+  {
+   "n": "AN Energeticos - Cortes",
+   "d": "Avenida Carmen Bellido, 52 (Cortes)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 41.926556,
+   "lon": -1.422056
+  },
+  {
    "n": "AN Energeticos - Urroz",
    "d": "Carretera NA-150 km 2 (Egues)",
    "p": 1.719,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.826028,
    "lon": -1.562972
   },
   {
+   "n": "AN Energeticos - Fustiñana",
+   "d": "Calle Pablo Sarasate, 52 (Fustiñana)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.0235,
+   "lon": -1.488639
+  },
+  {
+   "n": "AN Energeticos - Larraga SAN Isidro",
+   "d": "Carretera Carretera Lerín Km,2 km 2 (Larraga)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.551806,
+   "lon": -1.852028
+  },
+  {
+   "n": "AN Energeticos - Larraga-artajona",
+   "d": "Calle del Pinar, s/n (Larraga)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.562194,
+   "lon": -1.847667
+  },
+  {
+   "n": "AN Energeticos - Lumbier",
+   "d": "Avda Diputacion Foral s/n (Lumbier)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.658778,
+   "lon": -1.297639
+  },
+  {
+   "n": "AN Energeticos - Melida",
+   "d": "Poligono Bajo Aragon, s/n (Melida)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.355139,
+   "lon": -1.557944
+  },
+  {
+   "n": "AN Energeticos - Miranda DE Arga",
+   "d": "Carretera de Lerin km 1,3 (Miranda de Arga)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.492944,
+   "lon": -1.840083
+  },
+  {
+   "n": "AN Energeticos - Olite",
+   "d": "Poligono C/a, s/n (Olite)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.494639,
+   "lon": -1.665056
+  },
+  {
+   "n": "AN Energeticos - Ribaforada",
+   "d": "Avenida Nuestra Sra del Carmen, s/n (Ribaforada)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 41.994389,
+   "lon": -1.5155
+  },
+  {
+   "n": "AN Energeticos - Sanguesa",
+   "d": "Carretera Javier km s/n (Sanguesa)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.573889,
+   "lon": -1.275722
+  },
+  {
+   "n": "AN Energéticos - Sartaguda",
+   "d": "Poligono Industrial Gobella Fase I s/n (Sartaguda)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.38925,
+   "lon": -2.053806
+  },
+  {
+   "n": "AN Energeticos - Sesma",
+   "d": "Camino Camino Mendavia s/n, s/n (Sesma)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.476194,
+   "lon": -2.092
+  },
+  {
+   "n": "AN Energeticos - Tafalla",
+   "d": "Camino Miranda s/n (Tafalla)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.522861,
+   "lon": -1.685056
+  },
+  {
+   "n": "AN Energeticos - Tudela 1",
+   "d": "Carretera Corella km 3,5 (Tudela)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.059194,
+   "lon": -1.640944
+  },
+  {
+   "n": "AN Energeticos - Tudela 2",
+   "d": "Carretera Alfaro s/n km 0 (Tudela)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.066389,
+   "lon": -1.617778
+  },
+  {
+   "n": "AN Energeticos - Villafranca",
+   "d": "Camino Camino de Caparroso, s/n (Villafranca)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.2825,
+   "lon": -1.74225
+  },
+  {
+   "n": "Combustibles Villafranca",
+   "d": "Poligono Alesves, N (Villafranca)",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.272444,
+   "lon": -1.74425
+  },
+  {
    "n": "Bideko Aterpe",
    "d": "Poligono Meseta de Salinas, 4 (Salinas de Pamplona)",
    "p": 1.72,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.748556,
    "lon": -1.641444
   },
   {
+   "n": "Izelai Fuel",
+   "d": "Avenida Vitoria, s/n (Altsasu)",
+   "p": 1.724,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.89,
+   "lon": -2.169028
+  },
+  {
+   "n": "Izelai Fuel",
+   "d": "Avenida Iruñeko Etorbidea/avenida de Pamplona, 18 (Altsasu)",
+   "p": 1.724,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.891472,
+   "lon": -2.163806
+  },
+  {
+   "n": "Trueba Energy",
+   "d": "Carretera NA-132 km 2 (Legardeta)",
+   "p": 1.725,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.653583,
+   "lon": -2.004667
+  },
+  {
+   "n": "Transportes Sakana SCL",
+   "d": "Calle de la Estacion, 30 (Olazti)",
+   "p": 1.73,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.882222,
+   "lon": -2.185444
+  },
+  {
+   "n": "AN Energeticos - Ablitas",
+   "d": "Avda. de Ribaforada (carretera km 1) (Ablitas)",
+   "p": 1.739,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 41.97325,
+   "lon": -1.635194
+  },
+  {
+   "n": "AN Energeticos - Azagra",
+   "d": "Poligono Industrial, Calle D, 8 (Azagra)",
+   "p": 1.739,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.315667,
+   "lon": -1.902167
+  },
+  {
+   "n": "AN Energeticos - Arizkun",
+   "d": "Barrio Ordoki (Arizkun)",
+   "p": 1.739,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.180167,
+   "lon": -1.489222
+  },
+  {
+   "n": "BM Complet",
+   "d": "Poligono Comercial Alhama, sn (Cintruenigo)",
+   "p": 1.739,
+   "c": 0,
+   "h": "L-S: 08:00-21:30",
+   "lat": 42.08725,
+   "lon": -1.816167
+  },
+  {
+   "n": "AN Energéticos - Etxalar",
+   "d": "Bo Beolaldea s/n (Etxalar)",
+   "p": 1.739,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.235944,
+   "lon": -1.642167
+  },
+  {
+   "n": "AN Energeticos - Falces",
+   "d": "Carretera NA-6210 km 5 (Falces)",
+   "p": 1.739,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.387778,
+   "lon": -1.7875
+  },
+  {
+   "n": "Avanza OIL",
+   "d": "Na- 122 km 7 (Morentin)",
+   "p": 1.739,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.607389,
+   "lon": -2.016806
+  },
+  {
+   "n": "Etxarri OIL",
+   "d": "Poligono Zumurdiñeta, 15 (Etxarri-aranatz)",
+   "p": 1.744,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.899639,
+   "lon": -2.075944
+  },
+  {
+   "n": "Eroski",
+   "d": "Carretera Peralta km 128 (Peralta)",
+   "p": 1.745,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.335944,
+   "lon": -1.789972
+  },
+  {
    "n": "DST",
    "d": "Carretera Na150 km 1,56 (Alzuza)",
    "p": 1.749,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.826944,
    "lon": -1.567917
@@ -192,30 +809,178 @@
    "n": "AN Energeticos - Sarriguren",
    "d": "Calle Olaz, 3 (Olaz)",
    "p": 1.749,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.815556,
    "lon": -1.590667
   },
   {
+   "n": "Shell",
+   "d": "Avenida Roncesvalles, 29 (Olloki)",
+   "p": 1.749,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.8365,
+   "lon": -1.586917
+  },
+  {
    "n": "AN Energeticos - Huarte",
    "d": "Calle Olaz Chipi s/n, s/n (Huarte)",
    "p": 1.749,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.827806,
    "lon": -1.597611
   },
   {
+   "n": "BI Ahizpak",
+   "d": "Poligono Akaborro, 1 (Irurtzun)",
+   "p": 1.749,
+   "c": 0,
+   "h": "L-V: 09:00-14:00 y 16:00-19:30; S: 09:00-14:00",
+   "lat": 42.923167,
+   "lon": -1.831778
+  },
+  {
+   "n": "Forrajes DE Ribaforada, S.L.",
+   "d": "Camino Cementerio, s/n (Ribaforada)",
+   "p": 1.749,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 41.9905,
+   "lon": -1.517056
+  },
+  {
+   "n": "AN Energeticos - Peralta",
+   "d": "Avenida San Silvestre, s/n (Peralta)",
+   "p": 1.753,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.337694,
+   "lon": -1.809778
+  },
+  {
+   "n": "Adelfas OIL",
+   "d": "Calle Avda Diputación Foral, 7, (Artajona)",
+   "p": 1.755,
+   "c": 0,
+   "h": "L-V: 07:00-21:00; S: 08:00-14:00",
+   "lat": 42.586528,
+   "lon": -1.76475
+  },
+  {
+   "n": "Hnos. Fernandez Urabain S.L.",
+   "d": "Carretera Estella km 11,8 (Allo)",
+   "p": 1.759,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.571139,
+   "lon": -2.022194
+  },
+  {
+   "n": "Luis Moreno Roldan",
+   "d": "Poligono el Mallaton, 6 (Carcar)",
+   "p": 1.759,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.396167,
+   "lon": -1.98675
+  },
+  {
+   "n": "AN Energeticos - Funes",
+   "d": "Poligono Sardilla, s/n (Funes)",
+   "p": 1.759,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.308472,
+   "lon": -1.795139
+  },
+  {
+   "n": "E.S. Tiebas",
+   "d": "Na121;ctra Francia km 11,3 (Tiebas)",
+   "p": 1.759,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.717972,
+   "lon": -1.634611
+  },
+  {
+   "n": "Tiebas",
+   "d": "Na121;ctra Francia km 11,3 (Tiebas)",
+   "p": 1.759,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.717694,
+   "lon": -1.633556
+  },
+  {
+   "n": "Petrotudela",
+   "d": "Calle Vial B, 34 (Tudela)",
+   "p": 1.759,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.066139,
+   "lon": -1.625806
+  },
+  {
+   "n": "AN Energeticos - Valtierra",
+   "d": "Carretera Carretera Tudela km N8 (Valtierra)",
+   "p": 1.759,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.187306,
+   "lon": -1.619861
+  },
+  {
    "n": "Ballenoil",
    "d": "N-121 Pamplona-zaragoza km 9,4 (Beriain)",
    "p": 1.769,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.736,
    "lon": -1.633139
   },
   {
+   "n": "AN Energeticos - Cadreita",
+   "d": "Poligono las Navas, Calle A, 1 (Cadreita)",
+   "p": 1.769,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.221944,
+   "lon": -1.688611
+  },
+  {
+   "n": "AN Energeticos - Funes 2",
+   "d": "Poligono Bodega Romana, Vial Oeste, s/n (Funes)",
+   "p": 1.769,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.256806,
+   "lon": -1.835417
+  },
+  {
+   "n": "AN Energeticos - Mendavia",
+   "d": "Carretera Lodosa sn (Mendavia)",
+   "p": 1.769,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.443944,
+   "lon": -2.191639
+  },
+  {
+   "n": "Carrefour",
+   "d": "Carretera de Tarazona km 3 (Tudela)",
+   "p": 1.769,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.043861,
+   "lon": -1.6195
+  },
+  {
    "n": "Petro Swap",
    "d": "Parque Empresarial la Muga, 7 (Orcoyen)",
    "p": 1.779,
+   "c": 1,
    "h": "L-V: 06:00-22:30; S: 06:00-22:00; D: 08:00-22:00",
    "lat": 42.821639,
    "lon": -1.688694
@@ -224,62 +989,538 @@
    "n": "Adelfas",
    "d": "Calle Maria Viscarret - Nuevo Artica, 39 (Berrioplano)",
    "p": 1.788,
+   "c": 1,
    "h": "L-D: 08:00-22:00",
    "lat": 42.842889,
    "lon": -1.681833
   },
   {
+   "n": "Avia",
+   "d": "Carretera Comarcal NA-170 km 31,1 (Doneztebe)",
+   "p": 1.789,
+   "c": 0,
+   "h": "L-D: 07:00-22:00",
+   "lat": 43.136083,
+   "lon": -1.680583
+  },
+  {
+   "n": "Sarasate",
+   "d": "Carretera Pamplona-s.sebastian km 15 (Sarasate)",
+   "p": 1.789,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.892,
+   "lon": -1.777806
+  },
+  {
    "n": "Galp",
    "d": "Calle Artica Esq C/ansoain, sn (Artica)",
    "p": 1.798,
+   "c": 1,
    "h": "L-D: 08:00-22:00",
    "lat": 42.831583,
    "lon": -1.651222
   },
   {
+   "n": "MLC",
+   "d": "Carretera Pamplona-irun km 17,3 (Burutain)",
+   "p": 1.799,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.931806,
+   "lon": -1.608806
+  },
+  {
+   "n": "Petronor",
+   "d": "Carretera Tauste km 8,5 (Cabanillas)",
+   "p": 1.799,
+   "c": 0,
+   "h": "L-V: 06:00-22:00; S: 06:00-20:00; D: 07:00-14:00",
+   "lat": 42.029556,
+   "lon": -1.516056
+  },
+  {
    "n": "Ural Energy",
    "d": "Olite s/n (ciudad del Transporte de Pamplona) (Imarcoain)",
    "p": 1.799,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.725194,
    "lon": -1.611111
   },
   {
+   "n": "Repsol",
+   "d": "Avenida Zaragoza, 73 (Tudela)",
+   "p": 1.799,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.052528,
+   "lon": -1.597056
+  },
+  {
+   "n": "Avia",
+   "d": "Avenida Pamplona, 33 (Estella O Lizarra)",
+   "p": 1.8,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.665972,
+   "lon": -2.020806
+  },
+  {
+   "n": "AN Energeticos - Yerri",
+   "d": "Carretera Carretera Pamplona km 37,5 (Azcona)",
+   "p": 1.807,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.732361,
+   "lon": -1.987972
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Zaragoza, 48 (Tudela)",
+   "p": 1.809,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.058083,
+   "lon": -1.599861
+  },
+  {
+   "n": "Carburantes Valtierra S.L.",
+   "d": "Poligono Industrial Valtierra-arguedas, 2 (Valtierra)",
+   "p": 1.809,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.185444,
+   "lon": -1.62125
+  },
+  {
+   "n": "E.S.La Recta",
+   "d": "NA-134 km 13,6 (Arguedas)",
+   "p": 1.819,
+   "c": 0,
+   "h": "L-V: 08:00-20:00; S: 08:00-14:00",
+   "lat": 42.167611,
+   "lon": -1.593083
+  },
+  {
+   "n": "Q8",
+   "d": "Carretera N-121 km km 3,55 (Cascante)",
+   "p": 1.819,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.036472,
+   "lon": -1.631
+  },
+  {
+   "n": "Avia",
+   "d": "Navas de Tolosa, 78 (valtierra-san Adrian-na-134 km 12,64) (Milagro)",
+   "p": 1.819,
+   "c": 0,
+   "h": "L-S: 07:00-21:00; D: 08:00-14:00",
+   "lat": 42.244139,
+   "lon": -1.769944
+  },
+  {
+   "n": "E.S. Murchante Avia",
+   "d": "C/mayor, s/n (Murchante)",
+   "p": 1.819,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.036083,
+   "lon": -1.646556
+  },
+  {
+   "n": "AN Energeticos - Mendigorria",
+   "d": "Ctra.larraga km 2 (Mendigorria)",
+   "p": 1.823,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.612833,
+   "lon": -1.842889
+  },
+  {
+   "n": "Avia",
+   "d": "Avenida Pamplona, 28 (Estella O Lizarra)",
+   "p": 1.829,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.665944,
+   "lon": -2.020167
+  },
+  {
+   "n": "Avia",
+   "d": "Carlos Vii, 22 (Estella O Lizarra)",
+   "p": 1.829,
+   "c": 0,
+   "h": "L-D: 06:30-22:30",
+   "lat": 42.664361,
+   "lon": -2.032528
+  },
+  {
+   "n": "Avia",
+   "d": "Padre Raimundo de Lumbier, 14 (Sanguesa)",
+   "p": 1.829,
+   "c": 0,
+   "h": "L-D: 07:00-22:00",
+   "lat": 42.581139,
+   "lon": -1.285639
+  },
+  {
+   "n": "Alpe",
+   "d": "Poligono Industrial Elordi C/a 4 (Iraizotz)",
+   "p": 1.829,
+   "c": 0,
+   "h": "L-V: 09:00-19:00",
+   "lat": 43.000778,
+   "lon": -1.661786
+  },
+  {
+   "n": "DEL Villar Energia",
+   "d": "Poligono Merkatondoa, 28 (Estella O Lizarra)",
+   "p": 1.83,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.655139,
+   "lon": -2.027778
+  },
+  {
+   "n": "Avia",
+   "d": "Malvasia, 5 (Arcos (los))",
+   "p": 1.839,
+   "c": 0,
+   "h": "L-V: 07:00-22:00; S: 10:00-14:00 y 16:00-22:00",
+   "lat": 42.568333,
+   "lon": -2.191722
+  },
+  {
+   "n": "Nafar Mendi",
+   "d": "Carretera NA-121B km 45 (Arraioz)",
+   "p": 1.839,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 43.140028,
+   "lon": -1.572778
+  },
+  {
+   "n": "Iguzquiza Y Echeverria S.L.",
+   "d": "Avenida Guipuzcoa, s/n (Estella O Lizarra)",
+   "p": 1.839,
+   "c": 0,
+   "h": "L-D: 06:30-22:30",
+   "lat": 42.677889,
+   "lon": -2.035861
+  },
+  {
+   "n": "Repsol",
+   "d": "Ps de la Ribera, 215 (na-134 km 19) (Valtierra)",
+   "p": 1.839,
+   "c": 0,
+   "h": "L-V: 06:30-20:00; S: 08:00-13:00",
+   "lat": 42.201611,
+   "lon": -1.642861
+  },
+  {
+   "n": "Avia",
+   "d": "Cr C-5340, 31 (Aibar)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L: 07:30-21:30",
+   "lat": 42.590333,
+   "lon": -1.363972
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Pamplona, 24 (Altsasu)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-V: 06:00-22:00",
+   "lat": 42.891,
+   "lon": -2.16075
+  },
+  {
+   "n": "Repsol",
+   "d": "Calle Orella, s/n (Arribe)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-D: 08:00-13:00 y 16:00-21:00",
+   "lat": 43.033417,
+   "lon": -1.983694
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera NA-121 a km 77,39 (Bera)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 43.278278,
+   "lon": -1.710056
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera NA-121A km 77,3 (Bera)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.278111,
+   "lon": -1.708583
+  },
+  {
+   "n": "BP",
+   "d": "Poligono Zalain, 5 (Bera)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.278083,
+   "lon": -1.700278
+  },
+  {
+   "n": "Petronor",
+   "d": "Cr N-121, 75 (Bera)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-S: 07:00-22:00; D: 08:00-14:00",
+   "lat": 43.270833,
+   "lon": -1.687167
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-121A km 44,5 (Legasa)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 43.130444,
+   "lon": -1.630722
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera Nº 232 P.k. 82 km 82 (Castejon)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.136917,
+   "lon": -1.699944
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera NA-160 km 24 (Fitero)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-V: 07:00-22:00; S-D: 09:00-20:00",
+   "lat": 42.055861,
+   "lon": -1.861722
+  },
+  {
+   "n": "ES Landibar",
+   "d": "Calle Landibar 10, Poligono 2, Parcela 21, 10 (Landibar)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-D: 08:00-19:30",
+   "lat": 43.284083,
+   "lon": -1.505778
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-121 C, 10 (Cascante)",
+   "p": 1.855,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 41.993278,
+   "lon": -1.676361
+  },
+  {
    "n": "Petronor",
    "d": "Carretera Cr NA-7000, 5,3 km 5,3 (Arazuri)",
    "p": 1.855,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.818417,
    "lon": -1.718111
   },
   {
+   "n": "Nafaroil",
+   "d": "Barrio Ibardin, 19 (Bera)",
+   "p": 1.859,
+   "c": 0,
+   "h": "L-D: 08:15-19:15",
+   "lat": 43.309306,
+   "lon": -1.684056
+  },
+  {
+   "n": "Avia",
+   "d": "Barrio Ibardin, s/n (Bera)",
+   "p": 1.859,
+   "c": 0,
+   "h": "L-D: 08:00-19:30",
+   "lat": 43.309361,
+   "lon": -1.687444
+  },
+  {
+   "n": "Josenea Zubiri Avia",
+   "d": "Carretera N-138 km 19,7 (Saigots)",
+   "p": 1.859,
+   "c": 0,
+   "h": "L-D: 08:00-21:00",
+   "lat": 42.937167,
+   "lon": -1.503167
+  },
+  {
+   "n": "Marisa",
+   "d": "Carretera NA-122 km 21,200 (Lerin)",
+   "p": 1.859,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.486917,
+   "lon": -1.981556
+  },
+  {
+   "n": "Josenea Avia",
+   "d": "Camino Landibar, 14 (Dantxarinea)",
+   "p": 1.859,
+   "c": 0,
+   "h": "L-D: 08:00-20:00",
+   "lat": 43.291361,
+   "lon": -1.504944
+  },
+  {
+   "n": "Cepsa",
+   "d": "Barrio Dantxarinea, 2 (Urdazubi)",
+   "p": 1.859,
+   "c": 0,
+   "h": "L-D: 08:00-19:00",
+   "lat": 43.289583,
+   "lon": -1.505806
+  },
+  {
+   "n": "Cepsa",
+   "d": "Carretera N-121B km 79,500 (Urdazubi)",
+   "p": 1.859,
+   "c": 0,
+   "h": "L-D: 09:00-14:00",
+   "lat": 43.287444,
+   "lon": -1.505667
+  },
+  {
+   "n": "IDS",
+   "d": "Carretera N-i km 398 (Altsasu)",
+   "p": 1.864,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.9155,
+   "lon": -2.183833
+  },
+  {
+   "n": "Repsol",
+   "d": "Au A-15, 98,5 (Zuasti)",
+   "p": 1.865,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.861639,
+   "lon": -1.743917
+  },
+  {
    "n": "Petronor",
    "d": "Cl Poligono Landaben, S.n.",
    "p": 1.865,
+   "c": 1,
    "h": "L-S: 06:00-22:00; D: 07:00-22:00",
    "lat": 42.814333,
    "lon": -1.684278
   },
   {
+   "n": "Moeve",
+   "d": "Autovia A-15 (mrg.izdo.) km 134,5 (Gorriti)",
+   "p": 1.869,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.059111,
+   "lon": -1.957306
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-121 km 79,5 (Dantxarinea)",
+   "p": 1.869,
+   "c": 0,
+   "h": "L-V: 09:00-18:00; S-D: 10:00-19:00",
+   "lat": 43.290556,
+   "lon": -1.505806
+  },
+  {
    "n": "IDS",
    "d": "Ctra. N-121 km 9,5 (Beriain)",
    "p": 1.87,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.734722,
    "lon": -1.633889
   },
   {
+   "n": "Sertelgas,sl",
+   "d": "Poligono Industrial Ombatillo, s/n (Corella)",
+   "p": 1.873,
+   "c": 0,
+   "h": "L-D: 07:00-11:00",
+   "lat": 42.114611,
+   "lon": -1.797889
+  },
+  {
    "n": "Andamur \"pamplona\"",
    "d": "Avenida Este (ciudad del Transporte Pamplona), 1 (Imarcoain)",
    "p": 1.878,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.732583,
    "lon": -1.613972
   },
   {
+   "n": "Zona Auto Mugaire Avia",
+   "d": "Cr N-121, 48 (Mugairi(oronoz))",
+   "p": 1.879,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.137472,
+   "lon": -1.611139
+  },
+  {
+   "n": "Petromiralles Bera",
+   "d": "Calle Zalain, 18 (Bera)",
+   "p": 1.879,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.276444,
+   "lon": -1.700889
+  },
+  {
+   "n": "Moeve",
+   "d": "Carretera N-121-A km 55 (Doneztebe)",
+   "p": 1.879,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.152556,
+   "lon": -1.668083
+  },
+  {
+   "n": "Cepsa",
+   "d": "Carretera N-121-A km 23,7 (Lantz)",
+   "p": 1.879,
+   "c": 0,
+   "h": "L-V: 08:00-20:00; S-D: 09:00-17:00",
+   "lat": 42.983333,
+   "lon": -1.630528
+  },
+  {
+   "n": "Moeve",
+   "d": "Autovia A-15 (mrg.dcho.) km 134,4 (Gorriti)",
+   "p": 1.879,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.058806,
+   "lon": -1.955944
+  },
+  {
    "n": "Moeve",
    "d": "Au A-15, 78 (Imarcoain)",
    "p": 1.879,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.731944,
    "lon": -1.618028
@@ -288,6 +1529,7 @@
    "n": "Moeve",
    "d": "Autopista AP-15 km 78 (Imarcoain)",
    "p": 1.879,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.731944,
    "lon": -1.616889
@@ -296,62 +1538,187 @@
    "n": "Moeve",
    "d": "Avenida Guipuzcoa, 1",
    "p": 1.879,
+   "c": 1,
    "h": "L-D: 00:00-23:59",
    "lat": 42.820528,
    "lon": -1.655806
   },
   {
+   "n": "Avia",
+   "d": "Carretera Zaragoza, km 33.5 km 33 (Tafalla)",
+   "p": 1.879,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.514472,
+   "lon": -1.675778
+  },
+  {
+   "n": "Estacion DE Servicio Pradesol",
+   "d": "Poligono Industrial Calle F, 1 (Cintruenigo)",
+   "p": 1.885,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.071833,
+   "lon": -1.797758
+  },
+  {
+   "n": "Campsa",
+   "d": "Cr N-121B, 59 (n-121b km 58) (Elizondo)",
+   "p": 1.889,
+   "c": 0,
+   "h": "L-D: 07:00-21:00",
+   "lat": 43.148639,
+   "lon": -1.512361
+  },
+  {
+   "n": "Noil",
+   "d": "Poligono Poligono Industrial Zalain, S-p Parcela 3/104/2, 104 (Bera)",
+   "p": 1.889,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.276611,
+   "lon": -1.700306
+  },
+  {
    "n": "Moeve",
    "d": "N-121 km 9,4, (Beriain)",
    "p": 1.889,
+   "c": 1,
    "h": "L-D: 06:30-22:00",
    "lat": 42.734444,
    "lon": -1.633556
   },
   {
    "n": "Moeve",
+   "d": "Carretera Nacional 121 km 56 (Caparroso)",
+   "p": 1.889,
+   "c": 0,
+   "h": "L-V: 06:00-23:30; S: 06:00-22:00; D: 07:00-22:00",
+   "lat": 42.350722,
+   "lon": -1.650389
+  },
+  {
+   "n": "Moeve",
    "d": "Poligono Poligono Industrial Cordovilla-galar, Parcela 382, s/n (Cordovilla)",
    "p": 1.889,
+   "c": 1,
    "h": "L-V: 07:00-21:00; S: 07:00-14:00",
    "lat": 42.789778,
    "lon": -1.639611
   },
   {
+   "n": "Shell",
+   "d": "Autovia A-15 km 124,488 (Mugiro)",
+   "p": 1.889,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.000028,
+   "lon": -1.886167
+  },
+  {
+   "n": "Campsa",
+   "d": "Carretera Ctra. Na170 km1.98 km 1 (Leitza)",
+   "p": 1.889,
+   "c": 0,
+   "h": "L-S: 06:00-22:00; D: 08:00-14:00",
+   "lat": 43.084972,
+   "lon": -1.922278
+  },
+  {
+   "n": "Avia",
+   "d": "Calle Albistur, 57 (Lesaka)",
+   "p": 1.889,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.248778,
+   "lon": -1.69775
+  },
+  {
+   "n": "Transportes Bidasoa",
+   "d": "Carretera Lesaka-oiartzun km 0.1 (Lesaka)",
+   "p": 1.889,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.2545,
+   "lon": -1.681202
+  },
+  {
+   "n": "Moeve",
+   "d": "Carretera NA-123 km 0,7 (Lodosa)",
+   "p": 1.889,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.416556,
+   "lon": -2.076861
+  },
+  {
    "n": "Avia",
    "d": "Calle Carretera Baodstain, 2",
    "p": 1.889,
+   "c": 1,
    "h": "L-D: 07:00-22:00",
    "lat": 42.813306,
    "lon": -1.626333
   },
   {
    "n": "Repsol",
+   "d": "Au A-15, 14 (Valtierra)",
+   "p": 1.889,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.200361,
+   "lon": -1.674889
+  },
+  {
+   "n": "Estacion DE Servicio LA Noria",
+   "d": "Carretera NA-6920 km 3,850 (Corella)",
+   "p": 1.893,
+   "c": 0,
+   "h": "L-J: 06:00-23:00; V: 06:00-17:00; D: 06:00-23:00",
+   "lat": 42.113194,
+   "lon": -1.779778
+  },
+  {
+   "n": "Repsol",
    "d": "Carretera N-121 km 5 (Aranguren)",
    "p": 1.895,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.776111,
    "lon": -1.634722
   },
   {
    "n": "Repsol",
-   "d": "Carretera N-135 km 4,6 (Olaz)",
-   "p": 1.895,
-   "h": "L-D: 06:00-22:00",
-   "lat": 42.817194,
-   "lon": -1.59275
-  },
-  {
-   "n": "Repsol",
    "d": "Cr N-135, 4,6 (Olaz)",
    "p": 1.895,
+   "c": 1,
    "h": "L-V: 06:30-22:00",
    "lat": 42.816111,
    "lon": -1.593222
   },
   {
+   "n": "BP Estella",
+   "d": "Pg Merkatondoa - Upp3 Parc.4, S.n. (Estella O Lizarra)",
+   "p": 1.895,
+   "c": 0,
+   "h": "L-D: 05:00-23:00",
+   "lat": 42.6535,
+   "lon": -2.026667
+  },
+  {
+   "n": "Repsol",
+   "d": "Autopista A-68 km 222 (Fontellas)",
+   "p": 1.895,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.012583,
+   "lon": -1.600861
+  },
+  {
    "n": "BP Huarte",
    "d": "Calle Intxaurdia, 6 (Huarte)",
    "p": 1.895,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.831361,
    "lon": -1.585417
@@ -360,30 +1727,79 @@
    "n": "Repsol",
    "d": "Calle Altxutxate, 50 (Huarte)",
    "p": 1.895,
+   "c": 1,
    "h": "L-D: 07:00-21:30",
    "lat": 42.818278,
    "lon": -1.60325
   },
   {
    "n": "Repsol",
+   "d": "Cr N-240, 41 (Liedena)",
+   "p": 1.895,
+   "c": 0,
+   "h": "L-V: 06:00-22:00; S-D: 07:00-22:00",
+   "lat": 42.614194,
+   "lon": -1.27825
+  },
+  {
+   "n": "Repsol",
    "d": "Cr N-121, 5 (Noain)",
    "p": 1.895,
+   "c": 1,
    "h": "L-V: 06:00-22:00; S: 07:00-22:00",
    "lat": 42.775972,
    "lon": -1.635278
   },
   {
    "n": "Repsol",
-   "d": "Cl Carretera de Artica,s.n.",
+   "d": "Paseo de los Fueros, s/nº (nacional Iii km 24) (Puente la Reina)",
    "p": 1.895,
+   "c": 0,
    "h": "L-D: 06:00-22:00",
-   "lat": 42.8355,
-   "lon": -1.653361
+   "lat": 42.670611,
+   "lon": -1.815611
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera NA-134 km 51,7 (San Adrian)",
+   "p": 1.895,
+   "c": 0,
+   "h": "L-D: 06:00-21:30",
+   "lat": 42.350639,
+   "lon": -1.937639
+  },
+  {
+   "n": "Avia",
+   "d": "Carretera Pitillas-santacara Na5330 km 9,800 (Santacara)",
+   "p": 1.895,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.380306,
+   "lon": -1.552944
+  },
+  {
+   "n": "Repsol",
+   "d": "Av Pamplona s/n (Tafalla)",
+   "p": 1.895,
+   "c": 0,
+   "h": "L-V: 06:30-22:00; S: 07:00-22:00; D: 07:00-14:30",
+   "lat": 42.53175,
+   "lon": -1.672444
+  },
+  {
+   "n": "BP Tafalla",
+   "d": "Cr N-121, 38,1 (Tafalla)",
+   "p": 1.895,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.498389,
+   "lon": -1.673778
   },
   {
    "n": "BP Villava",
    "d": "Avenida Carretera Francia s/n, s/n (Villava O Atarrabia)",
    "p": 1.895,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.834944,
    "lon": -1.609389
@@ -392,54 +1808,169 @@
    "n": "Repsol",
    "d": "Avenida Estella, 9 (Zizur Mayor)",
    "p": 1.895,
+   "c": 1,
+   "h": "L: 06:00-22:00",
+   "lat": 42.792833,
+   "lon": -1.686583
+  },
+  {
+   "n": "Avia",
+   "d": "Carretera NA-132-A km 19 (Acedo)",
+   "p": 1.897,
+   "c": 0,
    "h": "L-D: 24H",
-   "lat": 42.792917,
-   "lon": -1.684194
+   "lat": 42.666917,
+   "lon": -2.252397
   },
   {
    "n": "Cepsa",
    "d": "Autovia A-12 km 7,3 (Gazolaz)",
    "p": 1.899,
+   "c": 1,
    "h": "L-D: 06:30-22:30",
    "lat": 42.7775,
    "lon": -1.707611
   },
   {
+   "n": "LOW Cost Fuel OIL",
+   "d": "Carretera N-135 km 41 (Aurizberri)",
+   "p": 1.899,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.977861,
+   "lon": -1.364
+  },
+  {
+   "n": "Luzaide",
+   "d": "Poligono Pol. Ind 1- Parcela 105, 105 (Luzaide)",
+   "p": 1.899,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.11725,
+   "lon": -1.2705
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr A-10 Autovia de la Barranca (Etxarren)",
+   "p": 1.905,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.9125,
+   "lon": -1.863028
+  },
+  {
    "n": "Repsol",
    "d": "Carretera Avd. Guipuzcoa N-240 km 4 (Berriozar)",
    "p": 1.905,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.836861,
    "lon": -1.672889
   },
   {
    "n": "Repsol",
+   "d": "Carretera N-135 km 4,6 (Olaz)",
+   "p": 1.905,
+   "c": 1,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.817194,
+   "lon": -1.59275
+  },
+  {
+   "n": "Repsol",
    "d": "Calle Sadar s/n, s/n",
    "p": 1.905,
+   "c": 1,
    "h": "L-S: 06:30-22:00; D: 07:00-22:00",
    "lat": 42.797694,
    "lon": -1.645583
   },
   {
+   "n": "Repsol",
+   "d": "Cl Carretera de Artica,s.n.",
+   "p": 1.905,
+   "c": 1,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.8355,
+   "lon": -1.653361
+  },
+  {
    "n": "Transportes Azpiroz",
    "d": "Calle Olite - Ciudad del Transporte, 28 (Elorz)",
    "p": 1.91,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.7255,
    "lon": -1.616389
   },
   {
+   "n": "Repsol",
+   "d": "Avenida San Luis Gonzaga, 3 (Viana)",
+   "p": 1.915,
+   "c": 0,
+   "h": "L-S: 07:00-23:00",
+   "lat": 42.512583,
+   "lon": -2.374028
+  },
+  {
+   "n": "Estacion DE Servicio Aoiz, S.L.",
+   "d": "Calle Domingo Elizondo, 12 (Aoiz)",
+   "p": 1.919,
+   "c": 0,
+   "h": "L-S: 07:00-22:00; D: 08:00-21:00",
+   "lat": 42.784389,
+   "lon": -1.372472
+  },
+  {
+   "n": "Valcarce",
+   "d": "Barrio de la Estacion s/n (Olazti)",
+   "p": 1.919,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.878917,
+   "lon": -2.196944
+  },
+  {
    "n": "Moeve",
    "d": "Calle Sancho Ramirez, 2",
    "p": 1.919,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.806833,
    "lon": -1.661611
   },
   {
+   "n": "Valcarce",
+   "d": "Autovia A-68 km 105,6 (Ribaforada)",
+   "p": 1.919,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 41.986667,
+   "lon": -1.530389
+  },
+  {
+   "n": "Valcarce",
+   "d": "Poligono Montes del Cierzo, 67 (Tudela)",
+   "p": 1.919,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.121167,
+   "lon": -1.675639
+  },
+  {
+   "n": "Petronor",
+   "d": "Cr NA-137, 28,7 (Urzainqui)",
+   "p": 1.919,
+   "c": 0,
+   "h": "L-D: 08:00-21:00",
+   "lat": 42.837667,
+   "lon": -0.939306
+  },
+  {
    "n": "Repsol",
    "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
    "p": 1.929,
+   "c": 1,
    "h": "L-V: 06:00-22:00; S-D: 07:00-22:00",
    "lat": 42.800611,
    "lon": -1.611611
@@ -448,14 +1979,43 @@
    "n": "Repsol",
    "d": "Calle Real, 66 (Noain)",
    "p": 1.929,
+   "c": 1,
    "h": "L-D: 07:00-22:00",
    "lat": 42.762889,
    "lon": -1.633722
   },
   {
+   "n": "Avia",
+   "d": "Calle Mayor, 3 (Oronz)",
+   "p": 1.93,
+   "c": 0,
+   "h": "L-D: 08:00-20:00",
+   "lat": 42.868083,
+   "lon": -1.096694
+  },
+  {
+   "n": "Asle",
+   "d": "Barrio Pekotxeta, s/n (Azoleta)",
+   "p": 1.934,
+   "c": 0,
+   "h": "L: 08:00-19:30",
+   "lat": 43.116889,
+   "lon": -1.271333
+  },
+  {
+   "n": "Zona Auto Luaide Avia",
+   "d": "Cr C-135 66 (Luzaide)",
+   "p": 1.934,
+   "c": 0,
+   "h": "L-D: 08:00-20:00",
+   "lat": 43.109083,
+   "lon": -1.283028
+  },
+  {
    "n": "Cepsa",
    "d": "Ronda de Barañain, 2 (Barañain)",
    "p": 1.939,
+   "c": 1,
    "h": "L-V: 06:00-22:00; S-D: 07:00-22:00",
    "lat": 42.806861,
    "lon": -1.67675
@@ -464,24 +2024,198 @@
    "n": "Repsol",
    "d": "N-240 km 378 (Noain)",
    "p": 1.939,
+   "c": 1,
    "h": "L-J: 06:00-21:00; V-S: 06:00-22:00; D: 07:00-21:00",
    "lat": 42.756667,
    "lon": -1.624167
   },
   {
+   "n": "Petronor",
+   "d": "Calle San Anton,7, (Zudaire)",
+   "p": 1.949,
+   "c": 0,
+   "h": "L-D: 08:00-22:00",
+   "lat": 42.771222,
+   "lon": -2.130472
+  },
+  {
+   "n": "Moeve",
+   "d": "Carretera N-113 km 91,5 (Cintruenigo)",
+   "p": 1.949,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.076944,
+   "lon": -1.79675
+  },
+  {
+   "n": "Moeve",
+   "d": "Carretera NA-2410 km 17 (Lakuntza)",
+   "p": 1.949,
+   "c": 0,
+   "h": "L-V: 06:00-22:00; S-D: 07:00-21:00",
+   "lat": 42.922111,
+   "lon": -2.0145
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr NA-134, 79 (Mendavia)",
+   "p": 1.949,
+   "c": 0,
+   "h": "L: 07:00-22:00",
+   "lat": 42.449611,
+   "lon": -2.212222
+  },
+  {
+   "n": "Petronor",
+   "d": "Calle Santa Maria, 13 (Aribe)",
+   "p": 1.95,
+   "c": 0,
+   "h": "L-D: 08:00-21:00",
+   "lat": 42.945722,
+   "lon": -1.265667
+  },
+  {
+   "n": "Galp",
+   "d": "Autovia A1 km 401 (Altsasu)",
+   "p": 1.959,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.917667,
+   "lon": -2.195389
+  },
+  {
+   "n": "Galp",
+   "d": "Ctra. A-1 km 391 (Ziordia)",
+   "p": 1.959,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.865028,
+   "lon": -2.236361
+  },
+  {
    "n": "Igoa Y Patxi SL",
    "d": "Poligono Industrial, s/n (Egues)",
    "p": 1.969,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.824167,
    "lon": -1.563056
+  },
+  {
+   "n": "Avia",
+   "d": "Crta N-135 km 18,5 Quinto Real (Eugi)",
+   "p": 1.969,
+   "c": 0,
+   "h": "M-D: 09:00-20:00",
+   "lat": 43.060278,
+   "lon": -1.453556
+  },
+  {
+   "n": "Galp",
+   "d": "Autovia a 1 km 401 (Altsasu)",
+   "p": 1.999,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.915306,
+   "lon": -2.197889
+  },
+  {
+   "n": "Cepsa",
+   "d": "Carretera NA-129 Acedo-sesma-lodosa km 14,6 (Arcos (los))",
+   "p": 2.019,
+   "c": 0,
+   "h": "L-D: 06:00-00:00",
+   "lat": 42.555556,
+   "lon": -2.180833
   }
  ],
  "g95": [
   {
    "n": "Plenergy",
+   "d": "Avenida Zaragoza, s/n (Tudela)",
+   "p": 1.327,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.047111,
+   "lon": -1.594472
+  },
+  {
+   "n": "Petroprix",
+   "d": "Calle Canal de Tauste, 290 (Tudela)",
+   "p": 1.327,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.040639,
+   "lon": -1.590028
+  },
+  {
+   "n": "Bonarea",
+   "d": "Calle Canal de Mañeru, 332 (Tudela)",
+   "p": 1.328,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.039139,
+   "lon": -1.589083
+  },
+  {
+   "n": "E.S. Bardenas",
+   "d": "Poligono la Serna - Calle B - A68(N232) Salida 91, s/n (Tudela)",
+   "p": 1.347,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.076222,
+   "lon": -1.642889
+  },
+  {
+   "n": "GM OIL",
+   "d": "Carrer Canal de Lodosa, s/n (Tudela)",
+   "p": 1.349,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.042972,
+   "lon": -1.591278
+  },
+  {
+   "n": "Plenergy",
+   "d": "Carrera Corella, 2 (Tudela)",
+   "p": 1.357,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.062278,
+   "lon": -1.620111
+  },
+  {
+   "n": "Plenergy",
+   "d": "Carretera Corella km s/n (Tudela)",
+   "p": 1.357,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.061194,
+   "lon": -1.622472
+  },
+  {
+   "n": "Plenergy",
+   "d": "Autovia A-68 km 99 (Bocal (el))",
+   "p": 1.359,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.023583,
+   "lon": -1.580222
+  },
+  {
+   "n": "Plenergy",
+   "d": "Carretera A-68 km 99,82 (Fontellas)",
+   "p": 1.359,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.024778,
+   "lon": -1.580333
+  },
+  {
+   "n": "Plenergy",
    "d": "Carretera Carretera de Guipuzkoa km 8 (Berrioplano)",
    "p": 1.369,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.846556,
    "lon": -1.686417
@@ -490,14 +2224,25 @@
    "n": "Ballenoil",
    "d": "Autovia A-12 km 7,3 (Astrain)",
    "p": 1.379,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.778278,
    "lon": -1.707139
   },
   {
+   "n": "Eroski",
+   "d": "Carretera Ctra. Zaragoza km s/n (Tudela)",
+   "p": 1.381,
+   "c": 0,
+   "h": "L-S: 09:30-22:00",
+   "lat": 42.0355,
+   "lon": -1.588
+  },
+  {
    "n": "Petroprix",
    "d": "Calle Artica, 30 (Berrioplano)",
    "p": 1.399,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.833667,
    "lon": -1.652306
@@ -506,6 +2251,7 @@
    "n": "Plenergy",
    "d": "Poligono Mugazuri, 3 (Burlada)",
    "p": 1.399,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.831222,
    "lon": -1.620389
@@ -514,14 +2260,34 @@
    "n": "Alcampo",
    "d": "Poligono Mugazuri Parcela B, 4 (Burlada)",
    "p": 1.399,
+   "c": 1,
    "h": "L-D: 08:00-21:30",
    "lat": 42.830778,
    "lon": -1.61925
   },
   {
+   "n": "Alcampo",
+   "d": "Calle Carlos Vii, 28 (Estella O Lizarra)",
+   "p": 1.42,
+   "c": 0,
+   "h": "L-D: 08:00-21:30",
+   "lat": 42.660972,
+   "lon": -2.034167
+  },
+  {
+   "n": "Euronor Energy",
+   "d": "Paseo del Ebro, 10 (Buñuel)",
+   "p": 1.439,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 41.975444,
+   "lon": -1.44
+  },
+  {
    "n": "Eurocam",
    "d": "Pol.agustinos Calle a Parcela 3b",
    "p": 1.439,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.829722,
    "lon": -1.686222
@@ -530,6 +2296,7 @@
    "n": "Gasolinera Noáin",
    "d": "Poligono Talluntxe Ii, s/n (Aranguren)",
    "p": 1.449,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.774333,
    "lon": -1.633278
@@ -538,14 +2305,34 @@
    "n": "Estacion DE Servicio Aralar",
    "d": "Ctra.guipuzcoa-n-240 km 5,5 (Aizoain)",
    "p": 1.449,
+   "c": 1,
    "h": "L-S: 05:30-22:30; D: 06:00-22:30",
    "lat": 42.84325,
    "lon": -1.681528
   },
   {
+   "n": "E.S. Kontxa S.L.",
+   "d": "Carretera Nacional 121-a km 48,5 (Doneztebe)",
+   "p": 1.449,
+   "c": 0,
+   "h": "L-S: 07:00-21:00; D: 08:00-15:00",
+   "lat": 43.155889,
+   "lon": -1.670167
+  },
+  {
+   "n": "Aralar",
+   "d": "Carretera N-121-A km 7,6 (Oricain)",
+   "p": 1.449,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.856083,
+   "lon": -1.618917
+  },
+  {
    "n": "Bidasoa Combustibles",
    "d": "Poligono Y, 10 (Noain)",
    "p": 1.449,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.776194,
    "lon": -1.636972
@@ -554,30 +2341,196 @@
    "n": "Aralar",
    "d": "Avenida Juan Pablo Ii, 23",
    "p": 1.449,
+   "c": 1,
    "h": "L: 06:30-22:30; M-D: 06:30-14:29 y 14:30-22:30",
    "lat": 42.804028,
    "lon": -1.627861
   },
   {
+   "n": "Trueba Energy",
+   "d": "Carretera NA-132 km 2 (Legardeta)",
+   "p": 1.449,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.653583,
+   "lon": -2.004667
+  },
+  {
+   "n": "AN Energeticos - Artajona",
+   "d": "Travesía San Isidro Labrador, s/n (Artajona)",
+   "p": 1.45,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.586972,
+   "lon": -1.766083
+  },
+  {
+   "n": "Eroski",
+   "d": "Calle Merkatondoa, 7 (Estella O Lizarra)",
+   "p": 1.45,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.663028,
+   "lon": -2.031194
+  },
+  {
    "n": "AN Energéticos - Tajonar",
    "d": "Campa Campo de Tajonar, s/n (Tajonar)",
    "p": 1.459,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.770083,
    "lon": -1.624917
   },
   {
+   "n": "AN Energeticos - Arguedas",
+   "d": "Camino Bardenas Reales, s/n (Arguedas)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.171139,
+   "lon": -1.587944
+  },
+  {
+   "n": "AN Energéticos - Ezkibel",
+   "d": "Poligono Poligono Industrial 10, 10 (Arroniz)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.584222,
+   "lon": -2.09075
+  },
+  {
+   "n": "AN Energeticos - Caparroso",
+   "d": "Camino Camino del Cementerio, s/n (Caparroso)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.338722,
+   "lon": -1.646167
+  },
+  {
+   "n": "AN Energeticos - Carcastillo",
+   "d": "Avenida Aragon 50 (Carcastillo)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.373833,
+   "lon": -1.443222
+  },
+  {
+   "n": "AN Energeticos - Caseda",
+   "d": "Ctra. Gallipienzo km 1 (Caseda)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.529306,
+   "lon": -1.364778
+  },
+  {
+   "n": "AN Energeticos - Castejon",
+   "d": "Carretera N-113 km 77 (Castejon)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.179222,
+   "lon": -1.696611
+  },
+  {
+   "n": "AN Energeticos - Cintruenigo Bodega Cirbonera",
+   "d": "Poligono Poligono Industrial s/n, 2 (Cintruenigo)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.072611,
+   "lon": -1.793361
+  },
+  {
+   "n": "AN Energeticos - Cortes",
+   "d": "Avenida Carmen Bellido, 52 (Cortes)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 41.926556,
+   "lon": -1.422056
+  },
+  {
+   "n": "AN Energéticos - Etxalar",
+   "d": "Bo Beolaldea s/n (Etxalar)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.235944,
+   "lon": -1.642167
+  },
+  {
    "n": "E.Leclerc",
    "d": "Barrio la Morea, (Cordovilla)",
    "p": 1.459,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.785194,
    "lon": -1.634278
   },
   {
+   "n": "AN Energeticos - Larraga SAN Isidro",
+   "d": "Carretera Carretera Lerín Km,2 km 2 (Larraga)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.551806,
+   "lon": -1.852028
+  },
+  {
+   "n": "AN Energeticos - Larraga-artajona",
+   "d": "Calle del Pinar, s/n (Larraga)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.562194,
+   "lon": -1.847667
+  },
+  {
+   "n": "AN Energeticos - Lumbier",
+   "d": "Avda Diputacion Foral s/n (Lumbier)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.658778,
+   "lon": -1.297639
+  },
+  {
+   "n": "AN Energeticos - Melida",
+   "d": "Poligono Bajo Aragon, s/n (Melida)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.355139,
+   "lon": -1.557944
+  },
+  {
+   "n": "AN Energeticos - Miranda DE Arga",
+   "d": "Carretera de Lerin km 1,3 (Miranda de Arga)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.492944,
+   "lon": -1.840083
+  },
+  {
+   "n": "AN Energeticos - Olite",
+   "d": "Poligono C/a, s/n (Olite)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.494639,
+   "lon": -1.665056
+  },
+  {
    "n": "Petroprix",
    "d": "Calle E, 1",
    "p": 1.459,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.814806,
    "lon": -1.684778
@@ -586,6 +2539,7 @@
    "n": "Avanza OIL Pamplona",
    "d": "Poligono Landaben, Calle F, 2",
    "p": 1.459,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.814028,
    "lon": -1.684528
@@ -594,22 +2548,160 @@
    "n": "Eroski",
    "d": "Calle Poligono Agustinos,calle A, Local 1598,",
    "p": 1.459,
+   "c": 1,
    "h": "L: 08:00-22:00",
    "lat": 42.832389,
    "lon": -1.677639
   },
   {
+   "n": "AN Energeticos - Ribaforada",
+   "d": "Avenida Nuestra Sra del Carmen, s/n (Ribaforada)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 41.994389,
+   "lon": -1.5155
+  },
+  {
+   "n": "AN Energeticos - Sanguesa",
+   "d": "Carretera Javier km s/n (Sanguesa)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.573889,
+   "lon": -1.275722
+  },
+  {
+   "n": "AN Energéticos - Sartaguda",
+   "d": "Poligono Industrial Gobella Fase I s/n (Sartaguda)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.38925,
+   "lon": -2.053806
+  },
+  {
+   "n": "AN Energeticos - Sesma",
+   "d": "Camino Camino Mendavia s/n, s/n (Sesma)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.476194,
+   "lon": -2.092
+  },
+  {
+   "n": "AN Energeticos - Tafalla",
+   "d": "Camino Miranda s/n (Tafalla)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.522861,
+   "lon": -1.685056
+  },
+  {
+   "n": "AN Energeticos - Tudela 1",
+   "d": "Carretera Corella km 3,5 (Tudela)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.059194,
+   "lon": -1.640944
+  },
+  {
+   "n": "AN Energeticos - Tudela 2",
+   "d": "Carretera Alfaro s/n km 0 (Tudela)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.066389,
+   "lon": -1.617778
+  },
+  {
+   "n": "AN Energeticos - Villafranca",
+   "d": "Camino Camino de Caparroso, s/n (Villafranca)",
+   "p": 1.459,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.2825,
+   "lon": -1.74225
+  },
+  {
    "n": "E. Leclerc",
    "d": "Calle Arrobia Kalea, s/n (Zizur Mayor)",
    "p": 1.459,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.787028,
    "lon": -1.698306
   },
   {
+   "n": "Izelai Fuel",
+   "d": "Avenida Vitoria, s/n (Altsasu)",
+   "p": 1.474,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.89,
+   "lon": -2.169028
+  },
+  {
+   "n": "Izelai Fuel",
+   "d": "Avenida Iruñeko Etorbidea/avenida de Pamplona, 18 (Altsasu)",
+   "p": 1.474,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.891472,
+   "lon": -2.163806
+  },
+  {
+   "n": "AN Energeticos - Andosilla Bodega SAN Sebastian",
+   "d": "Carretera Eje del Ebro km 55 (Andosilla)",
+   "p": 1.479,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.379861,
+   "lon": -1.957333
+  },
+  {
+   "n": "AN Energeticos - Arizkun",
+   "d": "Barrio Ordoki (Arizkun)",
+   "p": 1.479,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.180167,
+   "lon": -1.489222
+  },
+  {
+   "n": "AN Energeticos - Falces",
+   "d": "Carretera NA-6210 km 5 (Falces)",
+   "p": 1.479,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.387778,
+   "lon": -1.7875
+  },
+  {
+   "n": "BI Ahizpak",
+   "d": "Poligono Akaborro, 1 (Irurtzun)",
+   "p": 1.479,
+   "c": 0,
+   "h": "L-V: 09:00-14:00 y 16:00-19:30; S: 09:00-14:00",
+   "lat": 42.923167,
+   "lon": -1.831778
+  },
+  {
+   "n": "AN Energeticos - Azagra",
+   "d": "Poligono Industrial, Calle D, 8 (Azagra)",
+   "p": 1.489,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.315667,
+   "lon": -1.902167
+  },
+  {
    "n": "AN Energeticos - Sarriguren",
    "d": "Calle Olaz, 3 (Olaz)",
    "p": 1.489,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.815556,
    "lon": -1.590667
@@ -618,6 +2710,7 @@
    "n": "AN Energeticos - Huarte",
    "d": "Calle Olaz Chipi s/n, s/n (Huarte)",
    "p": 1.489,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.827806,
    "lon": -1.597611
@@ -626,78 +2719,583 @@
    "n": "Adelfas",
    "d": "Calle Maria Viscarret - Nuevo Artica, 39 (Berrioplano)",
    "p": 1.494,
+   "c": 1,
    "h": "L-D: 08:00-22:00",
    "lat": 42.842889,
    "lon": -1.681833
   },
   {
+   "n": "Etxarri OIL",
+   "d": "Poligono Zumurdiñeta, 15 (Etxarri-aranatz)",
+   "p": 1.494,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.899639,
+   "lon": -2.075944
+  },
+  {
+   "n": "Talleres Arrubla",
+   "d": "Ctra. Solchaga, s/n (Barasoain)",
+   "p": 1.498,
+   "c": 0,
+   "h": "L-S: 08:00-22:00",
+   "lat": 42.60225,
+   "lon": -1.644417
+  },
+  {
+   "n": "Beroil",
+   "d": "Carretera N-232 km 83,7 (Castejon)",
+   "p": 1.499,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.135028,
+   "lon": -1.700306
+  },
+  {
+   "n": "BM Complet",
+   "d": "Poligono Comercial Alhama, sn (Cintruenigo)",
+   "p": 1.499,
+   "c": 0,
+   "h": "L-S: 08:00-21:30",
+   "lat": 42.08725,
+   "lon": -1.816167
+  },
+  {
    "n": "AN Energeticos - Urroz",
    "d": "Carretera NA-150 km 2 (Egues)",
    "p": 1.499,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.826028,
    "lon": -1.562972
   },
   {
+   "n": "Combustibles Villafranca",
+   "d": "Poligono Alesves, N (Villafranca)",
+   "p": 1.499,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.272444,
+   "lon": -1.74425
+  },
+  {
+   "n": "AN Energeticos - Cadreita",
+   "d": "Poligono las Navas, Calle A, 1 (Cadreita)",
+   "p": 1.509,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.221944,
+   "lon": -1.688611
+  },
+  {
+   "n": "AN Energeticos - Funes 2",
+   "d": "Poligono Bodega Romana, Vial Oeste, s/n (Funes)",
+   "p": 1.509,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.256806,
+   "lon": -1.835417
+  },
+  {
+   "n": "Adelfas OIL",
+   "d": "Calle Avda Diputación Foral, 7, (Artajona)",
+   "p": 1.529,
+   "c": 0,
+   "h": "L-V: 07:00-21:00; S: 08:00-14:00",
+   "lat": 42.586528,
+   "lon": -1.76475
+  },
+  {
    "n": "DST",
    "d": "Carretera Na150 km 1,56 (Alzuza)",
    "p": 1.529,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.826944,
    "lon": -1.567917
   },
   {
+   "n": "Shell",
+   "d": "Avenida Roncesvalles, 29 (Olloki)",
+   "p": 1.529,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.8365,
+   "lon": -1.586917
+  },
+  {
    "n": "Ballenoil",
    "d": "N-121 Pamplona-zaragoza km 9,4 (Beriain)",
    "p": 1.549,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.736,
    "lon": -1.633139
   },
   {
+   "n": "Avanza OIL",
+   "d": "Na- 122 km 7 (Morentin)",
+   "p": 1.549,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.607389,
+   "lon": -2.016806
+  },
+  {
    "n": "Petro Swap",
    "d": "Parque Empresarial la Muga, 7 (Orcoyen)",
    "p": 1.549,
+   "c": 1,
    "h": "L-V: 06:00-22:30; S: 06:00-22:00; D: 08:00-22:00",
    "lat": 42.821639,
    "lon": -1.688694
   },
   {
+   "n": "E.S. Tiebas",
+   "d": "Na121;ctra Francia km 11,3 (Tiebas)",
+   "p": 1.549,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.717972,
+   "lon": -1.634611
+  },
+  {
+   "n": "Tiebas",
+   "d": "Na121;ctra Francia km 11,3 (Tiebas)",
+   "p": 1.549,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.717694,
+   "lon": -1.633556
+  },
+  {
+   "n": "AN Energeticos - Ablitas",
+   "d": "Avda. de Ribaforada (carretera km 1) (Ablitas)",
+   "p": 1.559,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 41.97325,
+   "lon": -1.635194
+  },
+  {
+   "n": "Avia",
+   "d": "Carretera Comarcal NA-170 km 31,1 (Doneztebe)",
+   "p": 1.559,
+   "c": 0,
+   "h": "L-D: 07:00-22:00",
+   "lat": 43.136083,
+   "lon": -1.680583
+  },
+  {
+   "n": "Avia",
+   "d": "Avenida Pamplona, 33 (Estella O Lizarra)",
+   "p": 1.56,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.665972,
+   "lon": -2.020806
+  },
+  {
+   "n": "Iguzquiza Y Echeverria S.L.",
+   "d": "Avenida Guipuzcoa, s/n (Estella O Lizarra)",
+   "p": 1.569,
+   "c": 0,
+   "h": "L-D: 06:30-22:30",
+   "lat": 42.677889,
+   "lon": -2.035861
+  },
+  {
+   "n": "Avia",
+   "d": "Carlos Vii, 22 (Estella O Lizarra)",
+   "p": 1.569,
+   "c": 0,
+   "h": "L-D: 06:30-22:30",
+   "lat": 42.664361,
+   "lon": -2.032528
+  },
+  {
+   "n": "DEL Villar Energia",
+   "d": "Poligono Merkatondoa, 28 (Estella O Lizarra)",
+   "p": 1.57,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.655139,
+   "lon": -2.027778
+  },
+  {
+   "n": "Eroski",
+   "d": "Carretera Peralta km 128 (Peralta)",
+   "p": 1.573,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.335944,
+   "lon": -1.789972
+  },
+  {
+   "n": "AN Energeticos - Peralta",
+   "d": "Avenida San Silvestre, s/n (Peralta)",
+   "p": 1.573,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.337694,
+   "lon": -1.809778
+  },
+  {
    "n": "Galp",
    "d": "Calle Artica Esq C/ansoain, sn (Artica)",
    "p": 1.579,
+   "c": 1,
    "h": "L-D: 08:00-22:00",
    "lat": 42.831583,
    "lon": -1.651222
   },
   {
+   "n": "Avia",
+   "d": "Avenida Pamplona, 28 (Estella O Lizarra)",
+   "p": 1.579,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.665944,
+   "lon": -2.020167
+  },
+  {
+   "n": "AN Energeticos - Funes",
+   "d": "Poligono Sardilla, s/n (Funes)",
+   "p": 1.579,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.308472,
+   "lon": -1.795139
+  },
+  {
+   "n": "AN Energeticos - Valtierra",
+   "d": "Carretera Carretera Tudela km N8 (Valtierra)",
+   "p": 1.579,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.187306,
+   "lon": -1.619861
+  },
+  {
+   "n": "Petronor",
+   "d": "Carretera Tauste km 8,5 (Cabanillas)",
+   "p": 1.599,
+   "c": 0,
+   "h": "L-V: 06:00-22:00; S: 06:00-20:00; D: 07:00-14:00",
+   "lat": 42.029556,
+   "lon": -1.516056
+  },
+  {
+   "n": "Avia",
+   "d": "Padre Raimundo de Lumbier, 14 (Sanguesa)",
+   "p": 1.599,
+   "c": 0,
+   "h": "L-D: 07:00-22:00",
+   "lat": 42.581139,
+   "lon": -1.285639
+  },
+  {
+   "n": "Eurocam",
+   "d": "Poligono las Labradas Manzana 12 (Tudela)",
+   "p": 1.599,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.0685,
+   "lon": -1.637591
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Zaragoza, 73 (Tudela)",
+   "p": 1.599,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.052528,
+   "lon": -1.597056
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Zaragoza, 48 (Tudela)",
+   "p": 1.599,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.058083,
+   "lon": -1.599861
+  },
+  {
+   "n": "Carrefour",
+   "d": "Carretera de Tarazona km 3 (Tudela)",
+   "p": 1.599,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.043861,
+   "lon": -1.6195
+  },
+  {
+   "n": "Alpe",
+   "d": "Poligono Industrial Elordi C/a 4 (Iraizotz)",
+   "p": 1.599,
+   "c": 0,
+   "h": "L-V: 09:00-19:00",
+   "lat": 43.000778,
+   "lon": -1.661786
+  },
+  {
+   "n": "Repsol",
+   "d": "Ps de la Ribera, 215 (na-134 km 19) (Valtierra)",
+   "p": 1.609,
+   "c": 0,
+   "h": "L-V: 06:30-20:00; S: 08:00-13:00",
+   "lat": 42.201611,
+   "lon": -1.642861
+  },
+  {
+   "n": "E.S.La Recta",
+   "d": "NA-134 km 13,6 (Arguedas)",
+   "p": 1.619,
+   "c": 0,
+   "h": "L-V: 08:00-20:00; S: 08:00-14:00",
+   "lat": 42.167611,
+   "lon": -1.593083
+  },
+  {
+   "n": "BP",
+   "d": "Poligono Zalain, 5 (Bera)",
+   "p": 1.619,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.278083,
+   "lon": -1.700278
+  },
+  {
+   "n": "Q8",
+   "d": "Carretera N-121 km km 3,55 (Cascante)",
+   "p": 1.619,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.036472,
+   "lon": -1.631
+  },
+  {
+   "n": "Avia",
+   "d": "Navas de Tolosa, 78 (valtierra-san Adrian-na-134 km 12,64) (Milagro)",
+   "p": 1.619,
+   "c": 0,
+   "h": "L-S: 07:00-21:00; D: 08:00-14:00",
+   "lat": 42.244139,
+   "lon": -1.769944
+  },
+  {
+   "n": "Josenea Zubiri Avia",
+   "d": "Carretera N-138 km 19,7 (Saigots)",
+   "p": 1.629,
+   "c": 0,
+   "h": "L-D: 08:00-21:00",
+   "lat": 42.937167,
+   "lon": -1.503167
+  },
+  {
+   "n": "Avia",
+   "d": "Cr C-5340, 31 (Aibar)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L: 07:30-21:30",
+   "lat": 42.590333,
+   "lon": -1.363972
+  },
+  {
+   "n": "Repsol",
+   "d": "Calle Orella, s/n (Arribe)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-D: 08:00-13:00 y 16:00-21:00",
+   "lat": 43.033417,
+   "lon": -1.983694
+  },
+  {
+   "n": "Campsa",
+   "d": "Cr N-121B, 59 (n-121b km 58) (Elizondo)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-D: 07:00-21:00",
+   "lat": 43.148639,
+   "lon": -1.512361
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera NA-121 a km 77,39 (Bera)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 43.278278,
+   "lon": -1.710056
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera NA-121A km 77,3 (Bera)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.278111,
+   "lon": -1.708583
+  },
+  {
+   "n": "Petronor",
+   "d": "Cr N-121, 75 (Bera)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-S: 07:00-22:00; D: 08:00-14:00",
+   "lat": 43.270833,
+   "lon": -1.687167
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-121A km 44,5 (Legasa)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 43.130444,
+   "lon": -1.630722
+  },
+  {
+   "n": "Atugas",
+   "d": "Calle Final Calle San Jose S.n, s/n (Castejon)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-D: 07:00-22:00",
+   "lat": 42.173278,
+   "lon": -1.699139
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera NA-160 km 24 (Fitero)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-V: 07:00-22:00; S-D: 09:00-20:00",
+   "lat": 42.055861,
+   "lon": -1.861722
+  },
+  {
+   "n": "AN Energeticos - Mendavia",
+   "d": "Carretera Lodosa sn (Mendavia)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.443944,
+   "lon": -2.191639
+  },
+  {
+   "n": "Repsol",
+   "d": "Paseo de los Fueros, s/nº (nacional Iii km 24) (Puente la Reina)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.670611,
+   "lon": -1.815611
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Pamplona, 24 (Altsasu)",
+   "p": 1.645,
+   "c": 0,
+   "h": "L-V: 06:00-22:00",
+   "lat": 42.891,
+   "lon": -2.16075
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-121 C, 10 (Cascante)",
+   "p": 1.645,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 41.993278,
+   "lon": -1.676361
+  },
+  {
    "n": "Petronor",
    "d": "Carretera Cr NA-7000, 5,3 km 5,3 (Arazuri)",
    "p": 1.645,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.818417,
    "lon": -1.718111
   },
   {
+   "n": "Petromiralles Bera",
+   "d": "Calle Zalain, 18 (Bera)",
+   "p": 1.649,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.276444,
+   "lon": -1.700889
+  },
+  {
+   "n": "E.S. Murchante Avia",
+   "d": "C/mayor, s/n (Murchante)",
+   "p": 1.649,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.036083,
+   "lon": -1.646556
+  },
+  {
+   "n": "ES Landibar",
+   "d": "Calle Landibar 10, Poligono 2, Parcela 21, 10 (Landibar)",
+   "p": 1.649,
+   "c": 0,
+   "h": "L-D: 08:00-19:30",
+   "lat": 43.284083,
+   "lon": -1.505778
+  },
+  {
    "n": "Repsol",
    "d": "Carretera N-121 km 5 (Aranguren)",
    "p": 1.655,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.776111,
    "lon": -1.634722
   },
   {
+   "n": "Repsol",
+   "d": "Carretera Nº 232 P.k. 82 km 82 (Castejon)",
+   "p": 1.655,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.136917,
+   "lon": -1.699944
+  },
+  {
+   "n": "BP Estella",
+   "d": "Pg Merkatondoa - Upp3 Parc.4, S.n. (Estella O Lizarra)",
+   "p": 1.655,
+   "c": 0,
+   "h": "L-D: 05:00-23:00",
+   "lat": 42.6535,
+   "lon": -2.026667
+  },
+  {
    "n": "BP Huarte",
    "d": "Calle Intxaurdia, 6 (Huarte)",
    "p": 1.655,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.831361,
    "lon": -1.585417
   },
   {
    "n": "Repsol",
+   "d": "Cr N-240, 41 (Liedena)",
+   "p": 1.655,
+   "c": 0,
+   "h": "L-V: 06:00-22:00; S-D: 07:00-22:00",
+   "lat": 42.614194,
+   "lon": -1.27825
+  },
+  {
+   "n": "Repsol",
    "d": "Cr N-121, 5 (Noain)",
    "p": 1.655,
+   "c": 1,
    "h": "L-V: 06:00-22:00; S: 07:00-22:00",
    "lat": 42.775972,
    "lon": -1.635278
@@ -706,70 +3304,313 @@
    "n": "Petronor",
    "d": "Cl Poligono Landaben, S.n.",
    "p": 1.655,
+   "c": 1,
    "h": "L-S: 06:00-22:00; D: 07:00-22:00",
    "lat": 42.814333,
    "lon": -1.684278
   },
   {
+   "n": "Avia",
+   "d": "Carretera Pitillas-santacara Na5330 km 9,800 (Santacara)",
+   "p": 1.655,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.380306,
+   "lon": -1.552944
+  },
+  {
+   "n": "BP Tafalla",
+   "d": "Cr N-121, 38,1 (Tafalla)",
+   "p": 1.655,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.498389,
+   "lon": -1.673778
+  },
+  {
    "n": "BP Villava",
    "d": "Avenida Carretera Francia s/n, s/n (Villava O Atarrabia)",
    "p": 1.655,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.834944,
    "lon": -1.609389
   },
   {
+   "n": "Nafaroil",
+   "d": "Barrio Ibardin, 19 (Bera)",
+   "p": 1.659,
+   "c": 0,
+   "h": "L-D: 08:15-19:15",
+   "lat": 43.309306,
+   "lon": -1.684056
+  },
+  {
+   "n": "Avia",
+   "d": "Barrio Ibardin, s/n (Bera)",
+   "p": 1.659,
+   "c": 0,
+   "h": "L-D: 08:00-19:30",
+   "lat": 43.309361,
+   "lon": -1.687444
+  },
+  {
    "n": "Repsol",
    "d": "Carretera Avd. Guipuzcoa N-240 km 4 (Berriozar)",
    "p": 1.659,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.836861,
    "lon": -1.672889
   },
   {
+   "n": "Josenea Avia",
+   "d": "Camino Landibar, 14 (Dantxarinea)",
+   "p": 1.659,
+   "c": 0,
+   "h": "L-D: 08:00-20:00",
+   "lat": 43.291361,
+   "lon": -1.504944
+  },
+  {
+   "n": "Cepsa",
+   "d": "Barrio Dantxarinea, 2 (Urdazubi)",
+   "p": 1.659,
+   "c": 0,
+   "h": "L-D: 08:00-19:00",
+   "lat": 43.289583,
+   "lon": -1.505806
+  },
+  {
+   "n": "Cepsa",
+   "d": "Carretera N-121B km 79,500 (Urdazubi)",
+   "p": 1.659,
+   "c": 0,
+   "h": "L-D: 09:00-14:00",
+   "lat": 43.287444,
+   "lon": -1.505667
+  },
+  {
+   "n": "Moeve",
+   "d": "Carretera N-121-A km 55 (Doneztebe)",
+   "p": 1.66,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.152556,
+   "lon": -1.668083
+  },
+  {
+   "n": "Cepsa",
+   "d": "Carretera N-121-A km 23,7 (Lantz)",
+   "p": 1.66,
+   "c": 0,
+   "h": "L-V: 08:00-20:00; S-D: 09:00-17:00",
+   "lat": 42.983333,
+   "lon": -1.630528
+  },
+  {
+   "n": "Moeve",
+   "d": "Autovia A-15 (mrg.izdo.) km 134,5 (Gorriti)",
+   "p": 1.66,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.059111,
+   "lon": -1.957306
+  },
+  {
+   "n": "Moeve",
+   "d": "Autovia A-15 (mrg.dcho.) km 134,4 (Gorriti)",
+   "p": 1.66,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.058806,
+   "lon": -1.955944
+  },
+  {
    "n": "Moeve",
    "d": "Au A-15, 78 (Imarcoain)",
    "p": 1.66,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.731944,
    "lon": -1.618028
   },
   {
    "n": "Moeve",
-   "d": "Autopista AP-15 km 78 (Imarcoain)",
-   "p": 1.66,
-   "h": "L-D: 24H",
-   "lat": 42.731944,
-   "lon": -1.616889
-  },
-  {
-   "n": "Moeve",
    "d": "Avenida Guipuzcoa, 1",
    "p": 1.66,
+   "c": 1,
    "h": "L-D: 00:00-23:59",
    "lat": 42.820528,
    "lon": -1.655806
   },
   {
+   "n": "Noil",
+   "d": "Poligono Poligono Industrial Zalain, S-p Parcela 3/104/2, 104 (Bera)",
+   "p": 1.666,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.276611,
+   "lon": -1.700306
+  },
+  {
+   "n": "Hnos. Fernandez Urabain S.L.",
+   "d": "Carretera Estella km 11,8 (Allo)",
+   "p": 1.669,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.571139,
+   "lon": -2.022194
+  },
+  {
    "n": "Avia",
    "d": "Calle Carretera Baodstain, 2",
    "p": 1.669,
+   "c": 1,
    "h": "L-D: 07:00-22:00",
    "lat": 42.813306,
    "lon": -1.626333
   },
   {
+   "n": "Avia",
+   "d": "Carretera Zaragoza, km 33.5 km 33 (Tafalla)",
+   "p": 1.669,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.514472,
+   "lon": -1.675778
+  },
+  {
+   "n": "Moeve",
+   "d": "Autopista AP-15 km 78 (Imarcoain)",
+   "p": 1.67,
+   "c": 1,
+   "h": "L-D: 24H",
+   "lat": 42.731944,
+   "lon": -1.616889
+  },
+  {
+   "n": "Estacion DE Servicio LA Noria",
+   "d": "Carretera NA-6920 km 3,850 (Corella)",
+   "p": 1.675,
+   "c": 0,
+   "h": "L-J: 06:00-23:00; V: 06:00-17:00; D: 06:00-23:00",
+   "lat": 42.113194,
+   "lon": -1.779778
+  },
+  {
+   "n": "Sertelgas,sl",
+   "d": "Poligono Industrial Ombatillo, s/n (Corella)",
+   "p": 1.675,
+   "c": 0,
+   "h": "L-D: 07:00-11:00",
+   "lat": 42.114611,
+   "lon": -1.797889
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera NA-134 km 51,7 (San Adrian)",
+   "p": 1.675,
+   "c": 0,
+   "h": "L-D: 06:00-21:30",
+   "lat": 42.350639,
+   "lon": -1.937639
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr A-10 Autovia de la Barranca (Etxarren)",
+   "p": 1.679,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.9125,
+   "lon": -1.863028
+  },
+  {
+   "n": "Shell",
+   "d": "Autovia A-15 km 124,488 (Mugiro)",
+   "p": 1.679,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.000028,
+   "lon": -1.886167
+  },
+  {
+   "n": "Campsa",
+   "d": "Carretera Ctra. Na170 km1.98 km 1 (Leitza)",
+   "p": 1.679,
+   "c": 0,
+   "h": "L-S: 06:00-22:00; D: 08:00-14:00",
+   "lat": 43.084972,
+   "lon": -1.922278
+  },
+  {
+   "n": "Valcarce",
+   "d": "Barrio de la Estacion s/n (Olazti)",
+   "p": 1.679,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.878917,
+   "lon": -2.196944
+  },
+  {
+   "n": "Valcarce",
+   "d": "Autovia A-68 km 105,6 (Ribaforada)",
+   "p": 1.679,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 41.986667,
+   "lon": -1.530389
+  },
+  {
+   "n": "Valcarce",
+   "d": "Poligono Montes del Cierzo, 67 (Tudela)",
+   "p": 1.679,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.121167,
+   "lon": -1.675639
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida San Luis Gonzaga, 3 (Viana)",
+   "p": 1.679,
+   "c": 0,
+   "h": "L-S: 07:00-23:00",
+   "lat": 42.512583,
+   "lon": -2.374028
+  },
+  {
+   "n": "Galp",
+   "d": "Ctra. A-1 km 391 (Ziordia)",
+   "p": 1.679,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.865028,
+   "lon": -2.236361
+  },
+  {
    "n": "Cepsa",
    "d": "Autovia A-12 km 7,3 (Gazolaz)",
    "p": 1.68,
+   "c": 1,
    "h": "L-D: 06:30-22:30",
    "lat": 42.7775,
    "lon": -1.707611
   },
   {
+   "n": "Estacion DE Servicio Pradesol",
+   "d": "Poligono Industrial Calle F, 1 (Cintruenigo)",
+   "p": 1.682,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.071833,
+   "lon": -1.797758
+  },
+  {
    "n": "Repsol",
    "d": "Carretera N-135 km 4,6 (Olaz)",
    "p": 1.685,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.817194,
    "lon": -1.59275
@@ -778,22 +3619,43 @@
    "n": "Repsol",
    "d": "Cr N-135, 4,6 (Olaz)",
    "p": 1.685,
+   "c": 1,
    "h": "L-V: 06:30-22:00",
    "lat": 42.816111,
    "lon": -1.593222
   },
   {
    "n": "Repsol",
+   "d": "Autopista A-68 km 222 (Fontellas)",
+   "p": 1.685,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.012583,
+   "lon": -1.600861
+  },
+  {
+   "n": "Repsol",
    "d": "Calle Altxutxate, 50 (Huarte)",
    "p": 1.685,
+   "c": 1,
    "h": "L-D: 07:00-21:30",
    "lat": 42.818278,
    "lon": -1.60325
   },
   {
    "n": "Repsol",
+   "d": "Au A-15, 98,5 (Zuasti)",
+   "p": 1.685,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.861639,
+   "lon": -1.743917
+  },
+  {
+   "n": "Repsol",
    "d": "Calle Sadar s/n, s/n",
    "p": 1.685,
+   "c": 1,
    "h": "L-S: 06:30-22:00; D: 07:00-22:00",
    "lat": 42.797694,
    "lon": -1.645583
@@ -802,62 +3664,259 @@
    "n": "Repsol",
    "d": "Cl Carretera de Artica,s.n.",
    "p": 1.685,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.8355,
    "lon": -1.653361
   },
   {
    "n": "Repsol",
+   "d": "Av Pamplona s/n (Tafalla)",
+   "p": 1.685,
+   "c": 0,
+   "h": "L-V: 06:30-22:00; S: 07:00-22:00; D: 07:00-14:30",
+   "lat": 42.53175,
+   "lon": -1.672444
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-121 km 79,5 (Dantxarinea)",
+   "p": 1.685,
+   "c": 0,
+   "h": "L-V: 09:00-18:00; S-D: 10:00-19:00",
+   "lat": 43.290556,
+   "lon": -1.505806
+  },
+  {
+   "n": "Repsol",
+   "d": "Au A-15, 14 (Valtierra)",
+   "p": 1.685,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.200361,
+   "lon": -1.674889
+  },
+  {
+   "n": "Repsol",
    "d": "Avenida Estella, 9 (Zizur Mayor)",
    "p": 1.685,
-   "h": "L-D: 24H",
-   "lat": 42.792917,
-   "lon": -1.684194
+   "c": 1,
+   "h": "L: 06:00-22:00",
+   "lat": 42.792833,
+   "lon": -1.686583
   },
   {
    "n": "Andamur \"pamplona\"",
    "d": "Avenida Este (ciudad del Transporte Pamplona), 1 (Imarcoain)",
    "p": 1.689,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.732583,
    "lon": -1.613972
   },
   {
+   "n": "Avia",
+   "d": "Calle Mayor, 3 (Oronz)",
+   "p": 1.689,
+   "c": 0,
+   "h": "L-D: 08:00-20:00",
+   "lat": 42.868083,
+   "lon": -1.096694
+  },
+  {
    "n": "Moeve",
    "d": "N-121 km 9,4, (Beriain)",
    "p": 1.69,
+   "c": 1,
    "h": "L-D: 06:30-22:00",
    "lat": 42.734444,
    "lon": -1.633556
   },
   {
    "n": "Moeve",
+   "d": "Carretera Nacional 121 km 56 (Caparroso)",
+   "p": 1.69,
+   "c": 0,
+   "h": "L-V: 06:00-23:30; S: 06:00-22:00; D: 07:00-22:00",
+   "lat": 42.350722,
+   "lon": -1.650389
+  },
+  {
+   "n": "Moeve",
    "d": "Poligono Poligono Industrial Cordovilla-galar, Parcela 382, s/n (Cordovilla)",
    "p": 1.69,
+   "c": 1,
    "h": "L-V: 07:00-21:00; S: 07:00-14:00",
    "lat": 42.789778,
    "lon": -1.639611
   },
   {
+   "n": "Moeve",
+   "d": "Carretera NA-123 km 0,7 (Lodosa)",
+   "p": 1.69,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.416556,
+   "lon": -2.076861
+  },
+  {
+   "n": "Marisa",
+   "d": "Carretera NA-122 km 21,200 (Lerin)",
+   "p": 1.698,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.486917,
+   "lon": -1.981556
+  },
+  {
+   "n": "Estacion DE Servicio Aoiz, S.L.",
+   "d": "Calle Domingo Elizondo, 12 (Aoiz)",
+   "p": 1.699,
+   "c": 0,
+   "h": "L-S: 07:00-22:00; D: 08:00-21:00",
+   "lat": 42.784389,
+   "lon": -1.372472
+  },
+  {
+   "n": "Sarasate",
+   "d": "Carretera Pamplona-s.sebastian km 15 (Sarasate)",
+   "p": 1.699,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.892,
+   "lon": -1.777806
+  },
+  {
+   "n": "Avia",
+   "d": "Calle Albistur, 57 (Lesaka)",
+   "p": 1.699,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.248778,
+   "lon": -1.69775
+  },
+  {
    "n": "Ural Energy",
    "d": "Olite s/n (ciudad del Transporte de Pamplona) (Imarcoain)",
    "p": 1.699,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.725194,
    "lon": -1.611111
   },
   {
+   "n": "Petronor",
+   "d": "Calle Santa Maria, 13 (Aribe)",
+   "p": 1.7,
+   "c": 0,
+   "h": "L-D: 08:00-21:00",
+   "lat": 42.945722,
+   "lon": -1.265667
+  },
+  {
    "n": "Moeve",
    "d": "Calle Sancho Ramirez, 2",
    "p": 1.7,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.806833,
    "lon": -1.661611
   },
   {
+   "n": "Luzaide",
+   "d": "Poligono Pol. Ind 1- Parcela 105, 105 (Luzaide)",
+   "p": 1.709,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.11725,
+   "lon": -1.2705
+  },
+  {
+   "n": "Petronor",
+   "d": "Cr NA-137, 28,7 (Urzainqui)",
+   "p": 1.709,
+   "c": 0,
+   "h": "L-D: 08:00-21:00",
+   "lat": 42.837667,
+   "lon": -0.939306
+  },
+  {
+   "n": "Zona Auto Mugaire Avia",
+   "d": "Cr N-121, 48 (Mugairi(oronoz))",
+   "p": 1.719,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.137472,
+   "lon": -1.611139
+  },
+  {
+   "n": "Galp",
+   "d": "Autovia A1 km 401 (Altsasu)",
+   "p": 1.729,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.917667,
+   "lon": -2.195389
+  },
+  {
+   "n": "MLC",
+   "d": "Carretera Pamplona-irun km 17,3 (Burutain)",
+   "p": 1.729,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.931806,
+   "lon": -1.608806
+  },
+  {
+   "n": "LOW Cost Fuel OIL",
+   "d": "Carretera N-135 km 41 (Aurizberri)",
+   "p": 1.729,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.977861,
+   "lon": -1.364
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr NA-134, 79 (Mendavia)",
+   "p": 1.729,
+   "c": 0,
+   "h": "L: 07:00-22:00",
+   "lat": 42.449611,
+   "lon": -2.212222
+  },
+  {
+   "n": "Carburantes Valtierra S.L.",
+   "d": "Poligono Industrial Valtierra-arguedas, 2 (Valtierra)",
+   "p": 1.729,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.185444,
+   "lon": -1.62125
+  },
+  {
+   "n": "Moeve",
+   "d": "Carretera NA-2410 km 17 (Lakuntza)",
+   "p": 1.739,
+   "c": 0,
+   "h": "L-V: 06:00-22:00; S-D: 07:00-21:00",
+   "lat": 42.922111,
+   "lon": -2.0145
+  },
+  {
+   "n": "Galp",
+   "d": "Autovia a 1 km 401 (Altsasu)",
+   "p": 1.749,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.915306,
+   "lon": -2.197889
+  },
+  {
    "n": "Repsol",
    "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
    "p": 1.749,
+   "c": 1,
    "h": "L-V: 06:00-22:00; S-D: 07:00-22:00",
    "lat": 42.800611,
    "lon": -1.611611
@@ -866,25 +3925,118 @@
    "n": "Cepsa",
    "d": "Ronda de Barañain, 2 (Barañain)",
    "p": 1.749,
+   "c": 1,
    "h": "L-V: 06:00-22:00; S-D: 07:00-22:00",
    "lat": 42.806861,
    "lon": -1.67675
   },
   {
+   "n": "Moeve",
+   "d": "Carretera N-113 km 91,5 (Cintruenigo)",
+   "p": 1.749,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.076944,
+   "lon": -1.79675
+  },
+  {
+   "n": "Asle",
+   "d": "Barrio Pekotxeta, s/n (Azoleta)",
+   "p": 1.749,
+   "c": 0,
+   "h": "L: 08:00-19:30",
+   "lat": 43.116889,
+   "lon": -1.271333
+  },
+  {
+   "n": "Zona Auto Luaide Avia",
+   "d": "Cr C-135 66 (Luzaide)",
+   "p": 1.749,
+   "c": 0,
+   "h": "L-D: 08:00-20:00",
+   "lat": 43.109083,
+   "lon": -1.283028
+  },
+  {
    "n": "Repsol",
    "d": "Calle Real, 66 (Noain)",
    "p": 1.749,
+   "c": 1,
    "h": "L-D: 07:00-22:00",
    "lat": 42.762889,
    "lon": -1.633722
   },
   {
+   "n": "CAN S.L.",
+   "d": "Calle Joaquin Maria Gaston, 12 (Arcos (los))",
+   "p": 1.75,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.573972,
+   "lon": -2.194278
+  },
+  {
    "n": "Repsol",
    "d": "N-240 km 378 (Noain)",
    "p": 1.759,
+   "c": 1,
    "h": "L-J: 06:00-21:00; V-S: 06:00-22:00; D: 07:00-21:00",
    "lat": 42.756667,
    "lon": -1.624167
+  },
+  {
+   "n": "Cepsa",
+   "d": "Carretera NA-129 Acedo-sesma-lodosa km 14,6 (Arcos (los))",
+   "p": 1.769,
+   "c": 0,
+   "h": "L-D: 06:00-00:00",
+   "lat": 42.555556,
+   "lon": -2.180833
+  },
+  {
+   "n": "Petronor",
+   "d": "Calle San Anton,7, (Zudaire)",
+   "p": 1.785,
+   "c": 0,
+   "h": "L-D: 08:00-22:00",
+   "lat": 42.771222,
+   "lon": -2.130472
+  },
+  {
+   "n": "Avia",
+   "d": "Crta N-135 km 18,5 Quinto Real (Eugi)",
+   "p": 1.789,
+   "c": 0,
+   "h": "M-D: 09:00-20:00",
+   "lat": 43.060278,
+   "lon": -1.453556
+  },
+  {
+   "n": "Avia",
+   "d": "Carretera NA-132-A km 19 (Acedo)",
+   "p": 1.799,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.666917,
+   "lon": -2.252397
+  },
+  {
+   "n": "Avia",
+   "d": "Poligono Reparcelacion de la UE-1 del AR-3, 3 (San Adrian)",
+   "p": 1.829,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.343417,
+   "lon": -1.942222
+  },
+  {
+   "n": "Nafar Mendi",
+   "d": "Carretera NA-121B km 45 (Arraioz)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 43.140028,
+   "lon": -1.572778
   }
  ],
  "g98": [
@@ -892,22 +4044,79 @@
    "n": "Alcampo",
    "d": "Poligono Mugazuri Parcela B, 4 (Burlada)",
    "p": 1.479,
+   "c": 1,
    "h": "L-D: 08:00-21:30",
    "lat": 42.830778,
    "lon": -1.61925
   },
   {
+   "n": "AN Energeticos - Falces",
+   "d": "Carretera NA-6210 km 5 (Falces)",
+   "p": 1.579,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.387778,
+   "lon": -1.7875
+  },
+  {
+   "n": "BM Complet",
+   "d": "Poligono Comercial Alhama, sn (Cintruenigo)",
+   "p": 1.639,
+   "c": 0,
+   "h": "L-S: 08:00-21:30",
+   "lat": 42.08725,
+   "lon": -1.816167
+  },
+  {
    "n": "Adelfas",
    "d": "Calle Maria Viscarret - Nuevo Artica, 39 (Berrioplano)",
    "p": 1.679,
+   "c": 1,
    "h": "L-D: 08:00-22:00",
    "lat": 42.842889,
    "lon": -1.681833
   },
   {
+   "n": "Repsol",
+   "d": "Avenida Zaragoza, 73 (Tudela)",
+   "p": 1.729,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.052528,
+   "lon": -1.597056
+  },
+  {
+   "n": "Nafaroil",
+   "d": "Barrio Ibardin, 19 (Bera)",
+   "p": 1.759,
+   "c": 0,
+   "h": "L-D: 08:15-19:15",
+   "lat": 43.309306,
+   "lon": -1.684056
+  },
+  {
+   "n": "Avia",
+   "d": "Barrio Ibardin, s/n (Bera)",
+   "p": 1.759,
+   "c": 0,
+   "h": "L-D: 08:00-19:30",
+   "lat": 43.309361,
+   "lon": -1.687444
+  },
+  {
+   "n": "Avia",
+   "d": "Padre Raimundo de Lumbier, 14 (Sanguesa)",
+   "p": 1.759,
+   "c": 0,
+   "h": "L-D: 07:00-22:00",
+   "lat": 42.581139,
+   "lon": -1.285639
+  },
+  {
    "n": "Galp",
    "d": "Calle Artica Esq C/ansoain, sn (Artica)",
    "p": 1.764,
+   "c": 1,
    "h": "L-D: 08:00-22:00",
    "lat": 42.831583,
    "lon": -1.651222
@@ -916,62 +4125,223 @@
    "n": "Moeve",
    "d": "Autopista AP-15 km 78 (Imarcoain)",
    "p": 1.775,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.731944,
    "lon": -1.616889
   },
   {
+   "n": "ES Landibar",
+   "d": "Calle Landibar 10, Poligono 2, Parcela 21, 10 (Landibar)",
+   "p": 1.779,
+   "c": 0,
+   "h": "L-D: 08:00-19:30",
+   "lat": 43.284083,
+   "lon": -1.505778
+  },
+  {
+   "n": "Josenea Avia",
+   "d": "Camino Landibar, 14 (Dantxarinea)",
+   "p": 1.789,
+   "c": 0,
+   "h": "L-D: 08:00-20:00",
+   "lat": 43.291361,
+   "lon": -1.504944
+  },
+  {
+   "n": "Cepsa",
+   "d": "Barrio Dantxarinea, 2 (Urdazubi)",
+   "p": 1.789,
+   "c": 0,
+   "h": "L-D: 08:00-19:00",
+   "lat": 43.289583,
+   "lon": -1.505806
+  },
+  {
    "n": "Cepsa",
    "d": "Autovia A-12 km 7,3 (Gazolaz)",
    "p": 1.795,
+   "c": 1,
    "h": "L-D: 06:30-22:30",
    "lat": 42.7775,
    "lon": -1.707611
   },
   {
+   "n": "BP Estella",
+   "d": "Pg Merkatondoa - Upp3 Parc.4, S.n. (Estella O Lizarra)",
+   "p": 1.795,
+   "c": 0,
+   "h": "L-D: 05:00-23:00",
+   "lat": 42.6535,
+   "lon": -2.026667
+  },
+  {
    "n": "BP Huarte",
    "d": "Calle Intxaurdia, 6 (Huarte)",
    "p": 1.795,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.831361,
    "lon": -1.585417
   },
   {
+   "n": "BP Tafalla",
+   "d": "Cr N-121, 38,1 (Tafalla)",
+   "p": 1.795,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.498389,
+   "lon": -1.673778
+  },
+  {
    "n": "BP Villava",
    "d": "Avenida Carretera Francia s/n, s/n (Villava O Atarrabia)",
    "p": 1.795,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.834944,
    "lon": -1.609389
   },
   {
+   "n": "Q8",
+   "d": "Carretera N-121 km km 3,55 (Cascante)",
+   "p": 1.799,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.036472,
+   "lon": -1.631
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Zaragoza, 48 (Tudela)",
+   "p": 1.799,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.058083,
+   "lon": -1.599861
+  },
+  {
+   "n": "Sertelgas,sl",
+   "d": "Poligono Industrial Ombatillo, s/n (Corella)",
+   "p": 1.805,
+   "c": 0,
+   "h": "L-D: 07:00-11:00",
+   "lat": 42.114611,
+   "lon": -1.797889
+  },
+  {
+   "n": "Repsol",
+   "d": "Au A-15, 98,5 (Zuasti)",
+   "p": 1.805,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.861639,
+   "lon": -1.743917
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-121 km 79,5 (Dantxarinea)",
+   "p": 1.805,
+   "c": 0,
+   "h": "L-V: 09:00-18:00; S-D: 10:00-19:00",
+   "lat": 43.290556,
+   "lon": -1.505806
+  },
+  {
    "n": "Repsol",
    "d": "Avenida Estella, 9 (Zizur Mayor)",
    "p": 1.805,
-   "h": "L-D: 24H",
-   "lat": 42.792917,
-   "lon": -1.684194
+   "c": 1,
+   "h": "L: 06:00-22:00",
+   "lat": 42.792833,
+   "lon": -1.686583
   },
   {
    "n": "Andamur \"pamplona\"",
    "d": "Avenida Este (ciudad del Transporte Pamplona), 1 (Imarcoain)",
    "p": 1.808,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.732583,
    "lon": -1.613972
   },
   {
+   "n": "Repsol",
+   "d": "Carretera N-121A km 44,5 (Legasa)",
+   "p": 1.809,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 43.130444,
+   "lon": -1.630722
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera NA-160 km 24 (Fitero)",
+   "p": 1.809,
+   "c": 0,
+   "h": "L-V: 07:00-22:00; S-D: 09:00-20:00",
+   "lat": 42.055861,
+   "lon": -1.861722
+  },
+  {
    "n": "Avia",
    "d": "Calle Carretera Baodstain, 2",
    "p": 1.809,
+   "c": 1,
    "h": "L-D: 07:00-22:00",
    "lat": 42.813306,
    "lon": -1.626333
   },
   {
    "n": "Repsol",
+   "d": "Avenida San Luis Gonzaga, 3 (Viana)",
+   "p": 1.809,
+   "c": 0,
+   "h": "L-S: 07:00-23:00",
+   "lat": 42.512583,
+   "lon": -2.374028
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Pamplona, 24 (Altsasu)",
+   "p": 1.815,
+   "c": 0,
+   "h": "L-V: 06:00-22:00",
+   "lat": 42.891,
+   "lon": -2.16075
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-121 C, 10 (Cascante)",
+   "p": 1.815,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 41.993278,
+   "lon": -1.676361
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera Nº 232 P.k. 82 km 82 (Castejon)",
+   "p": 1.815,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.136917,
+   "lon": -1.699944
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-240, 41 (Liedena)",
+   "p": 1.825,
+   "c": 0,
+   "h": "L-V: 06:00-22:00; S-D: 07:00-22:00",
+   "lat": 42.614194,
+   "lon": -1.27825
+  },
+  {
+   "n": "Repsol",
    "d": "Cr N-121, 5 (Noain)",
    "p": 1.825,
+   "c": 1,
    "h": "L-V: 06:00-22:00; S: 07:00-22:00",
    "lat": 42.775972,
    "lon": -1.635278
@@ -980,6 +4350,7 @@
    "n": "Petronor",
    "d": "Cl Poligono Landaben, S.n.",
    "p": 1.825,
+   "c": 1,
    "h": "L-S: 06:00-22:00; D: 07:00-22:00",
    "lat": 42.814333,
    "lon": -1.684278
@@ -988,6 +4359,7 @@
    "n": "Repsol",
    "d": "Carretera Avd. Guipuzcoa N-240 km 4 (Berriozar)",
    "p": 1.829,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.836861,
    "lon": -1.672889
@@ -996,22 +4368,61 @@
    "n": "Aralar",
    "d": "Avenida Juan Pablo Ii, 23",
    "p": 1.839,
+   "c": 1,
    "h": "L: 06:30-22:30; M-D: 06:30-14:29 y 14:30-22:30",
    "lat": 42.804028,
    "lon": -1.627861
   },
   {
+   "n": "Avia",
+   "d": "Carretera Zaragoza, km 33.5 km 33 (Tafalla)",
+   "p": 1.839,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.514472,
+   "lon": -1.675778
+  },
+  {
    "n": "Repsol",
    "d": "Calle Sadar s/n, s/n",
    "p": 1.845,
+   "c": 1,
    "h": "L-S: 06:30-22:00; D: 07:00-22:00",
    "lat": 42.797694,
    "lon": -1.645583
   },
   {
    "n": "Repsol",
+   "d": "Carretera NA-134 km 51,7 (San Adrian)",
+   "p": 1.845,
+   "c": 0,
+   "h": "L-D: 06:00-21:30",
+   "lat": 42.350639,
+   "lon": -1.937639
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr A-10 Autovia de la Barranca (Etxarren)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.9125,
+   "lon": -1.863028
+  },
+  {
+   "n": "Luzaide",
+   "d": "Poligono Pol. Ind 1- Parcela 105, 105 (Luzaide)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.11725,
+   "lon": -1.2705
+  },
+  {
+   "n": "Repsol",
    "d": "Carretera N-135 km 4,6 (Olaz)",
    "p": 1.855,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.817194,
    "lon": -1.59275
@@ -1020,30 +4431,70 @@
    "n": "Repsol",
    "d": "Cr N-135, 4,6 (Olaz)",
    "p": 1.855,
+   "c": 1,
    "h": "L-V: 06:30-22:00",
    "lat": 42.816111,
    "lon": -1.593222
   },
   {
    "n": "Repsol",
+   "d": "Autopista A-68 km 222 (Fontellas)",
+   "p": 1.855,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.012583,
+   "lon": -1.600861
+  },
+  {
+   "n": "Repsol",
    "d": "Cl Carretera de Artica,s.n.",
    "p": 1.855,
+   "c": 1,
    "h": "L-D: 06:00-22:00",
    "lat": 42.8355,
    "lon": -1.653361
   },
   {
+   "n": "Repsol",
+   "d": "Au A-15, 14 (Valtierra)",
+   "p": 1.855,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.200361,
+   "lon": -1.674889
+  },
+  {
    "n": "Moeve",
    "d": "Calle Sancho Ramirez, 2",
    "p": 1.86,
+   "c": 1,
    "h": "L-D: 24H",
    "lat": 42.806833,
    "lon": -1.661611
   },
   {
+   "n": "Asle",
+   "d": "Barrio Pekotxeta, s/n (Azoleta)",
+   "p": 1.87,
+   "c": 0,
+   "h": "L: 08:00-19:30",
+   "lat": 43.116889,
+   "lon": -1.271333
+  },
+  {
+   "n": "Carrefour",
+   "d": "Carretera de Tarazona km 3 (Tudela)",
+   "p": 1.879,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.043861,
+   "lon": -1.6195
+  },
+  {
    "n": "Repsol",
    "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
    "p": 1.889,
+   "c": 1,
    "h": "L-V: 06:00-22:00; S-D: 07:00-22:00",
    "lat": 42.800611,
    "lon": -1.611611
@@ -1052,17 +4503,948 @@
    "n": "Repsol",
    "d": "Calle Real, 66 (Noain)",
    "p": 1.889,
+   "c": 1,
    "h": "L-D: 07:00-22:00",
    "lat": 42.762889,
    "lon": -1.633722
   },
   {
+   "n": "Avia",
+   "d": "Malvasia, 5 (Arcos (los))",
+   "p": 1.899,
+   "c": 0,
+   "h": "L-V: 07:00-22:00; S: 10:00-14:00 y 16:00-22:00",
+   "lat": 42.568333,
+   "lon": -2.191722
+  },
+  {
+   "n": "Cepsa",
+   "d": "Carretera NA-129 Acedo-sesma-lodosa km 14,6 (Arcos (los))",
+   "p": 1.899,
+   "c": 0,
+   "h": "L-D: 06:00-00:00",
+   "lat": 42.555556,
+   "lon": -2.180833
+  },
+  {
+   "n": "Nafar Mendi",
+   "d": "Carretera NA-121B km 45 (Arraioz)",
+   "p": 1.899,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 43.140028,
+   "lon": -1.572778
+  },
+  {
    "n": "Repsol",
    "d": "N-240 km 378 (Noain)",
    "p": 1.899,
+   "c": 1,
    "h": "L-J: 06:00-21:00; V-S: 06:00-22:00; D: 07:00-21:00",
    "lat": 42.756667,
    "lon": -1.624167
+  },
+  {
+   "n": "Petronor",
+   "d": "Cr NA-137, 28,7 (Urzainqui)",
+   "p": 1.899,
+   "c": 0,
+   "h": "L-D: 08:00-21:00",
+   "lat": 42.837667,
+   "lon": -0.939306
+  },
+  {
+   "n": "Marisa",
+   "d": "Carretera NA-122 km 21,200 (Lerin)",
+   "p": 1.989,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.486917,
+   "lon": -1.981556
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr NA-134, 79 (Mendavia)",
+   "p": 2.049,
+   "c": 0,
+   "h": "L: 07:00-22:00",
+   "lat": 42.449611,
+   "lon": -2.212222
+  }
+ ],
+ "dpremium": [
+  {
+   "n": "Ballenoil",
+   "d": "Autovia A-12 km 7,3 (Astrain)",
+   "p": 1.659,
+   "c": 1,
+   "h": "L-D: 24H",
+   "lat": 42.778278,
+   "lon": -1.707139
+  },
+  {
+   "n": "E.S. Bardenas",
+   "d": "Poligono la Serna - Calle B - A68(N232) Salida 91, s/n (Tudela)",
+   "p": 1.69,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.076222,
+   "lon": -1.642889
+  },
+  {
+   "n": "LA Rotxa Ansoain",
+   "d": "Calle Berrioplano, 2 (Ansoain)",
+   "p": 1.699,
+   "c": 1,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.830778,
+   "lon": -1.647056
+  },
+  {
+   "n": "LC Repost - M.G. Mutilva",
+   "d": "Calle A, del Polígono Industrial Mutilva Baja, 21 (Mutilva Baja)",
+   "p": 1.699,
+   "c": 1,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.786,
+   "lon": -1.624222
+  },
+  {
+   "n": "MG Talluntxe",
+   "d": "Calle Q, 1 (Tajonar)",
+   "p": 1.699,
+   "c": 1,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.774278,
+   "lon": -1.634083
+  },
+  {
+   "n": "Agip",
+   "d": "Calle A, 24 (Orcoyen)",
+   "p": 1.699,
+   "c": 1,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.82625,
+   "lon": -1.688917
+  },
+  {
+   "n": "Talleres Arrubla",
+   "d": "Ctra. Solchaga, s/n (Barasoain)",
+   "p": 1.718,
+   "c": 0,
+   "h": "L-S: 08:00-22:00",
+   "lat": 42.60225,
+   "lon": -1.644417
+  },
+  {
+   "n": "Alcampo",
+   "d": "Calle Carlos Vii, 28 (Estella O Lizarra)",
+   "p": 1.72,
+   "c": 0,
+   "h": "L-D: 08:00-21:30",
+   "lat": 42.660972,
+   "lon": -2.034167
+  },
+  {
+   "n": "E.Leclerc",
+   "d": "Barrio la Morea, (Cordovilla)",
+   "p": 1.739,
+   "c": 1,
+   "h": "L-D: 24H",
+   "lat": 42.785194,
+   "lon": -1.634278
+  },
+  {
+   "n": "E. Leclerc",
+   "d": "Calle Arrobia Kalea, s/n (Zizur Mayor)",
+   "p": 1.739,
+   "c": 1,
+   "h": "L-D: 24H",
+   "lat": 42.787028,
+   "lon": -1.698306
+  },
+  {
+   "n": "Eroski",
+   "d": "Carretera Ctra. Zaragoza km s/n (Tudela)",
+   "p": 1.745,
+   "c": 0,
+   "h": "L-S: 09:30-22:00",
+   "lat": 42.0355,
+   "lon": -1.588
+  },
+  {
+   "n": "Estacion DE Servicio Aralar",
+   "d": "Ctra.guipuzcoa-n-240 km 5,5 (Aizoain)",
+   "p": 1.759,
+   "c": 1,
+   "h": "L-S: 05:30-22:30; D: 06:00-22:30",
+   "lat": 42.84325,
+   "lon": -1.681528
+  },
+  {
+   "n": "Aralar",
+   "d": "Carretera N-121-A km 7,6 (Oricain)",
+   "p": 1.759,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.856083,
+   "lon": -1.618917
+  },
+  {
+   "n": "AN Energeticos - Olite",
+   "d": "Poligono C/a, s/n (Olite)",
+   "p": 1.759,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.494639,
+   "lon": -1.665056
+  },
+  {
+   "n": "Aralar",
+   "d": "Avenida Juan Pablo Ii, 23",
+   "p": 1.759,
+   "c": 1,
+   "h": "L: 06:30-22:30; M-D: 06:30-14:29 y 14:30-22:30",
+   "lat": 42.804028,
+   "lon": -1.627861
+  },
+  {
+   "n": "Avanza OIL",
+   "d": "Na- 122 km 7 (Morentin)",
+   "p": 1.769,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.607389,
+   "lon": -2.016806
+  },
+  {
+   "n": "Eroski",
+   "d": "Calle Poligono Agustinos,calle A, Local 1598,",
+   "p": 1.769,
+   "c": 1,
+   "h": "L: 08:00-22:00",
+   "lat": 42.832389,
+   "lon": -1.677639
+  },
+  {
+   "n": "Ballenoil",
+   "d": "N-121 Pamplona-zaragoza km 9,4 (Beriain)",
+   "p": 1.779,
+   "c": 1,
+   "h": "L-D: 24H",
+   "lat": 42.736,
+   "lon": -1.633139
+  },
+  {
+   "n": "AN Energeticos - Sarriguren",
+   "d": "Calle Olaz, 3 (Olaz)",
+   "p": 1.789,
+   "c": 1,
+   "h": "L-D: 24H",
+   "lat": 42.815556,
+   "lon": -1.590667
+  },
+  {
+   "n": "Carrefour",
+   "d": "Carretera de Tarazona km 3 (Tudela)",
+   "p": 1.789,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.043861,
+   "lon": -1.6195
+  },
+  {
+   "n": "Alcampo",
+   "d": "Poligono Mugazuri Parcela B, 4 (Burlada)",
+   "p": 1.799,
+   "c": 1,
+   "h": "L-D: 08:00-21:30",
+   "lat": 42.830778,
+   "lon": -1.61925
+  },
+  {
+   "n": "BM Complet",
+   "d": "Poligono Comercial Alhama, sn (Cintruenigo)",
+   "p": 1.799,
+   "c": 0,
+   "h": "L-S: 08:00-21:30",
+   "lat": 42.08725,
+   "lon": -1.816167
+  },
+  {
+   "n": "DST",
+   "d": "Carretera Na150 km 1,56 (Alzuza)",
+   "p": 1.809,
+   "c": 1,
+   "h": "L-D: 24H",
+   "lat": 42.826944,
+   "lon": -1.567917
+  },
+  {
+   "n": "AN Energeticos - Funes 2",
+   "d": "Poligono Bodega Romana, Vial Oeste, s/n (Funes)",
+   "p": 1.809,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.256806,
+   "lon": -1.835417
+  },
+  {
+   "n": "Eroski",
+   "d": "Carretera Peralta km 128 (Peralta)",
+   "p": 1.835,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.335944,
+   "lon": -1.789972
+  },
+  {
+   "n": "Nafar Mendi",
+   "d": "Carretera NA-121B km 45 (Arraioz)",
+   "p": 1.849,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 43.140028,
+   "lon": -1.572778
+  },
+  {
+   "n": "E.S. Murchante Avia",
+   "d": "C/mayor, s/n (Murchante)",
+   "p": 1.859,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.036083,
+   "lon": -1.646556
+  },
+  {
+   "n": "MLC",
+   "d": "Carretera Pamplona-irun km 17,3 (Burutain)",
+   "p": 1.869,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.931806,
+   "lon": -1.608806
+  },
+  {
+   "n": "Galp",
+   "d": "Calle Artica Esq C/ansoain, sn (Artica)",
+   "p": 1.878,
+   "c": 1,
+   "h": "L-D: 08:00-22:00",
+   "lat": 42.831583,
+   "lon": -1.651222
+  },
+  {
+   "n": "Avia",
+   "d": "Padre Raimundo de Lumbier, 14 (Sanguesa)",
+   "p": 1.879,
+   "c": 0,
+   "h": "L-D: 07:00-22:00",
+   "lat": 42.581139,
+   "lon": -1.285639
+  },
+  {
+   "n": "Adelfas",
+   "d": "Calle Maria Viscarret - Nuevo Artica, 39 (Berrioplano)",
+   "p": 1.888,
+   "c": 1,
+   "h": "L-D: 08:00-22:00",
+   "lat": 42.842889,
+   "lon": -1.681833
+  },
+  {
+   "n": "Avia",
+   "d": "Carretera NA-132-A km 19 (Acedo)",
+   "p": 1.897,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.666917,
+   "lon": -2.252397
+  },
+  {
+   "n": "Josenea Zubiri Avia",
+   "d": "Carretera N-138 km 19,7 (Saigots)",
+   "p": 1.899,
+   "c": 0,
+   "h": "L-D: 08:00-21:00",
+   "lat": 42.937167,
+   "lon": -1.503167
+  },
+  {
+   "n": "Josenea Avia",
+   "d": "Camino Landibar, 14 (Dantxarinea)",
+   "p": 1.899,
+   "c": 0,
+   "h": "L-D: 08:00-20:00",
+   "lat": 43.291361,
+   "lon": -1.504944
+  },
+  {
+   "n": "Nafaroil",
+   "d": "Barrio Ibardin, 19 (Bera)",
+   "p": 1.919,
+   "c": 0,
+   "h": "L-D: 08:15-19:15",
+   "lat": 43.309306,
+   "lon": -1.684056
+  },
+  {
+   "n": "Avia",
+   "d": "Barrio Ibardin, s/n (Bera)",
+   "p": 1.919,
+   "c": 0,
+   "h": "L-D: 08:00-19:30",
+   "lat": 43.309361,
+   "lon": -1.687444
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-121 km 79,5 (Dantxarinea)",
+   "p": 1.929,
+   "c": 0,
+   "h": "L-V: 09:00-18:00; S-D: 10:00-19:00",
+   "lat": 43.290556,
+   "lon": -1.505806
+  },
+  {
+   "n": "Andamur \"pamplona\"",
+   "d": "Avenida Este (ciudad del Transporte Pamplona), 1 (Imarcoain)",
+   "p": 1.938,
+   "c": 1,
+   "h": "L-D: 24H",
+   "lat": 42.732583,
+   "lon": -1.613972
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-121A km 44,5 (Legasa)",
+   "p": 1.939,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 43.130444,
+   "lon": -1.630722
+  },
+  {
+   "n": "Avia",
+   "d": "Carretera Zaragoza, km 33.5 km 33 (Tafalla)",
+   "p": 1.939,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.514472,
+   "lon": -1.675778
+  },
+  {
+   "n": "Petronor",
+   "d": "Cl Poligono Landaben, S.n.",
+   "p": 1.945,
+   "c": 1,
+   "h": "L-S: 06:00-22:00; D: 07:00-22:00",
+   "lat": 42.814333,
+   "lon": -1.684278
+  },
+  {
+   "n": "Luzaide",
+   "d": "Poligono Pol. Ind 1- Parcela 105, 105 (Luzaide)",
+   "p": 1.949,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.11725,
+   "lon": -1.2705
+  },
+  {
+   "n": "Sertelgas,sl",
+   "d": "Poligono Industrial Ombatillo, s/n (Corella)",
+   "p": 1.954,
+   "c": 0,
+   "h": "L-D: 07:00-11:00",
+   "lat": 42.114611,
+   "lon": -1.797889
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr A-10 Autovia de la Barranca (Etxarren)",
+   "p": 1.955,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.9125,
+   "lon": -1.863028
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-135 km 4,6 (Olaz)",
+   "p": 1.955,
+   "c": 1,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.817194,
+   "lon": -1.59275
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-135, 4,6 (Olaz)",
+   "p": 1.955,
+   "c": 1,
+   "h": "L-V: 06:30-22:00",
+   "lat": 42.816111,
+   "lon": -1.593222
+  },
+  {
+   "n": "Repsol",
+   "d": "Calle Altxutxate, 50 (Huarte)",
+   "p": 1.955,
+   "c": 1,
+   "h": "L-D: 07:00-21:30",
+   "lat": 42.818278,
+   "lon": -1.60325
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-240, 41 (Liedena)",
+   "p": 1.955,
+   "c": 0,
+   "h": "L-V: 06:00-22:00; S-D: 07:00-22:00",
+   "lat": 42.614194,
+   "lon": -1.27825
+  },
+  {
+   "n": "Repsol",
+   "d": "Cl Carretera de Artica,s.n.",
+   "p": 1.955,
+   "c": 1,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.8355,
+   "lon": -1.653361
+  },
+  {
+   "n": "Repsol",
+   "d": "Av Pamplona s/n (Tafalla)",
+   "p": 1.955,
+   "c": 0,
+   "h": "L-V: 06:30-22:00; S: 07:00-22:00; D: 07:00-14:30",
+   "lat": 42.53175,
+   "lon": -1.672444
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Estella, 9 (Zizur Mayor)",
+   "p": 1.955,
+   "c": 1,
+   "h": "L: 06:00-22:00",
+   "lat": 42.792833,
+   "lon": -1.686583
+  },
+  {
+   "n": "Repsol",
+   "d": "Avenida Pamplona, 24 (Altsasu)",
+   "p": 1.959,
+   "c": 0,
+   "h": "L-V: 06:00-22:00",
+   "lat": 42.891,
+   "lon": -2.16075
+  },
+  {
+   "n": "Petronor",
+   "d": "Cr N-121, 75 (Bera)",
+   "p": 1.959,
+   "c": 0,
+   "h": "L-S: 07:00-22:00; D: 08:00-14:00",
+   "lat": 43.270833,
+   "lon": -1.687167
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera Nº 232 P.k. 82 km 82 (Castejon)",
+   "p": 1.959,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.136917,
+   "lon": -1.699944
+  },
+  {
+   "n": "Moeve",
+   "d": "Autovia A-15 (mrg.izdo.) km 134,5 (Gorriti)",
+   "p": 1.965,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.059111,
+   "lon": -1.957306
+  },
+  {
+   "n": "Petronor",
+   "d": "Carretera Cr NA-7000, 5,3 km 5,3 (Arazuri)",
+   "p": 1.965,
+   "c": 1,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.818417,
+   "lon": -1.718111
+  },
+  {
+   "n": "Shell",
+   "d": "Autovia A-15 km 124,488 (Mugiro)",
+   "p": 1.969,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.000028,
+   "lon": -1.886167
+  },
+  {
+   "n": "Cepsa",
+   "d": "Barrio Dantxarinea, 2 (Urdazubi)",
+   "p": 1.969,
+   "c": 0,
+   "h": "L-D: 08:00-19:00",
+   "lat": 43.289583,
+   "lon": -1.505806
+  },
+  {
+   "n": "Avia",
+   "d": "Cr C-5340, 31 (Aibar)",
+   "p": 1.979,
+   "c": 0,
+   "h": "L: 07:30-21:30",
+   "lat": 42.590333,
+   "lon": -1.363972
+  },
+  {
+   "n": "Valcarce",
+   "d": "Autovia A-68 km 105,6 (Ribaforada)",
+   "p": 1.979,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 41.986667,
+   "lon": -1.530389
+  },
+  {
+   "n": "Petronor",
+   "d": "Cr NA-137, 28,7 (Urzainqui)",
+   "p": 1.979,
+   "c": 0,
+   "h": "L-D: 08:00-21:00",
+   "lat": 42.837667,
+   "lon": -0.939306
+  },
+  {
+   "n": "Moeve",
+   "d": "Calle Sancho Ramirez, 2",
+   "p": 1.98,
+   "c": 1,
+   "h": "L-D: 24H",
+   "lat": 42.806833,
+   "lon": -1.661611
+  },
+  {
+   "n": "Asle",
+   "d": "Barrio Pekotxeta, s/n (Azoleta)",
+   "p": 1.984,
+   "c": 0,
+   "h": "L: 08:00-19:30",
+   "lat": 43.116889,
+   "lon": -1.271333
+  },
+  {
+   "n": "Zona Auto Luaide Avia",
+   "d": "Cr C-135 66 (Luzaide)",
+   "p": 1.984,
+   "c": 0,
+   "h": "L-D: 08:00-20:00",
+   "lat": 43.109083,
+   "lon": -1.283028
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-121 km 5 (Aranguren)",
+   "p": 1.985,
+   "c": 1,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.776111,
+   "lon": -1.634722
+  },
+  {
+   "n": "BP Estella",
+   "d": "Pg Merkatondoa - Upp3 Parc.4, S.n. (Estella O Lizarra)",
+   "p": 1.985,
+   "c": 0,
+   "h": "L-D: 05:00-23:00",
+   "lat": 42.6535,
+   "lon": -2.026667
+  },
+  {
+   "n": "BP Huarte",
+   "d": "Calle Intxaurdia, 6 (Huarte)",
+   "p": 1.985,
+   "c": 1,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.831361,
+   "lon": -1.585417
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr N-121, 5 (Noain)",
+   "p": 1.985,
+   "c": 1,
+   "h": "L-V: 06:00-22:00; S: 07:00-22:00",
+   "lat": 42.775972,
+   "lon": -1.635278
+  },
+  {
+   "n": "BP Tafalla",
+   "d": "Cr N-121, 38,1 (Tafalla)",
+   "p": 1.985,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.498389,
+   "lon": -1.673778
+  },
+  {
+   "n": "BP Villava",
+   "d": "Avenida Carretera Francia s/n, s/n (Villava O Atarrabia)",
+   "p": 1.985,
+   "c": 1,
+   "h": "L-D: 24H",
+   "lat": 42.834944,
+   "lon": -1.609389
+  },
+  {
+   "n": "Avia",
+   "d": "Calle Mayor, 3 (Oronz)",
+   "p": 1.989,
+   "c": 0,
+   "h": "L-D: 08:00-20:00",
+   "lat": 42.868083,
+   "lon": -1.096694
+  },
+  {
+   "n": "Moeve",
+   "d": "Carretera N-121-A km 55 (Doneztebe)",
+   "p": 1.995,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.152556,
+   "lon": -1.668083
+  },
+  {
+   "n": "Cepsa",
+   "d": "Carretera N-121-A km 23,7 (Lantz)",
+   "p": 1.995,
+   "c": 0,
+   "h": "L-V: 08:00-20:00; S-D: 09:00-17:00",
+   "lat": 42.983333,
+   "lon": -1.630528
+  },
+  {
+   "n": "Moeve",
+   "d": "Autovia A-15 (mrg.dcho.) km 134,4 (Gorriti)",
+   "p": 1.995,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 43.058806,
+   "lon": -1.955944
+  },
+  {
+   "n": "Moeve",
+   "d": "Au A-15, 78 (Imarcoain)",
+   "p": 1.995,
+   "c": 1,
+   "h": "L-D: 24H",
+   "lat": 42.731944,
+   "lon": -1.618028
+  },
+  {
+   "n": "Moeve",
+   "d": "Autopista AP-15 km 78 (Imarcoain)",
+   "p": 1.995,
+   "c": 1,
+   "h": "L-D: 24H",
+   "lat": 42.731944,
+   "lon": -1.616889
+  },
+  {
+   "n": "Moeve",
+   "d": "Avenida Guipuzcoa, 1",
+   "p": 1.995,
+   "c": 1,
+   "h": "L-D: 00:00-23:59",
+   "lat": 42.820528,
+   "lon": -1.655806
+  },
+  {
+   "n": "Petronor",
+   "d": "Calle San Anton,7, (Zudaire)",
+   "p": 1.999,
+   "c": 0,
+   "h": "L-D: 08:00-22:00",
+   "lat": 42.771222,
+   "lon": -2.130472
+  },
+  {
+   "n": "Repsol",
+   "d": "Carretera N-32 km 5,2 (Mutilva Baja)",
+   "p": 1.999,
+   "c": 1,
+   "h": "L-V: 06:00-22:00; S-D: 07:00-22:00",
+   "lat": 42.800611,
+   "lon": -1.611611
+  },
+  {
+   "n": "Campsa",
+   "d": "Cr N-121B, 59 (n-121b km 58) (Elizondo)",
+   "p": 1.999,
+   "c": 0,
+   "h": "L-D: 07:00-21:00",
+   "lat": 43.148639,
+   "lon": -1.512361
+  },
+  {
+   "n": "Campsa",
+   "d": "Carretera Ctra. Na170 km1.98 km 1 (Leitza)",
+   "p": 1.999,
+   "c": 0,
+   "h": "L-S: 06:00-22:00; D: 08:00-14:00",
+   "lat": 43.084972,
+   "lon": -1.922278
+  },
+  {
+   "n": "Repsol",
+   "d": "Calle Real, 66 (Noain)",
+   "p": 1.999,
+   "c": 1,
+   "h": "L-D: 07:00-22:00",
+   "lat": 42.762889,
+   "lon": -1.633722
+  },
+  {
+   "n": "Moeve",
+   "d": "N-121 km 9,4, (Beriain)",
+   "p": 2.005,
+   "c": 1,
+   "h": "L-D: 06:30-22:00",
+   "lat": 42.734444,
+   "lon": -1.633556
+  },
+  {
+   "n": "Moeve",
+   "d": "Carretera Nacional 121 km 56 (Caparroso)",
+   "p": 2.005,
+   "c": 0,
+   "h": "L-V: 06:00-23:30; S: 06:00-22:00; D: 07:00-22:00",
+   "lat": 42.350722,
+   "lon": -1.650389
+  },
+  {
+   "n": "Moeve",
+   "d": "Poligono Poligono Industrial Cordovilla-galar, Parcela 382, s/n (Cordovilla)",
+   "p": 2.005,
+   "c": 1,
+   "h": "L-V: 07:00-21:00; S: 07:00-14:00",
+   "lat": 42.789778,
+   "lon": -1.639611
+  },
+  {
+   "n": "Moeve",
+   "d": "Carretera NA-123 km 0,7 (Lodosa)",
+   "p": 2.005,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.416556,
+   "lon": -2.076861
+  },
+  {
+   "n": "Repsol",
+   "d": "Paseo de los Fueros, s/nº (nacional Iii km 24) (Puente la Reina)",
+   "p": 2.005,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.670611,
+   "lon": -1.815611
+  },
+  {
+   "n": "Repsol",
+   "d": "N-240 km 378 (Noain)",
+   "p": 2.009,
+   "c": 1,
+   "h": "L-J: 06:00-21:00; V-S: 06:00-22:00; D: 07:00-21:00",
+   "lat": 42.756667,
+   "lon": -1.624167
+  },
+  {
+   "n": "Cepsa",
+   "d": "Autovia A-12 km 7,3 (Gazolaz)",
+   "p": 2.015,
+   "c": 1,
+   "h": "L-D: 06:30-22:30",
+   "lat": 42.7775,
+   "lon": -1.707611
+  },
+  {
+   "n": "Galp",
+   "d": "Autovia A1 km 401 (Altsasu)",
+   "p": 2.049,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.917667,
+   "lon": -2.195389
+  },
+  {
+   "n": "Cepsa",
+   "d": "Ronda de Barañain, 2 (Barañain)",
+   "p": 2.049,
+   "c": 1,
+   "h": "L-V: 06:00-22:00; S-D: 07:00-22:00",
+   "lat": 42.806861,
+   "lon": -1.67675
+  },
+  {
+   "n": "Moeve",
+   "d": "Carretera N-113 km 91,5 (Cintruenigo)",
+   "p": 2.049,
+   "c": 0,
+   "h": "L-D: 06:00-22:00",
+   "lat": 42.076944,
+   "lon": -1.79675
+  },
+  {
+   "n": "Moeve",
+   "d": "Carretera NA-2410 km 17 (Lakuntza)",
+   "p": 2.049,
+   "c": 0,
+   "h": "L-V: 06:00-22:00; S-D: 07:00-21:00",
+   "lat": 42.922111,
+   "lon": -2.0145
+  },
+  {
+   "n": "Galp",
+   "d": "Ctra. A-1 km 391 (Ziordia)",
+   "p": 2.049,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.865028,
+   "lon": -2.236361
+  },
+  {
+   "n": "Repsol",
+   "d": "Cr NA-134, 79 (Mendavia)",
+   "p": 2.059,
+   "c": 0,
+   "h": "L: 07:00-22:00",
+   "lat": 42.449611,
+   "lon": -2.212222
+  },
+  {
+   "n": "Cepsa",
+   "d": "Carretera NA-129 Acedo-sesma-lodosa km 14,6 (Arcos (los))",
+   "p": 2.079,
+   "c": 0,
+   "h": "L-D: 06:00-00:00",
+   "lat": 42.555556,
+   "lon": -2.180833
+  },
+  {
+   "n": "Galp",
+   "d": "Autovia a 1 km 401 (Altsasu)",
+   "p": 2.089,
+   "c": 0,
+   "h": "L-D: 24H",
+   "lat": 42.915306,
+   "lon": -2.197889
   }
  ]
 }
