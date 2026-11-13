@@ -243,6 +243,15 @@ button:focus-visible,input:focus-visible,a:focus-visible,summary:focus-visible{o
   .best-name{font-size:1.2rem} .best-total b{font-size:1.4rem}
 }
 </style>
+<!-- Contador de visitas (GoatCounter): sin cookies ni datos personales.
+     Distingue si se abre como app instalada o desde el navegador. -->
+<script>
+window.goatcounter = { path: function(){
+  var inst = (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || window.navigator.standalone === true;
+  return inst ? "/app-instalada" : "/navegador";
+}};
+</script>
+<script data-goatcounter="https://gasolinerasbykkk.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
 
