@@ -178,6 +178,7 @@ button:focus-visible,input:focus-visible,a:focus-visible,summary:focus-visible{o
 .z-low .pin:not(.top){width:16px;height:16px;padding:0;font-size:0;border-radius:50%;transform:translate(-50%,-50%)}
 .z-low .pin:not(.top)::after{display:none}
 .leaflet-div-icon{background:none;border:0}
+.tiles-suaves{filter:saturate(.75) brightness(1.04) contrast(.95)}
 .me{width:16px;height:16px;border-radius:50%;background:#1f6690;border:3px solid #fff;box-shadow:0 0 0 6px rgba(31,102,144,.25)}
 .leaflet-popup-content-wrapper{border-radius:16px}
 .leaflet-popup-content{margin:12px 14px;font:14px/1.4 var(--body);color:#13293a}
@@ -599,8 +600,8 @@ let map=null, capa=null, yo=null, circulo=null, marcas={}, ultimoEncuadre="";
 function initMap(){
   if (map || !window.L) return;
   map = L.map("map",{zoomControl:false, attributionControl:true}).setView([42.8125,-1.6458],12);
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",{maxZoom:19,subdomains:"abcd",
-    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'}).addTo(map);
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,className:"tiles-suaves",
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
   L.control.zoom({position:"bottomright"}).addTo(map);
   capa = L.layerGroup().addTo(map);
   const zoomCls = () => $("map").classList.toggle("z-low", map.getZoom() < 14);
