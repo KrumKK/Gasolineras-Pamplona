@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Gasolineras Pamplona y comarca</title>
 <meta name="theme-color" content="#0b1218">
-<meta name="description" content="Precios de diésel y gasolina en Pamplona y comarca, de más barata a más cara, con mapa y el mejor día para llenar.">
+<meta name="description" content="Precios de diésel y gasolina en Pamplona, su comarca y toda Navarra, de más barata a más cara, con mapa y el mejor día para llenar.">
 <link rel="icon" type="image/png" href="kkk-favicon.png">
 <link rel="apple-touch-icon" href="kkk-apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
@@ -116,7 +116,7 @@ button:focus-visible,input:focus-visible,a:focus-visible,summary:focus-visible{o
 
 /* Barra de filtros de la lista */
 .filters{display:flex;flex-direction:column;gap:10px}
-.frow{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.frow{display:flex;flex-wrap:wrap;gap:8px}
 .frow::-webkit-scrollbar{display:none}
 .frow .chip{flex:none;background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.18)}
 .frow .chip[aria-pressed="true"]{background:var(--mint);color:var(--mint-ink);border-color:transparent}
@@ -149,6 +149,7 @@ button:focus-visible,input:focus-visible,a:focus-visible,summary:focus-visible{o
 .tag.km{color:var(--sky-ink);background:var(--sky)}
 .tag.h24{color:var(--lav-ink);background:var(--lav)}
 .tag.dto{color:var(--sun-ink);background:var(--sun)}
+.tag.prem{color:var(--peach-ink);background:var(--peach)}
 .price{text-align:right;font-variant-numeric:tabular-nums}
 .total{font:700 1.15rem var(--mono);white-space:nowrap}
 .pl{font:.76rem var(--mono);color:var(--muted);white-space:nowrap}
@@ -267,7 +268,7 @@ window.goatcounter = { path: function(){
     <section class="slide" data-s="0">
       <div class="art"><img src="kkk-logo.png" alt="Logo 13 KKK" width="200" height="200"></div>
       <h2>Bienvenido, ahorrador.</h2>
-      <p>Precios oficiales de todas las gasolineras de Pamplona y comarca, revisados cada hora y ordenados de la más barata a la más cara.</p>
+      <p>Precios oficiales de todas las gasolineras de Pamplona, su comarca y el resto de Navarra, revisados cada hora y ordenados de la más barata a la más cara.</p>
     </section>
     <section class="slide" data-s="1" hidden>
       <div class="art"><div class="mini-bars"><i style="height:55%"></i><i class="w" style="height:30%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:75%"></i><i style="height:95%"></i><i style="height:85%"></i></div></div>
@@ -291,6 +292,7 @@ window.goatcounter = { path: function(){
         <div><div class="label">Tu combustible</div>
           <div class="chips" id="o-fuel">
             <button class="chip" type="button" data-k="diesel">Diésel</button>
+            <button class="chip" type="button" data-k="dpremium">Diésel Premium</button>
             <button class="chip" type="button" data-k="g95">Gasolina 95</button>
             <button class="chip" type="button" data-k="g98">Gasolina 98</button>
           </div></div>
@@ -303,7 +305,8 @@ window.goatcounter = { path: function(){
         </div>
         <div><div class="label">Dónde buscar</div>
           <div class="chips" id="o-zona">
-            <button class="chip" type="button" data-z="all">Toda la comarca</button>
+            <button class="chip" type="button" data-z="all">Pamplona y comarca</button>
+            <button class="chip" type="button" data-z="nav">Toda Navarra</button>
             <button class="chip" type="button" data-z="near">📍 Cerca de mí</button>
           </div></div>
       </div>
@@ -357,7 +360,8 @@ window.goatcounter = { path: function(){
     <div class="filters">
       <div class="frow" data-fuelrow></div>
       <div class="frow" id="lFiltros">
-        <button class="chip sm" type="button" data-z="all">Toda la comarca</button>
+        <button class="chip sm" type="button" data-z="all">Pamplona y comarca</button>
+        <button class="chip sm" type="button" data-z="nav">Toda Navarra</button>
         <button class="chip sm" type="button" data-z="near">📍 Cerca de mí</button>
         <button class="chip sm" type="button" data-o="precio">Más barata</button>
         <button class="chip sm" type="button" data-o="cerca">Más cerca</button>
@@ -400,7 +404,8 @@ window.goatcounter = { path: function(){
       </div>
       <div><div class="label">Dónde buscar</div>
         <div class="chips" id="a-zona">
-          <button class="chip" type="button" data-z="all">Toda la comarca</button>
+          <button class="chip" type="button" data-z="all">Pamplona y comarca</button>
+          <button class="chip" type="button" data-z="nav">Toda Navarra</button>
           <button class="chip" type="button" data-z="near">📍 Cerca de mí</button>
         </div>
         <div class="chips" id="a-radios" style="margin-top:10px"></div>
@@ -435,8 +440,10 @@ window.goatcounter = { path: function(){
 /* ====================== utilidades ====================== */
 const DIAS = ["lunes","martes","miércoles","jueves","viernes","sábado","domingo"];
 const DIAS_C = ["Lun","Mar","Mié","Jue","Vie","Sáb","Dom"];
-const FUELS = [["diesel","Diésel"],["g95","Gasolina 95"],["g98","Gasolina 98"]];
-const FUEL_N = {diesel:"diésel", g95:"gasolina 95", g98:"gasolina 98"};
+const FUELS = [["diesel","Diésel"],["dpremium","Diésel Premium"],["g95","Gasolina 95"],["g98","Gasolina 98"]];
+const FUEL_N = {diesel:"diésel", dpremium:"diésel premium", g95:"gasolina 95", g98:"gasolina 98"};
+const DEL = f => (f==="g95"||f==="g98") ? "de la" : "del";
+const zonaTxt = () => st.zona==="near" && st.pos ? `cerca de ti (${st.radio} km)` : (st.zona==="nav" ? "en toda Navarra" : "en Pamplona y comarca");
 const RADIOS = [2,5,10,20];
 const $ = id => document.getElementById(id);
 const $$ = s => [...document.querySelectorAll(s)];
@@ -470,7 +477,14 @@ function distKm(a,b){ const R=6371,r=Math.PI/180,dLa=(b.lat-a.lat)*r,dLo=(b.lon-
   const h=Math.sin(dLa/2)**2+Math.cos(a.lat*r)*Math.cos(b.lat*r)*Math.sin(dLo/2)**2; return 2*R*Math.asin(Math.sqrt(h)); }
 const es24 = x => /24\s*h/i.test(x.h||"");
 function base(fuel=st.fuel){
-  return (st.doc?.[fuel]||[]).filter(x=>x && x.p>0).map(x=>{
+  let lista = (st.doc?.[fuel]||[]).filter(x=>x && x.p>0);
+  if (fuel==="diesel"){
+    // Gasolineras que solo publican Diésel Premium: también salen en Diésel, con su etiqueta
+    const ya = new Set(lista.map(x=>x.n+"|"+x.d));
+    lista = lista.concat((st.doc?.dpremium||[]).filter(x=>x && x.p>0 && !ya.has(x.n+"|"+x.d)).map(x=>({...x, prem:true})));
+  }
+  if (st.zona==="all") lista = lista.filter(x=>x.c!==0);
+  return lista.map(x=>{
     const key = x.n+"|"+x.d, cad = cadena(x.n), dto = cad ? (+st.desc[cad]||0) : 0;
     return {...x, key, cad, dto, pe: Math.max(.2, x.p - dto/100), fav: st.fav.has(key),
       km: (st.pos && x.lat && x.lon) ? distKm(st.pos, x) : null};
@@ -511,7 +525,7 @@ function tarjeta(x, i, ctx){
       <div class="rank">${i+1}</div>
       <div class="marca" style="background:${colorMarca(x.n)}">${esc(inicial(x.n))}</div>
       <div class="info"><div class="name">${esc(x.n)}${x.fav?'<span class="star" aria-label="Favorita">★</span>':""}</div>
-        <div class="loc">📍 ${esc(sitio)}${x.km!=null?` <span class="tag km">${kmTxt(x.km)}</span>`:""}${es24(x)?' <span class="tag h24">24 h</span>':""}${x.dto?` <span class="tag dto">−${x.dto} cts</span>`:""}</div></div>
+        <div class="loc">📍 ${esc(sitio)}${x.km!=null?` <span class="tag km">${kmTxt(x.km)}</span>`:""}${es24(x)?' <span class="tag h24">24 h</span>':""}${x.dto?` <span class="tag dto">−${x.dto} cts</span>`:""}${x.prem?' <span class="tag prem">Solo Premium</span>':""}</div></div>
       <div class="price"><div class="total">${importe(x)}</div><div class="pl">${precioTxt(x)}</div><span class="diff">${diff}</span></div>
       <div class="meter" title="Posición entre la más barata y la más cara"><i style="left:${pos}%"></i></div>
     </summary>
@@ -537,12 +551,12 @@ function renderInicio(){
     return;
   }
   const byP = rows.slice().sort((a,b)=>a.pe-b.pe), b = byP[0], w = byP[byP.length-1];
-  const aqui = cerca ? ` cerca de ti (${st.radio} km)` : "";
+  const aqui = " " + zonaTxt();
   $("heroSave").innerHTML = st.modo==="E"
     ? `Hoy${aqui}, con ${eur(st.euros)} eligiendo bien te llevas hasta<b>${lt(st.euros/b.pe - st.euros/w.pe)} más</b>de ${fuel} que en la más cara`
     : `Hoy${aqui}, elegir bien te ahorra hasta<b>${eur((w.pe-b.pe)*st.litros)}</b>en ${st.litros} L de ${fuel}`;
   const {sitio} = sitioDe(b);
-  $("bestLabel").textContent = cerca ? `Tu mejor opción cerca (${st.radio} km)` : "Tu mejor opción ahora";
+  $("bestLabel").textContent = cerca ? `Tu mejor opción cerca (${st.radio} km)` : (st.zona==="nav" ? "Tu mejor opción en Navarra" : "Tu mejor opción ahora");
   $("bestBody").innerHTML = `<div class="best-row">
       <div class="marca" style="background:${colorMarca(b.n)}">${esc(inicial(b.n))}</div>
       <div style="min-width:0"><div class="best-name">${esc(b.n)}</div>
@@ -555,7 +569,7 @@ function renderInicio(){
     </div>`;
   const ctx = {pMin:b.pe, pMax:w.pe, porCerca:false};
   $("top3").innerHTML = byP.slice(0,3).map((x,i)=>tarjeta(x,i,ctx)).join("");
-  $("top3Sub").textContent = `${fuel}${aqui} · toca una para ver más`;
+  $("top3Sub").textContent = `${fuel} ${zonaTxt()} · toca una para ver más`;
 }
 
 /* ====================== LISTA ====================== */
@@ -587,8 +601,8 @@ function renderLista(){
   }
   $("summary").hidden = false;
   const porCerca = cerca && st.orden==="cerca";
-  $("topTitle").textContent = porCerca ? "Las más cercanas" : (cerca ? "Las más baratas cerca de ti" : "De más barata a más cara");
-  $("topSub").textContent = `${fuel} · ${rows.length} gasolineras${cerca?` a menos de ${st.radio} km`:""} · ${st.modo==="E"?`litros por ${eur(st.euros)}`:`coste de ${st.litros}\u00a0L`}`;
+  $("topTitle").textContent = porCerca ? "Las más cercanas" : (cerca ? "Las más baratas cerca de ti" : (st.zona==="nav" ? "Toda Navarra, de más barata a más cara" : "De más barata a más cara"));
+  $("topSub").textContent = `${fuel} · ${rows.length} gasolineras ${cerca?`a menos de ${st.radio} km`:zonaTxt()} · ${st.modo==="E"?`litros por ${eur(st.euros)}`:`coste de ${st.litros}\u00a0L`}`;
   const vis = st.todas ? rows : rows.slice(0,N);
   $("list").innerHTML = vis.map((x,i)=>tarjeta(x,i,{pMin,pMax,porCerca})).join("");
   $("verMas").hidden = rows.length <= N;
@@ -610,7 +624,7 @@ function initMap(){
 function popupHTML(x){
   const {calle,sitio}=sitioDe(x);
   return `<div class="pop"><b>${esc(x.n)}</b>${x.fav?" ★":""}<div>${esc(calle)}, ${esc(sitio)}${x.km!=null?" · "+kmTxt(x.km):""}</div>
-    <div class="pp">${precioTxt(x)} · ${importe(x)}</div>${x.h?`<div style="font-size:.8rem;color:#5f7484">Horario: ${esc(x.h)}</div>`:""}
+    <div class="pp">${precioTxt(x)} · ${importe(x)}</div>${x.prem?'<div style="font-size:.8rem;color:#8f4a24">Solo publica precio de Diésel Premium</div>':""}${x.h?`<div style="font-size:.8rem;color:#5f7484">Horario: ${esc(x.h)}</div>`:""}
     <div class="actions"><a class="btn pri" href="${mapsUrl(x)}" target="_blank" rel="noopener">Cómo llegar ➜</a>
     <button class="btn fav" type="button" data-fav="${esc(x.key)}">${x.fav?"★ Quitar":"☆ Favorita"}</button></div></div>`;
 }
@@ -666,26 +680,27 @@ function renderAjustes(){
 /* ====================== MEJOR DÍA ====================== */
 function renderBestDay(){
   const sums = Array.from({length:7},()=>[0,0]); let nDays = 0;
-  for (const [f,v] of Object.entries(st.hist)){ const p=v?.[st.fuel]; if(!(p>0)) continue;
+  const enNav = st.zona==="nav", zl = enNav ? "Navarra" : "la comarca";
+  for (const [f,v] of Object.entries(st.hist)){ const p = enNav ? v?.nav?.[st.fuel] : v?.[st.fuel]; if(!(p>0)) continue;
     const wd=(new Date(f+"T12:00:00").getDay()+6)%7; sums[wd][0]+=p; sums[wd][1]++; nDays++; }
   const avg = sums.map(([s,n])=> n ? s/n : null), covered = avg.filter(v=>v!==null).length, fuel = FUEL_N[st.fuel];
-  $("barsCap").textContent = `Precio medio ${st.fuel==="diesel"?"del":"de la"} ${fuel} por día de la semana (€/L)`;
+  $("barsCap").textContent = `Precio medio ${DEL(st.fuel)} ${fuel} en ${zl} por día de la semana (€/L)`;
   if (covered < 7){
     $("bdLabel").textContent = "Mejor día para llenar · patrón en España";
     $("bdHead").textContent = "Llena el depósito el lunes";
-    $("bdText").textContent = "Según la OCU, el lunes suele ser el día más barato y el fin de semana el más caro (unos 4–5 € más por depósito de 50 L). Cuando tenga datos de los 7 días de la semana, la recomendación saldrá de los precios reales de la comarca.";
+    $("bdText").textContent = `Según la OCU, el lunes suele ser el día más barato y el fin de semana el más caro (unos 4–5 € más por depósito de 50 L). Cuando tenga datos de los 7 días de la semana, la recomendación saldrá de los precios reales de ${zl}.`;
     $("bars").innerHTML = barsHTML(avg,null,null);
-    $("bdFoot").textContent = `Media de todas las gasolineras de la comarca. ${covered} de 7 días de la semana con datos (${nDays} ${nDays===1?"día guardado":"días guardados"}).`;
+    $("bdFoot").textContent = `Media de todas las gasolineras de ${zl}. ${covered} de 7 días de la semana con datos (${nDays} ${nDays===1?"día guardado":"días guardados"}).`;
     return;
   }
   const v=avg.filter(x=>x!==null), lo=Math.min(...v), hi=Math.max(...v), best=avg.indexOf(lo), worst=avg.indexOf(hi);
-  $("bdLabel").textContent = `Mejor día para llenar · comarca, últimos ${nDays} días`;
+  $("bdLabel").textContent = `Mejor día para llenar · ${enNav?"Navarra":"comarca"}, últimos ${nDays} días`;
   if ((hi-lo)*100 < .3){ $("bdHead").textContent="Da igual el día";
-    $("bdText").textContent=`En la comarca el ${fuel} cuesta prácticamente lo mismo todos los días. Lo que ahorra es elegir bien la gasolinera.`; }
+    $("bdText").textContent=`En ${zl} el ${fuel} cuesta prácticamente lo mismo todos los días. Lo que ahorra es elegir bien la gasolinera.`; }
   else { $("bdHead").textContent=`Llena el depósito el ${DIAS[best]}`;
     $("bdText").textContent=`Es el día más barato de media para ${fuel}: ${f3(lo)} €/L. El más caro es el ${DIAS[worst]} (${f3(hi)} €/L). Con ${st.litros} L ahorras unos ${eur((hi-lo)*st.litros)} por depósito.`; }
   $("bars").innerHTML = barsHTML(avg,best,worst,lo,hi);
-  $("bdFoot").textContent = "Media de todas las gasolineras de la comarca. La barra más baja es el mejor día.";
+  $("bdFoot").textContent = `Media de todas las gasolineras de ${zl}. La barra más baja es el mejor día.`;
 }
 function barsHTML(avg,best,worst,lo,hi){
   const v=avg.filter(x=>x!==null); if(lo===undefined && v.length){lo=Math.min(...v);hi=Math.max(...v);}
@@ -728,7 +743,7 @@ function pedirUbicacion(silencioso, alTerminar){
                       : "No he podido saber dónde estás. Comprueba que la ubicación del móvil está activada y vuelve a intentarlo.", true);
   }, {enableHighAccuracy:false, timeout:15000, maximumAge:120000});
 }
-function setZona(z, sinPedir){ st.zona=z; put("zona",z); st.todas=false; if (z==="near" && !sinPedir) pedirUbicacion(false); else if (z==="all") geoMsg(""); render(); }
+function setZona(z, sinPedir){ st.zona=z; put("zona",z); st.todas=false; if (z==="near" && !sinPedir) pedirUbicacion(false); else if (z!=="near") geoMsg(""); render(); }
 
 /* ====================== eventos (delegados) ====================== */
 document.addEventListener("click", e=>{
@@ -797,14 +812,24 @@ $("onb").addEventListener("click", e=>{
 $("o-cant").addEventListener("change", e=>{ onb.cant=Math.max(1,+e.target.value||1); });
 
 /* ====================== arranque ====================== */
-(async () => {
-  const q = "?v=" + Date.now();
+let ultimaCarga = 0, cargando = false;
+async function cargarDatos(forzar){
+  if (cargando || (!forzar && Date.now()-ultimaCarga < 60000)) return;
+  cargando = true;
   try{
-    const [p,h] = await Promise.all([fetch("data/precios.json"+q), fetch("data/historial.json"+q)]);
-    st.doc = await p.json(); st.hist = h.ok ? await h.json() : {};
-  }catch(e){ $$("[data-stamp]").forEach(x=>x.textContent="No se han podido cargar los precios."); }
-  render();
-})();
+    const q = "?v=" + Date.now();
+    const [p,h] = await Promise.all([fetch("data/precios.json"+q,{cache:"no-store"}), fetch("data/historial.json"+q,{cache:"no-store"})]);
+    const doc = await p.json(), hist = h.ok ? await h.json() : st.hist;
+    ultimaCarga = Date.now();
+    const cambio = !st.doc || doc.ts !== st.doc.ts;
+    st.doc = doc; st.hist = hist;
+    if (cambio) render();
+  }catch(e){ if (!st.doc) $$("[data-stamp]").forEach(x=>x.textContent="No se han podido cargar los precios."); }
+  cargando = false;
+}
+cargarDatos(true);
+document.addEventListener("click", e=>{ if (!e.target.closest(".onb") && e.target.closest("button")) cargarDatos(false); });
+document.addEventListener("visibilitychange", ()=>{ if (document.visibilityState==="visible") cargarDatos(true); });
 if (!get("onb")) abrirIntro();
 irA(["inicio","lista","mapa","ajustes"].includes(get("tab")) ? get("tab") : "inicio");
 render();
