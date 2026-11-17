@@ -113,6 +113,25 @@ button:focus-visible,input:focus-visible,a:focus-visible,summary:focus-visible{o
 .bar span{font-size:.75rem;font-weight:800;color:var(--lav-ink)}
 .bars-cap{font-size:.78rem;font-weight:800;color:var(--lav-ink);margin-bottom:-4px}
 .bd-foot{font-size:.75rem;color:var(--lav-ink);opacity:.85}
+/* Tendencia */
+.trend{background:var(--sky);border-color:transparent}
+.trend .label{color:var(--sky-ink)}
+.trend .chip{background:var(--surface)}
+.trend .chip[aria-pressed="true"]{background:var(--sky-ink);color:var(--bg)}
+.tr-head{font:700 1.25rem/1.2 var(--display);color:var(--sky-ink);text-wrap:balance}
+.tr-sel select{width:100%;font:700 .92rem var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:9px 10px}
+.tr-ctrl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.tr-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tr-stats div{background:var(--surface);border-radius:12px;padding:8px 10px;min-width:0}
+.tr-stats span{display:block;font-size:.7rem;color:var(--muted);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tr-stats b{font:700 .98rem var(--mono);white-space:nowrap}
+.tr-chart{background:var(--surface);border-radius:14px;padding:6px 4px 2px}
+.tr-chart svg{display:block;width:100%;height:auto}
+.tr-chart text{font:600 9px var(--mono);fill:var(--muted)}
+.tr-legend{display:flex;flex-wrap:wrap;gap:12px;font-size:.78rem;color:var(--sky-ink);font-weight:700}
+.tr-legend i{display:inline-block;width:16px;height:4px;border-radius:2px;vertical-align:middle;margin-right:5px}
+.tr-text{font-size:.9rem;color:var(--ink)}
+.tr-foot{font-size:.75rem;color:var(--sky-ink);opacity:.85}
 
 /* Barra de filtros de la lista */
 .filters{display:flex;flex-direction:column;gap:10px}
@@ -354,6 +373,21 @@ window.goatcounter = { path: function(){
       <div class="bd-foot" id="bdFoot"></div>
     </section>
 
+    <section class="panel trend" id="trend" aria-label="Tendencia de precios y ahorro">
+      <div class="label" id="trLabel">Tendencia</div>
+      <div class="tr-head" id="trHead">Cargando histórico…</div>
+      <div class="tr-sel"><select id="trEst" aria-label="Gasolinera para comparar"></select></div>
+      <div class="tr-ctrl">
+        <div class="chips" id="trModo"><button class="chip sm" type="button" data-tm="precio">Precio</button><button class="chip sm" type="button" data-tm="ahorro">Ahorro</button></div>
+        <div class="chips" id="trDias"><button class="chip sm" type="button" data-td="7">7 d</button><button class="chip sm" type="button" data-td="30">30 d</button><button class="chip sm" type="button" data-td="90">90 d</button></div>
+      </div>
+      <div class="tr-stats" id="trStats"></div>
+      <div class="tr-chart" id="trChart"></div>
+      <div class="tr-legend" id="trLegend"></div>
+      <div class="tr-text" id="trText"></div>
+      <div class="tr-foot" id="trFoot"></div>
+    </section>
+
     <div class="top-head"><h3>Las 3 más baratas</h3><span id="top3Sub"></span></div>
     <ol class="list" id="top3"></ol>
     <button class="ver-mas" type="button" data-goto="lista">Ver todas las gasolineras</button>
@@ -583,6 +617,7 @@ function tarjeta(x, i, ctx){
       <div class="actions">
         <a class="btn pri" href="${mapsUrl(x)}" target="_blank" rel="noopener">Cómo llegar ➜</a>
         <button class="btn sec" type="button" data-vermapa="${esc(x.key)}">Ver en el mapa</button>
+        <button class="btn sec" type="button" data-trend="${esc(x.key)}">📈 Tendencia</button>
         <button class="btn fav" type="button" data-fav="${esc(x.key)}">${x.fav?"★ Quitar de favoritas":"☆ Favorita"}</button>
       </div></div>
   </details></li>`;
@@ -642,10 +677,123 @@ function renderInicio(){
     <div class="actions" style="margin-top:12px">
       <a class="btn pri" href="${mapsUrl(b)}" target="_blank" rel="noopener">Cómo llegar ➜</a>
       <button class="btn sec" type="button" data-vermapa="${esc(b.key)}">Ver en el mapa</button>
+      <button class="btn sec" type="button" data-trend="${esc(b.key)}">📈 Tendencia</button>
     </div>`;
   const ctx = {pMin:b.pe, pMax:w.pe, porCerca:false};
   $("top3").innerHTML = byP.slice(0,3).map((x,i)=>tarjeta(x,i,ctx)).join("");
   $("top3Sub").textContent = `${fuel} ${zonaTxt()} · toca una para ver más`;
+}
+
+/* ====================== TENDENCIA ====================== */
+st.trModo = get("trmodo","precio"); st.trDias = +get("trdias",30) || 30; st.trSel = get("trsel","") || null; st.serie = null;
+const fechaCorta = f => new Date(f+"T12:00:00").toLocaleDateString("es-ES",{day:"numeric",month:"short"}).replace(".","");
+const cts = v => (v>0?"+":"") + (v*100).toLocaleString("es-ES",{maximumFractionDigits:1}) + " cts";
+function datosTendencia(){
+  const sj = st.serie; if (!sj || !sj.d?.length) return null;
+  const n = sj.d.length, k = Math.min(n, st.trDias), from = n - k;
+  let zona = estaciones().filter(enZona);
+  if (st.zona==="near" && st.pos) zona = zona.filter(e=>e.lat && e.lon && distKm(st.pos,e) <= st.radio);
+  const media = [], minimo = [];
+  for (let i=0; i<k; i++){
+    let s=0, c=0, m=Infinity;
+    for (const e of zona){ const v = sj.s[e.id]?.[st.fuel]?.[from+i]; if (v){ s+=v; c++; if (v<m) m=v; } }
+    media.push(c ? s/c/1000 : null); minimo.push(c ? m/1000 : null);
+  }
+  const rows = visibles({ignoraFiltros:true}).rows.slice().sort((a,b)=>a.pe-b.pe);
+  const sel = rows.find(x=>x.key===st.trSel) || rows[0] || null;
+  let estS = [];
+  if (sel){
+    const fuels = [st.fuel, ...(ALT[st.fuel]||[]).map(a=>a[0])];
+    const serieF = fuels.map(f=>sj.s[sel.id]?.[f]).find(a=>a && a.some(Boolean)) || [];
+    estS = Array.from({length:k}, (_,i)=>{ const v = serieF[from+i]; return v ? Math.max(.2, v/1000 - (sel.dto||0)/100) : null; });
+  }
+  return {fechas: sj.d.slice(from), media, minimo, sel, estS, rows};
+}
+function caminos(vals, X, Y){
+  let d = "", abierto = false;
+  vals.forEach((v,i)=>{ if (v==null){ abierto=false; return; } d += (abierto?"L":"M") + X(i).toFixed(1) + " " + Y(v).toFixed(1) + " "; abierto = true; });
+  return d;
+}
+function svgTendencia(t){
+  const W=320, H=150, L=40, R=10, T=10, B=22, k=t.fechas.length;
+  const X = i => k<2 ? (L+W-R)/2 : L + i*(W-L-R)/(k-1);
+  const ahorro = st.trModo==="ahorro";
+  let series, lo, hi;
+  if (ahorro){
+    const v = t.fechas.map((_,i)=> (t.estS[i]!=null && t.media[i]!=null) ? valorAhorro(t.estS[i], t.media[i]) : null);
+    series = v; const nn = v.filter(x=>x!=null); lo = Math.min(0,...nn); hi = Math.max(0,...nn);
+  } else {
+    const nn = [...t.media, ...t.minimo, ...t.estS].filter(x=>x!=null); lo = Math.min(...nn); hi = Math.max(...nn);
+  }
+  if (!isFinite(lo)){ return ""; }
+  if (hi-lo < (ahorro?0.5:0.02)){ const m=(hi+lo)/2, h=(ahorro?0.25:0.01); lo=m-h; hi=m+h; }
+  const pad=(hi-lo)*.12; lo-=pad; hi+=pad;
+  const Y = v => T + (H-T-B) * (1 - (v-lo)/(hi-lo));
+  const fmtY = v => ahorro ? (st.modo==="E" ? v.toFixed(1)+" L" : Math.round(v)+" €") : v.toFixed(3).replace(".",",");
+  let g = "";
+  [0,.5,1].forEach(f=>{ const v = lo + (hi-lo)*(.1+.8*f), y = Y(v);
+    g += `<line x1="${L}" x2="${W-R}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)" stroke-width="1"/><text x="${L-4}" y="${(y+3).toFixed(1)}" text-anchor="end">${fmtY(v)}</text>`; });
+  const idxL = k<2 ? [0] : [...new Set([0, Math.floor((k-1)/2), k-1])];
+  idxL.forEach(i=>{ g += `<text x="${X(i).toFixed(1)}" y="${H-6}" text-anchor="${k<2?"middle":(i===0?"start":(i===k-1?"end":"middle"))}">${fechaCorta(t.fechas[i])}</text>`; });
+  if (ahorro){
+    const y0 = Y(0), bw = Math.max(3, Math.min(18, (W-L-R)/Math.max(k,1)*.6));
+    g += `<line x1="${L}" x2="${W-R}" y1="${y0.toFixed(1)}" y2="${y0.toFixed(1)}" stroke="var(--muted)" stroke-width="1"/>`;
+    series.forEach((v,i)=>{ if (v==null) return; const y=Y(v), top=Math.min(y,y0), h=Math.max(1,Math.abs(y-y0));
+      g += `<rect x="${(X(i)-bw/2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="2" fill="${v>=0?"var(--good)":"var(--bad)"}"/>`; });
+  } else {
+    g += `<path d="${caminos(t.media,X,Y)}" fill="none" stroke="#d39e1f" stroke-width="2.2"/>`;
+    g += `<path d="${caminos(t.estS,X,Y)}" fill="none" stroke="var(--sky-ink)" stroke-width="3" stroke-linejoin="round"/>`;
+    g += `<path d="${caminos(t.minimo,X,Y)}" fill="none" stroke="var(--good)" stroke-width="2" stroke-dasharray="5 4"/>`;
+    [[t.media,"#d39e1f"],[t.estS,"var(--sky-ink)"]].forEach(([s,c])=>{ for (let i=k-1;i>=0;i--) if (s[i]!=null){ g += `<circle cx="${X(i).toFixed(1)}" cy="${Y(s[i]).toFixed(1)}" r="3.5" fill="${c}" stroke="var(--surface)" stroke-width="1.5"/>`; break; } });
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${ahorro?"Ahorro diario frente a la media":"Evolución del precio"}">${g}</svg>`;
+}
+const valorAhorro = (p, media) => st.modo==="E" ? st.euros/p - st.euros/media : (media - p) * st.litros;
+const ahorroTxt = v => st.modo==="E" ? (v>=0?"+":"−")+lt(Math.abs(v)) : (v>=0?"":"−")+eur(Math.abs(v));
+function ultimo(a){ for (let i=a.length-1;i>=0;i--) if (a[i]!=null) return [a[i],i]; return [null,-1]; }
+function renderTendencia(){
+  const fuel = FUEL_N[st.fuel];
+  $$("#trModo [data-tm]").forEach(c=>c.setAttribute("aria-pressed", c.dataset.tm===st.trModo));
+  $$("#trDias [data-td]").forEach(c=>c.setAttribute("aria-pressed", +c.dataset.td===st.trDias));
+  $("trLabel").textContent = `Tendencia · ${fuel} · ${st.zona==="nav"?"toda Navarra":(st.zona==="near"&&st.pos?`a menos de ${st.radio} km`:"Pamplona y comarca")}`;
+  const t = datosTendencia();
+  if (!t || !t.sel){
+    $("trHead").textContent = st.serie ? `Aún no hay histórico de ${fuel} en esta zona.` : "Cargando histórico…";
+    ["trStats","trChart","trLegend","trText","trFoot"].forEach(id=>$(id).innerHTML=""); $("trEst").innerHTML=""; return;
+  }
+  const sel = t.sel;
+  if (document.activeElement !== $("trEst")){
+    $("trEst").innerHTML = t.rows.map(x=>`<option value="${esc(x.key)}"${x.key===sel.key?" selected":""}>${esc(x.n)} · ${esc(sitioDe(x).sitio)} · ${f3(x.pe)} €/L${x.fav?" ★":""}</option>`).join("");
+  }
+  const [mHoy] = ultimo(t.media), [minHoy] = ultimo(t.minimo), [eHoy] = ultimo(t.estS);
+  const ahorroHoy = (eHoy!=null && mHoy!=null) ? valorAhorro(eHoy, mHoy) : null;
+  $("trHead").textContent = ahorroHoy==null ? sel.n
+    : (ahorroHoy >= 0 ? `${sel.n}: hoy ahorras ${ahorroTxt(ahorroHoy)} frente a la media` : `${sel.n}: hoy pagas ${ahorroTxt(-ahorroHoy).replace("−","")} más que la media`);
+  $("trStats").innerHTML = `<div><span>${esc(sel.n)}</span><b>${eHoy!=null?f3(eHoy):"–"}</b></div><div><span>Media zona</span><b>${mHoy!=null?f3(mHoy):"–"}</b></div><div><span>La más barata</span><b>${minHoy!=null?f3(minHoy):"–"}</b></div>`;
+  $("trChart").innerHTML = svgTendencia(t);
+  $("trLegend").innerHTML = st.trModo==="ahorro"
+    ? `<span><i style="background:var(--good)"></i>Ahorras</span><span><i style="background:var(--bad)"></i>Pagas más</span>`
+    : `<span><i style="background:var(--sky-ink)"></i>${esc(sel.n)}</span><span><i style="background:#d39e1f"></i>Media</span><span><i style="background:var(--good)"></i>La más barata</span>`;
+  const dias = t.fechas.length, conDatos = t.estS.map((v,i)=>v!=null&&t.media[i]!=null?valorAhorro(v,t.media[i]):null).filter(v=>v!=null);
+  const [m0] = (()=>{ for (let i=0;i<t.media.length;i++) if (t.media[i]!=null) return [t.media[i]]; return [null]; })();
+  let txt = "";
+  if (st.trModo==="ahorro"){
+    if (conDatos.length){ const med = conDatos.reduce((a,b)=>a+b,0)/conDatos.length;
+      txt = `Llenando ${st.modo==="E"?`${eur(st.euros)}`:`${st.litros} L`} aquí, de media ${med>=0?"ahorras":"pagas de más"} <b>${ahorroTxt(Math.abs(med)).replace("−","")}</b> por repostaje frente a la media de la zona (${conDatos.length} ${conDatos.length===1?"día":"días"}).`; }
+  } else if (mHoy!=null && m0!=null && dias>1){
+    const dif = mHoy - m0;
+    txt = Math.abs(dif) < .0005 ? `La media de la zona está estable en ${dias} días.` : `La media de la zona ha ${dif<0?"bajado":"subido"} <b>${cts(Math.abs(dif)).replace("+","")}</b> en ${dias} días.`;
+    if (eHoy!=null) txt += ` ${esc(sel.n)} está ${eHoy<=mHoy?`<b>${cts(mHoy-eHoy).replace("+","")} por debajo</b>`:`<b>${cts(eHoy-mHoy).replace("+","")} por encima</b>`} de la media.`;
+  }
+  $("trText").innerHTML = txt;
+  $("trFoot").textContent = (dias < 7 ? `Histórico desde el ${fechaCorta(st.serie.d[0])}; se completa cada día. ` : "")
+    + (sel.alt ? `${sel.n} no publica ${fuel}: se usa su precio de ${sel.alt}. ` : "")
+    + (sel.dto ? `Incluye tu descuento de ${sel.dto} cts/L. ` : "")
+    + "Elige otra gasolinera arriba o toca «📈 Tendencia» en cualquiera.";
+}
+function verTendencia(key){
+  st.trSel = key; put("trsel", key); irA("inicio"); render();
+  setTimeout(()=>$("trend").scrollIntoView({behavior:"smooth", block:"start"}), 50);
 }
 
 /* ====================== LISTA ====================== */
@@ -701,7 +849,7 @@ function initMap(){
 function popupHTML(x){
   const {calle,sitio}=sitioDe(x);
   return `<div class="pop"><b>${esc(x.n)}</b>${x.fav?" ★":""}<div>${esc(calle)}, ${esc(sitio)}${x.km!=null?" · "+kmTxt(x.km):""}</div>
-    <div class="pp">${precioTxt(x)} · ${importe(x)}</div>${x.alt?`<div style="font-size:.8rem;color:#8f4a24">No publica ${FUEL_N[st.fuel]}: precio de ${esc(x.alt)}</div>`:""}${x.h?`<div style="font-size:.8rem;color:#5f7484">Horario: ${esc(x.h)}</div>`:""}
+    <div class="pp">${precioTxt(x)} · ${importe(x)}</div><div style="margin:2px 0 4px"><button class="btn sec" type="button" data-trend="${esc(x.key)}" style="padding:6px 12px;background:#d8ecf8;color:#1f6690">📈 Ver tendencia</button></div>${x.alt?`<div style="font-size:.8rem;color:#8f4a24">No publica ${FUEL_N[st.fuel]}: precio de ${esc(x.alt)}</div>`:""}${x.h?`<div style="font-size:.8rem;color:#5f7484">Horario: ${esc(x.h)}</div>`:""}
     <div class="actions"><a class="btn pri" href="${mapsUrl(x)}" target="_blank" rel="noopener">Cómo llegar ➜</a>
     <button class="btn fav" type="button" data-fav="${esc(x.key)}">${x.fav?"★ Quitar":"☆ Favorita"}</button></div></div>`;
 }
@@ -804,7 +952,7 @@ function render(){
     const t = "Actualizado " + d.toLocaleString("es-ES",{weekday:"long",day:"numeric",month:"long",hour:"2-digit",minute:"2-digit",timeZone:"Europe/Madrid"}) + (navigator.onLine?"":" · sin conexión");
     $$("[data-stamp]").forEach(e=>e.textContent=t); }
   $$("[data-fuelrow]").forEach(r=>r.innerHTML = FUELS.map(([k,n])=>`<button class="chip sm" type="button" data-k="${k}" aria-pressed="${k===st.fuel}">${n}</button>`).join(""));
-  renderInicio(); renderBestDay(); renderLista(); renderAjustes(); renderMapa();
+  renderInicio(); renderBestDay(); renderTendencia(); renderLista(); renderAjustes(); renderMapa();
 }
 
 /* ====================== navegación ====================== */
@@ -845,6 +993,9 @@ document.addEventListener("click", e=>{
     abiertos.forEach(k2=>{ const b=$$(`[data-fav]`).find(b=>b.dataset.fav===k2 && b.closest("details")); b?.closest("details")?.setAttribute("open",""); });
     if (map) map.closePopup(); return; }
   if (t.dataset.vermapa!==undefined){ verEnMapa(t.dataset.vermapa); return; }
+  if (t.dataset.trend!==undefined){ if (map) map.closePopup(); verTendencia(t.dataset.trend); return; }
+  if (t.dataset.tm){ st.trModo=t.dataset.tm; put("trmodo",st.trModo); renderTendencia(); return; }
+  if (t.dataset.td){ st.trDias=+t.dataset.td; put("trdias",st.trDias); renderTendencia(); return; }
   if (t.dataset.k && (t.closest("[data-fuelrow]") || t.closest("#a-fuel"))){ st.fuel=t.dataset.k; put("fuel",st.fuel); render(); return; }
   if (t.dataset.z && (t.closest("#lFiltros") || t.closest("#a-zona"))){ setZona(t.dataset.z); return; }
   if (t.dataset.o){ st.orden=t.dataset.o; put("orden",st.orden); render(); return; }
@@ -862,6 +1013,7 @@ document.addEventListener("click", e=>{
 document.addEventListener("change", e=>{
   const t=e.target;
   if (t.id==="cant" || t.id==="a-cant") setCant(t.value);
+  if (t.id==="trEst"){ st.trSel=t.value; put("trsel",t.value); t.blur(); renderTendencia(); }
   if (t.dataset.c && t.closest("#disc")){ st.desc[t.dataset.c]=Math.max(0,Math.min(50,+t.value||0)); putJ("desc",st.desc); t.blur(); render(); }
 });
 document.addEventListener("visibilitychange", ()=>{ if(document.visibilityState==="visible" && st.zona==="near") pedirUbicacion(true); });
@@ -907,8 +1059,10 @@ async function cargarDatos(forzar){
   cargando = true;
   try{
     const q = "?v=" + Date.now();
-    const [p,h] = await Promise.all([fetch("data/precios.json"+q,{cache:"no-store"}), fetch("data/historial.json"+q,{cache:"no-store"})]);
+    const [p,h,sr] = await Promise.all([fetch("data/precios.json"+q,{cache:"no-store"}), fetch("data/historial.json"+q,{cache:"no-store"}),
+      fetch("data/serie.json"+q,{cache:"no-store"}).catch(()=>null)]);
     const doc = await p.json(), hist = h.ok ? await h.json() : st.hist;
+    if (sr && sr.ok){ try{ const s2 = await sr.json(); if (!st.serie || JSON.stringify(s2.d)!==JSON.stringify(st.serie.d) || doc.ts!==st.doc?.ts){ st.serie = s2; if (st.doc && doc.ts===st.doc.ts) renderTendencia(); } }catch(e){} }
     ultimaCarga = Date.now();
     const cambio = !st.doc || doc.ts !== st.doc.ts;
     st.doc = doc; st.hist = hist; migraFavoritas();
