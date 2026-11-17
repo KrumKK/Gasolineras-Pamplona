@@ -8,6 +8,7 @@ de TODAS las gasolineras de Navarra y los guarda en data/.
 
 - data/precios.json   -> última lectura (la usa la web)
 - data/historial.json -> precio medio por día, para el "mejor día para llenar"
+- data/serie.json     -> precio diario de cada gasolinera (últimos 90 días), para la tendencia
 """
 import hashlib, json, os, re, ssl, subprocess, sys, time, unicodedata, urllib.request
 from datetime import datetime
@@ -46,6 +47,43 @@ CODIGOS = {
 }
 CENTRO = (42.8180, -1.6430)  # Plaza del Castillo, Pamplona
 RADIO_COMARCA_KM = 14
+
+
+# Serie diaria por gasolinera: combustibles que se guardan y días que se conservan
+SERIE_FUELS = ["diesel", "dpremium", "g95", "g95e10", "g95p", "g98", "g98e10"]
+SERIE_DIAS = 90
+
+
+def leer_serie(path):
+    """data/serie.json -> {fecha: {id: {combustible: precio}}}"""
+    try:
+        sj = json.load(open(path, encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    dias = {f: {} for f in sj.get("d", [])}
+    for ide, fuels in sj.get("s", {}).items():
+        for f, vals in fuels.items():
+            for fecha, v in zip(sj["d"], vals):
+                if v:
+                    dias[fecha].setdefault(ide, {})[f] = v / 1000
+    return dias
+
+
+def guardar_serie(path, dias):
+    fechas = sorted(dias)[-SERIE_DIAS:]
+    s = {}
+    for i, fecha in enumerate(fechas):
+        for ide, fuels in dias[fecha].items():
+            for f, p in fuels.items():
+                s.setdefault(ide, {}).setdefault(f, [0] * len(fechas))[i] = round(p * 1000)
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump({"d": fechas, "s": s}, fh, separators=(",", ":"))
+
+
+def anota_dia(dias, fecha, estaciones):
+    """Guarda el precio del día de cada gasolinera (el último leído ese día)."""
+    dias[fecha] = {e["id"]: {f: e["pr"][f] for f in SERIE_FUELS if f in e["pr"]}
+                   for e in estaciones if any(f in e["pr"] for f in SERIE_FUELS)}
 
 
 def codigo(campo):
@@ -231,6 +269,11 @@ def main():
     hist = dict(sorted(hist.items())[-400:])
     with open(hist_path, "w", encoding="utf-8") as f:
         json.dump(hist, f, ensure_ascii=False, indent=1)
+
+    serie_path = os.path.join(DATA, "serie.json")
+    dias = leer_serie(serie_path)
+    anota_dia(dias, doc["fecha"], estaciones)
+    guardar_serie(serie_path, dias)
 
     sin = [x for x in estaciones if not x["pr"]]
     print(f"Estaciones de Navarra en el Ministerio: {len(lista)} · guardadas: {len(estaciones)} "
