@@ -66,6 +66,7 @@ button:focus-visible,input:focus-visible,a:focus-visible,summary:focus-visible{o
 .save{margin-top:14px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:10px 14px;font-size:.92rem}
 .save b{display:block;font:700 1.8rem/1.15 var(--mono);white-space:nowrap;margin:2px 0}
 .save:empty{display:none}
+.aviso{margin-top:10px;background:var(--sun);color:var(--sun-ink);border-radius:12px;padding:8px 12px;font-size:.85rem;font-weight:700}
 
 /* Paneles */
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:14px}
@@ -132,6 +133,38 @@ button:focus-visible,input:focus-visible,a:focus-visible,summary:focus-visible{o
 .tr-legend i{display:inline-block;width:16px;height:4px;border-radius:2px;vertical-align:middle;margin-right:5px}
 .tr-text{font-size:.9rem;color:var(--ink)}
 .tr-foot{font-size:.75rem;color:var(--sky-ink);opacity:.85}
+/* Mis registros */
+.reg-form{background:var(--mint);border-color:transparent}
+.reg-form .label{color:var(--mint-ink)}
+.reg-form .chip{background:var(--surface)}
+.reg-form .chip[aria-pressed="true"]{background:var(--mint-ink);color:var(--bg)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field input[type=date],.field input[type=search],.field select,.field input.num{width:100%;font:700 .95rem var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px}
+.field input.num{font:700 1.25rem var(--mono);text-align:center}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.preview{background:var(--surface);border-radius:14px;padding:10px 12px;font-size:.92rem}
+.preview b{font-family:var(--mono)}
+.btn.big{width:100%;justify-content:center;padding:13px;font-size:1rem;border-radius:14px;background:var(--mint-ink);color:var(--bg)}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.kpis div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px;min-width:0}
+.kpis span{display:block;font-size:.72rem;color:var(--muted);font-weight:700}
+.kpis b{display:block;font:700 1.25rem var(--mono);white-space:nowrap}
+.kpis small{font-size:.75rem;color:var(--muted)}
+.kpis .good b{color:var(--mint-ink)} .kpis .bad b{color:var(--peach-ink)}
+.reg-chart{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.reg-chart svg{display:block;width:100%;height:auto}
+.reg-chart text{font:600 9px var(--mono);fill:var(--muted)}
+.reg-chart h4{margin:0;font:700 1.05rem var(--display)}
+.reg-chart .tr-legend{color:var(--muted)}
+.reg-chart .tr-text{font-size:.88rem}
+.rg{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 14px;display:grid;grid-template-columns:1fr auto;gap:4px 10px;list-style:none}
+.rg .t{font-weight:800;overflow-wrap:anywhere}
+.rg .s{font-size:.8rem;color:var(--muted)}
+.rg .e{font:700 1.1rem var(--mono);text-align:right;white-space:nowrap}
+.rg .a{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.rg .del{border:0;background:transparent;color:var(--muted);font-weight:700;font-size:.8rem;padding:4px 6px}
+.rg .del.sure{color:#fff;background:var(--bad);border-radius:999px;padding:4px 10px}
+.backup{display:flex;gap:8px;flex-wrap:wrap}
 
 /* Barra de filtros de la lista */
 .filters{display:flex;flex-direction:column;gap:10px}
@@ -225,7 +258,7 @@ button:focus-visible,input:focus-visible,a:focus-visible,summary:focus-visible{o
 /* Barra inferior */
 .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:1000;background:rgba(11,18,24,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   border-top:1px solid rgba(255,255,255,.1);padding:6px max(8px,env(safe-area-inset-left,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-right,0px))}
-.tabbar nav{max-width:640px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.tabbar nav{max-width:640px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
 .tab{border:0;background:transparent;color:rgba(255,255,255,.6);display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;border-radius:14px;font-size:.72rem;font-weight:800}
 .tab svg{width:24px;height:24px}
 .tab[aria-current="page"]{color:#fff;background:rgba(255,255,255,.08)}
@@ -351,6 +384,7 @@ window.goatcounter = { path: function(){
       <img class="banner" src="kkk-banner.jpg" alt="Logo 13 KKK" width="1280" height="853">
       <h1>Gasolineras Pamplona y comarca</h1>
       <div class="stamp" data-stamp>Cargando precios…</div>
+      <div class="aviso" id="aviso" hidden></div>
       <div class="save" id="heroSave"></div>
     </header>
 
@@ -431,6 +465,62 @@ window.goatcounter = { path: function(){
     <div class="geo-msg" data-geomsg hidden></div>
   </section>
 
+  <!-- ===================== MIS REGISTROS ===================== -->
+  <section class="view" id="v-registros" hidden>
+    <div class="vhead"><img src="kkk-favicon.png" alt="" width="42" height="42"><div><h2>Mis registros</h2><div class="stamp">Tus repostajes, guardados en este móvil</div></div></div>
+
+    <form class="panel reg-form" id="regForm" autocomplete="off">
+      <div class="label">Apuntar un repostaje</div>
+      <div class="row2">
+        <div class="field"><label class="sublabel" for="rFecha">Fecha</label><input type="date" id="rFecha" required></div>
+        <div class="field"><label class="sublabel" for="rFuel">Combustible</label><select id="rFuel"></select></div>
+      </div>
+      <div class="field"><label class="sublabel" for="rBusca">Gasolinera</label>
+        <input type="search" id="rBusca" placeholder="Buscar por nombre o pueblo…">
+        <select id="rEst" required></select>
+      </div>
+      <div class="field"><span class="sublabel">He pagado</span>
+        <div class="chips" id="rModo"><button class="chip sm" type="button" data-rm="E">En euros</button><button class="chip sm" type="button" data-rm="L">En litros</button></div>
+        <div class="row2">
+          <div class="field"><label class="sublabel" for="rCant" id="rCantLbl">Euros</label><input class="num" type="number" id="rCant" inputmode="decimal" min="1" max="500" step="0.01" required></div>
+          <div class="field"><label class="sublabel" for="rPrecio">Precio €/L</label><input class="num" type="number" id="rPrecio" inputmode="decimal" min="0.5" max="5" step="0.001" required></div>
+        </div>
+      </div>
+      <div class="preview" id="rPreview"></div>
+      <button class="btn big" type="submit" id="rGuardar">Guardar repostaje</button>
+      <div class="hint" id="rMsg" style="margin:0"></div>
+    </form>
+
+    <div class="kpis" id="rKpis"></div>
+
+    <div class="reg-chart">
+      <h4>¿A qué precio he repostado?</h4>
+      <div id="rChart1"></div>
+      <div class="tr-legend"><span><i style="background:var(--sky-ink)"></i>Lo que pagué</span><span><i style="background:#d39e1f"></i>Media de la zona ese día</span><span><i style="background:var(--lav-ink)"></i>Tendencia</span></div>
+      <div class="tr-text" id="rText1"></div>
+    </div>
+
+    <div class="reg-chart">
+      <h4>Gasto mensual</h4>
+      <div class="chips" id="rAnios"></div>
+      <div id="rChart2"></div>
+      <div class="tr-text" id="rText2"></div>
+    </div>
+
+    <div class="top-head"><h3>Mis repostajes</h3><span id="rSub"></span></div>
+    <ol class="list" id="rLista"></ol>
+
+    <div class="panel">
+      <div class="label">Copia de seguridad</div>
+      <div class="hint" style="margin:0">Tus registros se guardan solo en este móvil (y en la app instalada aparte del navegador). Haz una copia de vez en cuando para no perderlos si cambias de móvil.</div>
+      <div class="backup">
+        <button class="btn sec" type="button" id="rExport">Descargar copia</button>
+        <label class="btn sec" for="rImport" style="cursor:pointer">Recuperar copia</label>
+        <input type="file" id="rImport" accept="application/json,.json" hidden>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== AJUSTES ===================== -->
   <section class="view" id="v-ajustes" hidden>
     <div class="vhead"><img src="kkk-favicon.png" alt="" width="42" height="42"><div><h2>Ajustes</h2><div class="stamp">Se guardan en este móvil</div></div></div>
@@ -473,6 +563,7 @@ window.goatcounter = { path: function(){
   <button class="tab" type="button" data-tab="inicio" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</button>
   <button class="tab" type="button" data-tab="lista"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg>Lista</button>
   <button class="tab" type="button" data-tab="mapa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Mapa</button>
+  <button class="tab" type="button" data-tab="registros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M3 21h12"/><path d="M14 9h2a2 2 0 0 1 2 2v5a1.5 1.5 0 0 0 3 0V8l-3-3"/><path d="M7 7h4"/></svg>Registros</button>
   <button class="tab" type="button" data-tab="ajustes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>Ajustes</button>
 </nav></div>
 
@@ -796,6 +887,214 @@ function verTendencia(key){
   setTimeout(()=>$("trend").scrollIntoView({behavior:"smooth", block:"start"}), 50);
 }
 
+/* ====================== MIS REGISTROS ====================== */
+let regs = getJ("reg", []);
+const reg = {modo: get("rmodo","E"), est: get("rest","") || null, fuel: null, precioManual: false, anio: null, borrar: null};
+const hoyISO = () => new Date(Date.now() - new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);
+const guardaRegs = () => putJ("reg", regs);
+const mesTxt = (y,m) => new Date(y, m, 1).toLocaleDateString("es-ES",{month:"short"}).replace(".","");
+/* Precio de una gasolinera en una fecha: el del día si es hoy, si no el del histórico */
+function precioEn(e, fuel, fecha){
+  const hoy = st.doc && fecha === st.doc.fecha;
+  if (!hoy && st.serie){
+    const i = st.serie.d.indexOf(fecha);
+    if (i >= 0){
+      for (const f of [fuel, ...(ALT[fuel]||[]).map(a=>a[0])]){ const v = st.serie.s[e.id]?.[f]?.[i]; if (v) return v/1000; }
+    }
+  }
+  return precioDe(e, fuel)[0];
+}
+/* Media del combustible ese día en la zona de la gasolinera (comarca o Navarra) */
+function mediaEn(e, fuel, fecha){
+  const zona = estaciones().filter(x => e.c===0 ? true : x.c!==0);
+  if (st.doc && fecha === st.doc.fecha){
+    const v = zona.map(x=>x.pr?.[fuel]).filter(v=>v>0); return v.length ? v.reduce((a,b)=>a+b,0)/v.length : null;
+  }
+  if (!st.serie) return null;
+  const i = st.serie.d.indexOf(fecha); if (i < 0) return null;
+  let s=0, c=0; for (const x of zona){ const v = st.serie.s[x.id]?.[fuel]?.[i]; if (v){ s+=v; c++; } }
+  return c ? s/c/1000 : null;
+}
+function opcionesGasolinera(){
+  const q = norm($("rBusca").value);
+  const usadas = new Map(); regs.forEach(r=>usadas.set(r.sid, (usadas.get(r.sid)||0)+1));
+  let L = estaciones().filter(e=>Object.keys(e.pr||{}).length);
+  if (q) L = L.filter(e=>norm(e.n+" "+e.d).includes(q));
+  L.sort((a,b)=> (st.fav.has(b.id)-st.fav.has(a.id)) || ((usadas.get(b.id)||0)-(usadas.get(a.id)||0)) || (b.c-a.c) || a.n.localeCompare(b.n,"es"));
+  if (!reg.est || !estaciones().some(e=>e.id===reg.est)){
+    const ult = regs[regs.length-1]?.sid, mejor = visibles({ignoraFiltros:true}).rows.slice().sort((a,b)=>a.pe-b.pe)[0];
+    reg.est = (ult && estaciones().some(e=>e.id===ult)) ? ult : (mejor?.id || L[0]?.id || null);
+  }
+  if (reg.est && !L.some(e=>e.id===reg.est)){
+    if (q) reg.est = L[0]?.id || reg.est;   // al buscar, se elige la primera coincidencia
+    else { const e = estaciones().find(x=>x.id===reg.est); if (e) L.unshift(e); }
+  }
+  $("rEst").innerHTML = L.length ? L.map(e=>`<option value="${esc(e.id)}"${e.id===reg.est?" selected":""}>${st.fav.has(e.id)?"★ ":""}${esc(e.n)} · ${esc(sitioDe(e).sitio)}</option>`).join("")
+    : `<option value="">No hay resultados</option>`;
+}
+const norm = t => (t||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+function pintaFormulario(forzarPrecio){
+  if (!$("rFecha").value) $("rFecha").value = hoyISO();
+  $("rFecha").max = hoyISO();
+  if (!reg.fuel) reg.fuel = st.fuel;
+  $("rFuel").innerHTML = FUELS.map(([k,n])=>`<option value="${k}"${k===reg.fuel?" selected":""}>${n}</option>`).join("");
+  $$("#rModo [data-rm]").forEach(c=>c.setAttribute("aria-pressed", c.dataset.rm===reg.modo));
+  $("rCantLbl").textContent = reg.modo==="E" ? "Euros" : "Litros";
+  if (!$("rCant").value) $("rCant").value = reg.modo==="E" ? (st.modo==="E" ? st.euros : 50) : st.litros;
+  if (document.activeElement !== $("rEst") && document.activeElement !== $("rBusca")) opcionesGasolinera();
+  const e = estaciones().find(x=>x.id===reg.est);
+  if (e && (forzarPrecio || !reg.precioManual || !$("rPrecio").value)){
+    const p = precioEn(e, reg.fuel, $("rFecha").value);
+    $("rPrecio").value = p ? p.toFixed(3) : ""; reg.precioManual = false;
+  }
+  pintaPreview();
+}
+function calcula(){
+  const cant = parseFloat($("rCant").value), p = parseFloat($("rPrecio").value);
+  if (!(cant>0) || !(p>0)) return null;
+  const eurs = reg.modo==="E" ? cant : cant*p, litros = reg.modo==="E" ? cant/p : cant;
+  return {eur: Math.round(eurs*100)/100, l: Math.round(litros*100)/100, p};
+}
+function pintaPreview(){
+  const c = calcula(), e = estaciones().find(x=>x.id===reg.est);
+  if (!c || !e){ $("rPreview").innerHTML = "Elige gasolinera, cantidad y precio."; return; }
+  const m = mediaEn(e, reg.fuel, $("rFecha").value);
+  let t = `<b>${eur(c.eur)}</b> · <b>${lt(c.l)}</b> a <b>${f3(c.p)} €/L</b>`;
+  if (m){ const a = (m - c.p)*c.l; t += `<br>Media de la zona ese día: ${f3(m)} €/L → ${a>=0?`ahorras <b>${eur(a)}</b>`:`pagas <b>${eur(-a)}</b> de más`}`; }
+  else t += `<br><span style="color:var(--muted)">No hay media de la zona para esa fecha.</span>`;
+  $("rPreview").innerHTML = t;
+}
+function guardarRegistro(ev){
+  ev.preventDefault();
+  const c = calcula(), e = estaciones().find(x=>x.id===reg.est), fecha = $("rFecha").value;
+  if (!c || !e || !fecha){ $("rMsg").textContent = "Falta la gasolinera, la cantidad o el precio."; return; }
+  const m = mediaEn(e, reg.fuel, fecha);
+  regs.push({id: Date.now().toString(36), t: fecha, sid: e.id, n: e.n, sitio: sitioDe(e).sitio, fuel: reg.fuel,
+    eur: c.eur, l: c.l, p: c.p, m: m ? Math.round(m*1000)/1000 : null});
+  regs.sort((a,b)=> a.t.localeCompare(b.t) || a.id.localeCompare(b.id));
+  guardaRegs(); put("rest", e.id); put("rmodo", reg.modo);
+  $("rMsg").textContent = `Guardado: ${eur(c.eur)} en ${e.n} el ${fechaLarga(fecha)}.`;
+  $("rCant").value = ""; $("rFecha").value = hoyISO(); reg.precioManual = false;
+  renderRegistros();
+  setTimeout(()=>$("rKpis").scrollIntoView({behavior:"smooth", block:"start"}), 50);
+}
+const fechaLarga = f => new Date(f+"T12:00:00").toLocaleDateString("es-ES",{day:"numeric",month:"long",year:"numeric"});
+function regresion(xs, ys){
+  const n = xs.length; if (n < 2) return null;
+  const mx = xs.reduce((a,b)=>a+b,0)/n, my = ys.reduce((a,b)=>a+b,0)/n;
+  let num=0, den=0; for (let i=0;i<n;i++){ num += (xs[i]-mx)*(ys[i]-my); den += (xs[i]-mx)**2; }
+  if (!den) return null; const b = num/den; return {b, a: my - b*mx};
+}
+function svgPrecios(R){
+  const W=320, H=160, L=40, Rr=10, T=10, B=22;
+  const dias = R.map(r=>new Date(r.t+"T12:00:00").getTime()/864e5);
+  const d0 = Math.min(...dias), d1 = Math.max(...dias), span = Math.max(d1-d0, 1);
+  const X = d => R.length<2 ? (L+W-Rr)/2 : L + (d-d0)/span*(W-L-Rr);
+  const vals = [...R.map(r=>r.p), ...R.map(r=>r.m).filter(v=>v)];
+  let lo = Math.min(...vals), hi = Math.max(...vals); if (hi-lo < .02){ const m=(hi+lo)/2; lo=m-.01; hi=m+.01; }
+  const pad=(hi-lo)*.15; lo-=pad; hi+=pad;
+  const Y = v => T + (H-T-B)*(1-(v-lo)/(hi-lo));
+  let g = "";
+  [0,.5,1].forEach(f=>{ const v=lo+(hi-lo)*(.1+.8*f), y=Y(v); g += `<line x1="${L}" x2="${W-Rr}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)"/><text x="${L-4}" y="${(y+3).toFixed(1)}" text-anchor="end">${f3(v)}</text>`; });
+  const labs = R.length<2 ? [0] : [...new Set([0, Math.floor((R.length-1)/2), R.length-1])];
+  labs.forEach(i=>g += `<text x="${X(dias[i]).toFixed(1)}" y="${H-6}" text-anchor="${R.length<2?"middle":(i===0?"start":(i===R.length-1?"end":"middle"))}">${fechaCorta(R[i].t)}</text>`);
+  const pm = R.map((r,i)=>r.m?`${X(dias[i]).toFixed(1)} ${Y(r.m).toFixed(1)}`:null);
+  let dm = "", ab = false; pm.forEach(p=>{ if(!p){ab=false;return;} dm += (ab?"L":"M")+p+" "; ab=true; });
+  g += `<path d="${dm}" fill="none" stroke="#d39e1f" stroke-width="2"/>`;
+  const rg = regresion(dias, R.map(r=>r.p));
+  if (rg) g += `<line x1="${X(d0).toFixed(1)}" y1="${Y(rg.a+rg.b*d0).toFixed(1)}" x2="${X(d1).toFixed(1)}" y2="${Y(rg.a+rg.b*d1).toFixed(1)}" stroke="var(--lav-ink)" stroke-width="2" stroke-dasharray="6 4"/>`;
+  g += `<path d="${R.map((r,i)=>(i?"L":"M")+X(dias[i]).toFixed(1)+" "+Y(r.p).toFixed(1)).join(" ")}" fill="none" stroke="var(--sky-ink)" stroke-width="1.5" opacity=".5"/>`;
+  R.forEach((r,i)=>{ const ok = r.m ? r.p<=r.m : null;
+    g += `<circle cx="${X(dias[i]).toFixed(1)}" cy="${Y(r.p).toFixed(1)}" r="4.5" fill="${ok===null?"var(--sky-ink)":(ok?"var(--good)":"var(--bad)")}" stroke="var(--surface)" stroke-width="1.5"><title>${fechaCorta(r.t)} · ${esc(r.n)} · ${f3(r.p)} €/L</title></circle>`; });
+  return {svg:`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Precio pagado en cada repostaje">${g}</svg>`, rg};
+}
+function svgMeses(anio){
+  const W=320, H=150, L=34, Rr=8, T=14, B=22;
+  const tot = Array(12).fill(0); regs.filter(r=>+r.t.slice(0,4)===anio).forEach(r=>tot[+r.t.slice(5,7)-1]+=r.eur);
+  const hi = Math.max(10, ...tot)*1.15, bw = (W-L-Rr)/12;
+  const Y = v => T + (H-T-B)*(1-v/hi);
+  let g = "";
+  [0,.5,1].forEach(f=>{ const v=hi*f*.87, y=Y(v); g += `<line x1="${L}" x2="${W-Rr}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)"/><text x="${L-4}" y="${(y+3).toFixed(1)}" text-anchor="end">${Math.round(v)}€</text>`; });
+  const hoy = new Date(), mesAct = hoy.getFullYear()===anio ? hoy.getMonth() : 11;
+  tot.forEach((v,m)=>{ const x = L + m*bw + bw*.15, w = bw*.7;
+    if (v>0){ g += `<rect x="${x.toFixed(1)}" y="${Y(v).toFixed(1)}" width="${w.toFixed(1)}" height="${(Y(0)-Y(v)).toFixed(1)}" rx="3" fill="${m===mesAct?"var(--mint-ink)":"var(--sky-ink)"}" opacity="${m===mesAct?1:.75}"/>`;
+      g += `<text x="${(x+w/2).toFixed(1)}" y="${(Y(v)-3).toFixed(1)}" text-anchor="middle">${Math.round(v)}</text>`; }
+    g += `<text x="${(x+w/2).toFixed(1)}" y="${H-6}" text-anchor="middle">${mesTxt(anio,m).slice(0,3)}</text>`; });
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Gasto mensual ${anio}">${g}</svg>`;
+}
+function renderRegistros(){
+  if (!$("v-registros")) return;
+  pintaFormulario(false);
+  const R = regs.slice().sort((a,b)=>a.t.localeCompare(b.t));
+  const hoy = new Date(), y = hoy.getFullYear(), mm = String(hoy.getMonth()+1).padStart(2,"0");
+  const sum = (arr,k)=>arr.reduce((a,r)=>a+(r[k]||0),0);
+  const delMes = R.filter(r=>r.t.startsWith(`${y}-${mm}`)), delAnio = R.filter(r=>r.t.startsWith(`${y}`));
+  const conM = R.filter(r=>r.m), ahorro = conM.reduce((a,r)=>a+(r.m-r.p)*r.l,0);
+  const litros = sum(R,"l"), pMedio = litros ? sum(R,"eur")/litros : null;
+  $("rKpis").innerHTML = `
+    <div><span>Este mes</span><b>${eur(sum(delMes,"eur"))}</b><small>${delMes.length} ${delMes.length===1?"repostaje":"repostajes"} · ${lt(sum(delMes,"l"))}</small></div>
+    <div><span>Acumulado ${y}</span><b>${eur(sum(delAnio,"eur"))}</b><small>${delAnio.length} ${delAnio.length===1?"repostaje":"repostajes"} · ${lt(sum(delAnio,"l"))}</small></div>
+    <div><span>Precio medio pagado</span><b>${pMedio?f3(pMedio)+" €/L":"–"}</b><small>${R.length} ${R.length===1?"repostaje en total":"repostajes en total"}</small></div>
+    <div class="${ahorro>=0?"good":"bad"}"><span>${ahorro>=0?"Ahorro frente a la media":"Pagado de más"}</span><b>${conM.length?eur(Math.abs(ahorro)):"–"}</b><small>${conM.length?`en ${conM.length} repostajes con media`:"aún sin datos"}</small></div>`;
+  if (!R.length){
+    $("rChart1").innerHTML = `<div class="hint" style="margin:6px 0">Apunta tu primer repostaje arriba y aquí verás a qué precio vas llenando frente a la media.</div>`;
+    $("rText1").innerHTML = ""; $("rAnios").innerHTML = ""; $("rChart2").innerHTML = ""; $("rText2").innerHTML = "";
+    $("rLista").innerHTML = `<li class="empty">Todavía no hay repostajes apuntados.</li>`; $("rSub").textContent = ""; return;
+  }
+  const {svg, rg} = svgPrecios(R);
+  $("rChart1").innerHTML = svg;
+  let t1 = "";
+  if (rg && R.length >= 2){
+    const porMes = rg.b*30*100;
+    const c = Math.abs(porMes), ct = c.toLocaleString("es-ES",{maximumFractionDigits:1});
+    t1 = c < .1 ? "Tu precio por litro se mantiene estable." : `Tu precio por litro ${porMes<0?"baja":"sube"} unos <b>${ct} ${ct==="1"?"céntimo":"céntimos"} al mes</b>.`;
+  }
+  if (conM.length){ const bien = conM.filter(r=>r.p<=r.m).length;
+    t1 += ` En <b>${bien} de ${conM.length}</b> repostajes pagaste menos que la media de ese día${ahorro>=0?`, con un ahorro total de <b>${eur(ahorro)}</b>`:""}.`; }
+  t1 += ` <span style="color:var(--muted)">Puntos verdes: por debajo de la media; rojos: por encima.</span>`;
+  $("rText1").innerHTML = t1;
+  const anios = [...new Set(R.map(r=>+r.t.slice(0,4)))].sort();
+  if (!reg.anio || !anios.includes(reg.anio)) reg.anio = anios.includes(y) ? y : anios[anios.length-1];
+  $("rAnios").innerHTML = anios.length>1 ? anios.map(a=>`<button class="chip sm" type="button" data-ranio="${a}" aria-pressed="${a===reg.anio}">${a}</button>`).join("") : "";
+  $("rChart2").innerHTML = svgMeses(reg.anio);
+  const A = R.filter(r=>+r.t.slice(0,4)===reg.anio), meses = new Set(A.map(r=>r.t.slice(0,7))).size;
+  $("rText2").innerHTML = `Acumulado ${reg.anio}: <b>${eur(sum(A,"eur"))}</b> en ${lt(sum(A,"l"))}${meses?` · media de <b>${eur(sum(A,"eur")/meses)}</b> al mes`:""}.`;
+  $("rSub").textContent = `${R.length} en total · los más recientes primero`;
+  $("rLista").innerHTML = R.slice().reverse().map(r=>{
+    const a = r.m ? (r.m-r.p)*r.l : null;
+    return `<li class="rg"><div><div class="t">${esc(r.n)}</div><div class="s">${fechaLarga(r.t)} · ${esc(r.sitio||"")} · ${esc(FUEL_N[r.fuel]||r.fuel)}</div></div>
+      <div class="e">${eur(r.eur)}</div>
+      <div class="a"><span class="s">${lt(r.l)} a ${f3(r.p)} €/L${r.m?` · media ${f3(r.m)}`:""}</span>
+        ${a!==null?`<span class="tag ${a>=0?"h24":"prem"}" style="font-size:.74rem">${a>=0?"Ahorraste "+eur(a):"+"+eur(-a)+" sobre la media"}</span>`:""}
+        <button class="del${reg.borrar===r.id?" sure":""}" type="button" data-rdel="${esc(r.id)}">${reg.borrar===r.id?"¿Borrar? Toca otra vez":"Borrar"}</button></div></li>`;
+  }).join("");
+}
+function exportarRegistros(){
+  const blob = new Blob([JSON.stringify({app:"gasolineras-kkk", version:1, exportado:new Date().toISOString(), registros:regs}, null, 1)], {type:"application/json"});
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `mis-repostajes-${hoyISO()}.json`;
+  document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+}
+async function importarRegistros(file){
+  try{
+    const j = JSON.parse(await file.text()), L = Array.isArray(j) ? j : j.registros;
+    if (!Array.isArray(L)) throw 0;
+    const ya = new Set(regs.map(r=>r.id)); let n = 0;
+    L.forEach(r=>{ if (r && r.id && r.t && r.eur>0 && r.p>0 && !ya.has(r.id)){ regs.push(r); n++; } });
+    regs.sort((a,b)=>a.t.localeCompare(b.t)); guardaRegs();
+    $("rMsg").textContent = n ? `Recuperados ${n} repostajes.` : "La copia no tenía repostajes nuevos.";
+    renderRegistros(); $("regForm").scrollIntoView({behavior:"smooth"});
+  }catch(e){ $("rMsg").textContent = "Ese archivo no es una copia válida de Mis registros."; $("regForm").scrollIntoView({behavior:"smooth"}); }
+}
+$("regForm").addEventListener("submit", guardarRegistro);
+$("rBusca").addEventListener("input", ()=>{ opcionesGasolinera(); reg.est = $("rEst").value || reg.est; reg.precioManual=false;
+  const e = estaciones().find(x=>x.id===reg.est); if (e){ const p = precioEn(e, reg.fuel, $("rFecha").value); $("rPrecio").value = p ? p.toFixed(3) : ""; } pintaPreview(); });
+$("rEst").addEventListener("change", ()=>{ reg.est = $("rEst").value; reg.precioManual=false; pintaFormulario(true); });
+$("rFuel").addEventListener("change", ()=>{ reg.fuel = $("rFuel").value; reg.precioManual=false; pintaFormulario(true); });
+$("rFecha").addEventListener("change", ()=>{ reg.precioManual=false; pintaFormulario(true); });
+$("rCant").addEventListener("input", pintaPreview);
+$("rPrecio").addEventListener("input", ()=>{ reg.precioManual = true; pintaPreview(); });
+$("rImport").addEventListener("change", e=>{ const f=e.target.files?.[0]; if (f) importarRegistros(f); e.target.value=""; });
+
 /* ====================== LISTA ====================== */
 function renderLista(){
   const {rows, cerca, fuera, sin} = visibles();
@@ -949,16 +1248,26 @@ function barsHTML(avg,best,worst,lo,hi){
 /* ====================== render general ====================== */
 function render(){
   if (st.doc){ const d=new Date(st.doc.ts);
-    const t = "Actualizado " + d.toLocaleString("es-ES",{weekday:"long",day:"numeric",month:"long",hour:"2-digit",minute:"2-digit",timeZone:"Europe/Madrid"}) + (navigator.onLine?"":" · sin conexión");
+    const hora = x => x.toLocaleTimeString("es-ES",{hour:"2-digit",minute:"2-digit",timeZone:"Europe/Madrid"});
+    const dia = x => x.toLocaleDateString("es-ES",{weekday:"long",day:"numeric",month:"long",timeZone:"Europe/Madrid"});
+    const esHoy = x => dia(x) === dia(new Date());
+    const comp = st.estado?.comprobado ? new Date(st.estado.comprobado) : null;
+    const hace = x => { const m = Math.round((Date.now()-x.getTime())/60000); return m < 1 ? "ahora mismo" : m < 60 ? `hace ${m} min` : `hace ${Math.floor(m/60)} h ${m%60 ? (m%60)+" min" : ""}`.trim(); };
+    let t = `Precios de ${esHoy(d) ? "hoy" : dia(d)} a las ${hora(d)}`;
+    if (comp && comp > d) t += ` · comprobados ${hace(comp)}`;
+    if (!navigator.onLine) t += " · sin conexión";
+    const ultima = comp && comp > d ? comp : d, retraso = (Date.now() - ultima.getTime())/60000;
+    $("aviso").hidden = retraso <= 75;
+    if (retraso > 75) $("aviso").textContent = `⚠️ Los precios no se comprueban desde ${esHoy(ultima) ? "las "+hora(ultima) : dia(ultima)+" a las "+hora(ultima)} (${hace(ultima)}). Pueden haber cambiado: confirma el precio en el surtidor.`;
     $$("[data-stamp]").forEach(e=>e.textContent=t); }
   $$("[data-fuelrow]").forEach(r=>r.innerHTML = FUELS.map(([k,n])=>`<button class="chip sm" type="button" data-k="${k}" aria-pressed="${k===st.fuel}">${n}</button>`).join(""));
-  renderInicio(); renderBestDay(); renderTendencia(); renderLista(); renderAjustes(); renderMapa();
+  renderInicio(); renderBestDay(); renderTendencia(); renderLista(); renderRegistros(); renderAjustes(); renderMapa();
 }
 
 /* ====================== navegación ====================== */
 function irA(tab){
   st.tab = tab; put("tab", tab);
-  ["inicio","lista","mapa","ajustes"].forEach(t=>$("v-"+t).hidden = t!==tab);
+  ["inicio","lista","mapa","registros","ajustes"].forEach(t=>$("v-"+t).hidden = t!==tab);
   $$(".tab").forEach(b=>{ if (b.dataset.tab===tab) b.setAttribute("aria-current","page"); else b.removeAttribute("aria-current"); });
   window.scrollTo(0,0);
   if (tab==="mapa") requestAnimationFrame(renderMapa);
@@ -994,6 +1303,10 @@ document.addEventListener("click", e=>{
     if (map) map.closePopup(); return; }
   if (t.dataset.vermapa!==undefined){ verEnMapa(t.dataset.vermapa); return; }
   if (t.dataset.trend!==undefined){ if (map) map.closePopup(); verTendencia(t.dataset.trend); return; }
+  if (t.dataset.rm){ reg.modo=t.dataset.rm; put("rmodo",reg.modo); $("rCant").value=""; pintaFormulario(false); return; }
+  if (t.dataset.ranio){ reg.anio=+t.dataset.ranio; renderRegistros(); return; }
+  if (t.dataset.rdel){ const id=t.dataset.rdel; if (reg.borrar===id){ regs=regs.filter(r=>r.id!==id); guardaRegs(); reg.borrar=null; } else { reg.borrar=id; setTimeout(()=>{ if(reg.borrar===id){ reg.borrar=null; renderRegistros(); } }, 4000); } renderRegistros(); return; }
+  if (t.id==="rExport"){ exportarRegistros(); return; }
   if (t.dataset.tm){ st.trModo=t.dataset.tm; put("trmodo",st.trModo); renderTendencia(); return; }
   if (t.dataset.td){ st.trDias=+t.dataset.td; put("trdias",st.trDias); renderTendencia(); return; }
   if (t.dataset.k && (t.closest("[data-fuelrow]") || t.closest("#a-fuel"))){ st.fuel=t.dataset.k; put("fuel",st.fuel); render(); return; }
@@ -1059,8 +1372,9 @@ async function cargarDatos(forzar){
   cargando = true;
   try{
     const q = "?v=" + Date.now();
-    const [p,h,sr] = await Promise.all([fetch("data/precios.json"+q,{cache:"no-store"}), fetch("data/historial.json"+q,{cache:"no-store"}),
-      fetch("data/serie.json"+q,{cache:"no-store"}).catch(()=>null)]);
+    const [p,h,sr,es] = await Promise.all([fetch("data/precios.json"+q,{cache:"no-store"}), fetch("data/historial.json"+q,{cache:"no-store"}),
+      fetch("data/serie.json"+q,{cache:"no-store"}).catch(()=>null), fetch("data/estado.json"+q,{cache:"no-store"}).catch(()=>null)]);
+    if (es && es.ok){ try{ const e2 = await es.json(); const cambioEstado = e2.comprobado !== st.estado?.comprobado; st.estado = e2; if (cambioEstado && st.doc) render(); }catch(e){} }
     const doc = await p.json(), hist = h.ok ? await h.json() : st.hist;
     if (sr && sr.ok){ try{ const s2 = await sr.json(); if (!st.serie || JSON.stringify(s2.d)!==JSON.stringify(st.serie.d) || doc.ts!==st.doc?.ts){ st.serie = s2; if (st.doc && doc.ts===st.doc.ts) renderTendencia(); } }catch(e){} }
     ultimaCarga = Date.now();
@@ -1073,8 +1387,9 @@ async function cargarDatos(forzar){
 cargarDatos(true);
 document.addEventListener("click", e=>{ if (!e.target.closest(".onb") && e.target.closest("button")) cargarDatos(false); });
 document.addEventListener("visibilitychange", ()=>{ if (document.visibilityState==="visible") cargarDatos(true); });
+setInterval(()=>{ if (document.visibilityState==="visible") cargarDatos(true); }, 5*60000);
 if (!get("onb")) abrirIntro();
-irA(["inicio","lista","mapa","ajustes"].includes(get("tab")) ? get("tab") : "inicio");
+irA(["inicio","lista","mapa","registros","ajustes"].includes(get("tab")) ? get("tab") : "inicio");
 render();
 if (st.zona==="near") pedirUbicacion(false);
 
